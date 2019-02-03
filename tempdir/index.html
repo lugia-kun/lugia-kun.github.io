@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.27.1">
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "";
+</script>
+
+  <meta id="repository-name" content="github.com/lugia-kun/tempdir.cr">
+  <title>README - github.com/lugia-kun/tempdir.cr</title>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class=" " data-id="github.com/lugia-kun/tempdir.cr/Dir" data-name="dir">
+      <a href="Dir.html">Dir</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/tempdir.cr/Tempdir" data-name="tempdir">
+      <a href="Tempdir.html">Tempdir</a>
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1>tempdir.cr</h1>
+
+<p>Creates a temporary directory.</p>
+
+<h2>Installation</h2>
+
+<ol><li>Add the dependency to your <code>shard.yml</code>:</li></ol>
+
+<p><code></code>`yaml
+   dependencies:</p>
+
+<pre><code> tempdir.cr:
+   github: lugia<span class="o">-</span>kun<span class="s">/tempdir.cr</code></pre>
+
+<p><code></code>`</p>
+
+<ol><li>Run <code>shards install</code></li></ol>
+
+<h2>Usage</h2>
+
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;tempdir&quot;</span></code></pre>
+
+<h3>Dir.mktmpdir</h3>
+
+<pre><code class="language-crystal">dir <span class="o">=</span> <span class="t">Dir</span>.mktmpdir(<span class="o">*</span>args)</code></pre>
+
+<p>Creates a temporary directory. Arguments are not checked by here, this
+methods arguments to <code>File.tmpname</code> as-is. See <code>File.tempname</code>.</p>
+
+<p>The returning object is <code><a href="Tempdir.html">Tempdir</a></code>. It removes all entries when
+<code>#close</code>-d.</p>
+
+<p>With block, the created directory will be removed after block is left.</p>
+
+<pre><code class="language-crystal"><span class="t">Dir</span>.mktmpdir(...) <span class="k">do</span> <span class="o">|</span>dir<span class="o">|</span>
+  <span class="c"># work with dir</span>
+<span class="k">end</span></code></pre>
+
+<h3>Tempdir</h3>
+
+<p>The temporary directory class based on <code><a href="Dir.html">Dir</a></code>.</p>
+
+<p>This class only rewrite <code>#close</code> method to remove entries in the
+directory.</p>
+
+<h2>Development</h2>
+
+<p>There is no special instructions about this library.</p>
+
+<p>The <a href="https://github.com/crystal-lang/crystal/" target="_blank">crystal-lang/crystal</a>'s
+development rules and policies would be apply.</p>
+
+<h2>Contributing</h2>
+
+<ol><li>Fork it (&lt;https://github.com/lugia-kun/tempdir.cr/fork>)</li><li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li><li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li><li>Push to the branch (<code>git push origin my-new-feature</code>)</li><li>Create a new Pull Request</li></ol>
+
+<h2>Contributors</h2>
+
+<ul><li><a href="https://github.com/lugia-kun" target="_blank">Hajime Yoshimori</a> - creator and maintainer</li></ul>
+</div>
+</body>
+</html>
