@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.27.1">
+<meta name="generator" content="Crystal Docs 0.28.0-dev">
 
 
 <link href="css/style.css" rel="stylesheet" type="text/css">
@@ -13,8 +13,8 @@
   CrystalDoc.base_path = "";
 </script>
 
-  <meta id="repository-name" content="github.com/lugia-kun/tempdir.cr">
-  <title>README - github.com/lugia-kun/tempdir.cr</title>
+  <meta id="repository-name" content="github.com/lugia-kun/tempdir">
+  <title>README - github.com/lugia-kun/tempdir</title>
 </head>
 <body>
 
@@ -36,12 +36,12 @@
   <div class="types-list">
     <ul>
   
-  <li class=" " data-id="github.com/lugia-kun/tempdir.cr/Dir" data-name="dir">
+  <li class=" " data-id="github.com/lugia-kun/tempdir/Dir" data-name="dir">
       <a href="Dir.html">Dir</a>
       
     </li>
   
-  <li class=" " data-id="github.com/lugia-kun/tempdir.cr/Tempdir" data-name="tempdir">
+  <li class=" " data-id="github.com/lugia-kun/tempdir/Tempdir" data-name="tempdir">
       <a href="Tempdir.html">Tempdir</a>
       
     </li>
@@ -53,7 +53,7 @@
 
 
 <div class="main-content">
-<h1>tempdir.cr</h1>
+<h1>tempdir</h1>
 
 <p>Creates a temporary directory.</p>
 
@@ -61,13 +61,9 @@
 
 <ol><li>Add the dependency to your <code>shard.yml</code>:</li></ol>
 
-<p><code></code>`yaml
-   dependencies:</p>
-
-<pre><code> tempdir.cr:
-   github: lugia<span class="o">-</span>kun<span class="s">/tempdir.cr</code></pre>
-
-<p><code></code>`</p>
+<pre><code class="language-yaml">dependencies:
+  tempdir:
+    github: lugia-kun/tempdir</code></pre>
 
 <ol><li>Run <code>shards install</code></li></ol>
 
@@ -79,8 +75,9 @@
 
 <pre><code class="language-crystal">dir <span class="o">=</span> <span class="t">Dir</span>.mktmpdir(<span class="o">*</span>args)</code></pre>
 
-<p>Creates a temporary directory. Arguments are not checked by here, this
-methods arguments to <code>File.tmpname</code> as-is. See <code>File.tempname</code>.</p>
+<p>Creates a temporary directory. Given arguments are not checked by
+here, this method passes them to <code>File.tmpname</code> as-is. See
+<code>File.tempname</code>.</p>
 
 <p>The returning object is <code><a href="Tempdir.html">Tempdir</a></code>. It removes all entries when
 <code>#close</code>-d.</p>
