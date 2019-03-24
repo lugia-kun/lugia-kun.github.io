@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.28.0-dev">
+
+
+<link href="../../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../../";
+</script>
+
+  <meta id="repository-name" content="github.com/lugia-kun/crystal-rpm">
+  <title>RPM::Transaction::Callback - github.com/lugia-kun/crystal-rpm</title>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="../../index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="github.com/lugia-kun/crystal-rpm/RPM" data-name="rpm">
+      <a href="../../RPM.html">RPM</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/CallbackType" data-name="rpm::callbacktype">
+      <a href="../../RPM/CallbackType.html">CallbackType</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/ChangeLog" data-name="rpm::changelog">
+      <a href="../../RPM/ChangeLog.html">ChangeLog</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Conflict" data-name="rpm::conflict">
+      <a href="../../RPM/Conflict.html">Conflict</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/DB" data-name="rpm::db">
+      <a href="../../RPM/DB.html">DB</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/DbiTag" data-name="rpm::dbitag">
+      <a href="../../RPM/DbiTag.html">DbiTag</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/DbiTagValue" data-name="rpm::dbitagvalue">
+      <a href="../../RPM/DbiTagValue.html">DbiTagValue</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Dependency" data-name="rpm::dependency">
+      <a href="../../RPM/Dependency.html">Dependency</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/File" data-name="rpm::file">
+      <a href="../../RPM/File.html">File</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/FileAttrs" data-name="rpm::fileattrs">
+      <a href="../../RPM/FileAttrs.html">FileAttrs</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/FileDescriptor" data-name="rpm::filedescriptor">
+      <a href="../../RPM/FileDescriptor.html">FileDescriptor</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/FileState" data-name="rpm::filestate">
+      <a href="../../RPM/FileState.html">FileState</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Icon" data-name="rpm::icon">
+      <a href="../../RPM/Icon.html">Icon</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/MatchIterator" data-name="rpm::matchiterator">
+      <a href="../../RPM/MatchIterator.html">MatchIterator</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/MireMode" data-name="rpm::miremode">
+      <a href="../../RPM/MireMode.html">MireMode</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Obsolete" data-name="rpm::obsolete">
+      <a href="../../RPM/Obsolete.html">Obsolete</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Package" data-name="rpm::package">
+      <a href="../../RPM/Package.html">Package</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Patch" data-name="rpm::patch">
+      <a href="../../RPM/Patch.html">Patch</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Problem" data-name="rpm::problem">
+      <a href="../../RPM/Problem.html">Problem</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/ProblemSet" data-name="rpm::problemset">
+      <a href="../../RPM/ProblemSet.html">ProblemSet</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/ProblemSetIterator" data-name="rpm::problemsetiterator">
+      <a href="../../RPM/ProblemSetIterator.html">ProblemSetIterator</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/ProblemType" data-name="rpm::problemtype">
+      <a href="../../RPM/ProblemType.html">ProblemType</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Provide" data-name="rpm::provide">
+      <a href="../../RPM/Provide.html">Provide</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Require" data-name="rpm::require">
+      <a href="../../RPM/Require.html">Require</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Sense" data-name="rpm::sense">
+      <a href="../../RPM/Sense.html">Sense</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Source" data-name="rpm::source">
+      <a href="../../RPM/Source.html">Source</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/SourceBase" data-name="rpm::sourcebase">
+      <a href="../../RPM/SourceBase.html">SourceBase</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/lugia-kun/crystal-rpm/RPM/Spec" data-name="rpm::spec">
+      <a href="../../RPM/Spec.html">Spec</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Spec/PackageIterator" data-name="rpm::spec::packageiterator">
+      <a href="../../RPM/Spec/PackageIterator.html">PackageIterator</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Spec/SourceIterator" data-name="rpm::spec::sourceiterator">
+      <a href="../../RPM/Spec/SourceIterator.html">SourceIterator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Tag" data-name="rpm::tag">
+      <a href="../../RPM/Tag.html">Tag</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagReturnType" data-name="rpm::tagreturntype">
+      <a href="../../RPM/TagReturnType.html">TagReturnType</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagType" data-name="rpm::tagtype">
+      <a href="../../RPM/TagType.html">TagType</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagValue" data-name="rpm::tagvalue">
+      <a href="../../RPM/TagValue.html">TagValue</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="github.com/lugia-kun/crystal-rpm/RPM/Transaction" data-name="rpm::transaction">
+      <a href="../../RPM/Transaction.html">Transaction</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="github.com/lugia-kun/crystal-rpm/RPM/Transaction/Callback" data-name="rpm::transaction::callback">
+      <a href="../../RPM/Transaction/Callback.html">Callback</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Transaction/CallbackBoxData" data-name="rpm::transaction::callbackboxdata">
+      <a href="../../RPM/Transaction/CallbackBoxData.html">CallbackBoxData</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Transaction/CallbackReturnType" data-name="rpm::transaction::callbackreturntype">
+      <a href="../../RPM/Transaction/CallbackReturnType.html">CallbackReturnType</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TransactionFlags" data-name="rpm::transactionflags">
+      <a href="../../RPM/TransactionFlags.html">TransactionFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Version" data-name="rpm::version">
+      <a href="../../RPM/Version.html">Version</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">alias</span> RPM::Transaction::Callback
+
+</h1>
+
+
+
+
+
+
+
+  <h2>Alias Definition</h2>
+  <code><a href="../../RPM/Package.html">RPM::Package</a>?, RPM::LibRPM::CallbackType, UInt64, UInt64, Pointer(Void) -> IO::FileDescriptor | Int32 | Nil</code>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/transaction.cr#L158" target="_blank">
+        rpm/transaction.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="methods-inherited">
+  
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+</body>
+</html>

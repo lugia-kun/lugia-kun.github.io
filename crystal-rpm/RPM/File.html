@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.28.0-dev">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
+  <meta id="repository-name" content="github.com/lugia-kun/crystal-rpm">
+  <title>RPM::File - github.com/lugia-kun/crystal-rpm</title>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="../index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="github.com/lugia-kun/crystal-rpm/RPM" data-name="rpm">
+      <a href="../RPM.html">RPM</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/CallbackType" data-name="rpm::callbacktype">
+      <a href="../RPM/CallbackType.html">CallbackType</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/ChangeLog" data-name="rpm::changelog">
+      <a href="../RPM/ChangeLog.html">ChangeLog</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Conflict" data-name="rpm::conflict">
+      <a href="../RPM/Conflict.html">Conflict</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/DB" data-name="rpm::db">
+      <a href="../RPM/DB.html">DB</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/DbiTag" data-name="rpm::dbitag">
+      <a href="../RPM/DbiTag.html">DbiTag</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/DbiTagValue" data-name="rpm::dbitagvalue">
+      <a href="../RPM/DbiTagValue.html">DbiTagValue</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Dependency" data-name="rpm::dependency">
+      <a href="../RPM/Dependency.html">Dependency</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/lugia-kun/crystal-rpm/RPM/File" data-name="rpm::file">
+      <a href="../RPM/File.html">File</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/FileAttrs" data-name="rpm::fileattrs">
+      <a href="../RPM/FileAttrs.html">FileAttrs</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/FileDescriptor" data-name="rpm::filedescriptor">
+      <a href="../RPM/FileDescriptor.html">FileDescriptor</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/FileState" data-name="rpm::filestate">
+      <a href="../RPM/FileState.html">FileState</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Icon" data-name="rpm::icon">
+      <a href="../RPM/Icon.html">Icon</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/MatchIterator" data-name="rpm::matchiterator">
+      <a href="../RPM/MatchIterator.html">MatchIterator</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/MireMode" data-name="rpm::miremode">
+      <a href="../RPM/MireMode.html">MireMode</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Obsolete" data-name="rpm::obsolete">
+      <a href="../RPM/Obsolete.html">Obsolete</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Package" data-name="rpm::package">
+      <a href="../RPM/Package.html">Package</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Patch" data-name="rpm::patch">
+      <a href="../RPM/Patch.html">Patch</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Problem" data-name="rpm::problem">
+      <a href="../RPM/Problem.html">Problem</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/ProblemSet" data-name="rpm::problemset">
+      <a href="../RPM/ProblemSet.html">ProblemSet</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/ProblemSetIterator" data-name="rpm::problemsetiterator">
+      <a href="../RPM/ProblemSetIterator.html">ProblemSetIterator</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/ProblemType" data-name="rpm::problemtype">
+      <a href="../RPM/ProblemType.html">ProblemType</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Provide" data-name="rpm::provide">
+      <a href="../RPM/Provide.html">Provide</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Require" data-name="rpm::require">
+      <a href="../RPM/Require.html">Require</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Sense" data-name="rpm::sense">
+      <a href="../RPM/Sense.html">Sense</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Source" data-name="rpm::source">
+      <a href="../RPM/Source.html">Source</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/SourceBase" data-name="rpm::sourcebase">
+      <a href="../RPM/SourceBase.html">SourceBase</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/lugia-kun/crystal-rpm/RPM/Spec" data-name="rpm::spec">
+      <a href="../RPM/Spec.html">Spec</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Spec/PackageIterator" data-name="rpm::spec::packageiterator">
+      <a href="../RPM/Spec/PackageIterator.html">PackageIterator</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Spec/SourceIterator" data-name="rpm::spec::sourceiterator">
+      <a href="../RPM/Spec/SourceIterator.html">SourceIterator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Tag" data-name="rpm::tag">
+      <a href="../RPM/Tag.html">Tag</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagReturnType" data-name="rpm::tagreturntype">
+      <a href="../RPM/TagReturnType.html">TagReturnType</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagType" data-name="rpm::tagtype">
+      <a href="../RPM/TagType.html">TagType</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagValue" data-name="rpm::tagvalue">
+      <a href="../RPM/TagValue.html">TagValue</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/lugia-kun/crystal-rpm/RPM/Transaction" data-name="rpm::transaction">
+      <a href="../RPM/Transaction.html">Transaction</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Transaction/Callback" data-name="rpm::transaction::callback">
+      <a href="../RPM/Transaction/Callback.html">Callback</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Transaction/CallbackBoxData" data-name="rpm::transaction::callbackboxdata">
+      <a href="../RPM/Transaction/CallbackBoxData.html">CallbackBoxData</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Transaction/CallbackReturnType" data-name="rpm::transaction::callbackreturntype">
+      <a href="../RPM/Transaction/CallbackReturnType.html">CallbackReturnType</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TransactionFlags" data-name="rpm::transactionflags">
+      <a href="../RPM/TransactionFlags.html">TransactionFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Version" data-name="rpm::version">
+      <a href="../RPM/Version.html">Version</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> RPM::File
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../RPM/File.html">RPM::File</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L2" target="_blank">
+        rpm/file.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>Constructors</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28path%2Cmd5sum%2Clink_to%2Csize%2Cmtime%2Cowner%2Cgroup%2Crdev%2Cmode%2Cattr%2Cstate%29-class-method" class="signature"><strong>.new</strong>(path, md5sum, link_to, size, mtime, owner, group, rdev, mode, attr, state)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#attr%3AFileAttrs-instance-method" class="signature"><strong>#attr</strong> : FileAttrs</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#attr%3D%28attr%3AFileAttrs%29-instance-method" class="signature"><strong>#attr=</strong>(attr : FileAttrs)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#config%3F-instance-method" class="signature"><strong>#config?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#doc%3F-instance-method" class="signature"><strong>#doc?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ghost%3F-instance-method" class="signature"><strong>#ghost?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#group%3AString-instance-method" class="signature"><strong>#group</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#group%3D%28group%3AString%29-instance-method" class="signature"><strong>#group=</strong>(group : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#is_missingok%3F-instance-method" class="signature"><strong>#is_missingok?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#is_noreplace%3F-instance-method" class="signature"><strong>#is_noreplace?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#is_specfile%3F-instance-method" class="signature"><strong>#is_specfile?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#license%3F-instance-method" class="signature"><strong>#license?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#link_to%3AString-instance-method" class="signature"><strong>#link_to</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#link_to%3D%28link_to%3AString%29-instance-method" class="signature"><strong>#link_to=</strong>(link_to : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#md5sum%3AString-instance-method" class="signature"><strong>#md5sum</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#md5sum%3D%28md5sum%3AString%29-instance-method" class="signature"><strong>#md5sum=</strong>(md5sum : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#missing%3F-instance-method" class="signature"><strong>#missing?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mode%3AUInt16-instance-method" class="signature"><strong>#mode</strong> : UInt16</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mode%3D%28mode%3AUInt16%29-instance-method" class="signature"><strong>#mode=</strong>(mode : UInt16)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mtime%3ATime-instance-method" class="signature"><strong>#mtime</strong> : Time</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mtime%3D%28mtime%3ATime%29-instance-method" class="signature"><strong>#mtime=</strong>(mtime : Time)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#netshared%3F-instance-method" class="signature"><strong>#netshared?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#notinstalled%3F-instance-method" class="signature"><strong>#notinstalled?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#owner%3AString-instance-method" class="signature"><strong>#owner</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#owner%3D%28owner%3AString%29-instance-method" class="signature"><strong>#owner=</strong>(owner : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#path%3AString-instance-method" class="signature"><strong>#path</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#path%3D%28path%3AString%29-instance-method" class="signature"><strong>#path=</strong>(path : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#rdev%3AUInt16-instance-method" class="signature"><strong>#rdev</strong> : UInt16</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#rdev%3D%28rdev%3AUInt16%29-instance-method" class="signature"><strong>#rdev=</strong>(rdev : UInt16)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#readme%3F-instance-method" class="signature"><strong>#readme?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#replaced%3F-instance-method" class="signature"><strong>#replaced?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#size%3AUInt32-instance-method" class="signature"><strong>#size</strong> : UInt32</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#size%3D%28size%3AUInt32%29-instance-method" class="signature"><strong>#size=</strong>(size : UInt32)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#state%3AFileState-instance-method" class="signature"><strong>#state</strong> : FileState</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#state%3D%28state%3AFileState%29-instance-method" class="signature"><strong>#state=</strong>(state : FileState)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#symlink%3F-instance-method" class="signature"><strong>#symlink?</strong></a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new(path,md5sum,link_to,size,mtime,owner,group,rdev,mode,attr,state)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(path, md5sum, link_to, size, mtime, owner, group, rdev, mode, attr, state)
+
+        <a class="method-permalink" href="#new%28path%2Cmd5sum%2Clink_to%2Csize%2Cmtime%2Cowner%2Cgroup%2Crdev%2Cmode%2Cattr%2Cstate%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L15" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="attr:FileAttrs-instance-method">
+      <div class="signature">
+        
+        def <strong>attr</strong> : <a href="../RPM/FileAttrs.html">FileAttrs</a>
+
+        <a class="method-permalink" href="#attr%3AFileAttrs-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L13" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="attr=(attr:FileAttrs)-instance-method">
+      <div class="signature">
+        
+        def <strong>attr=</strong>(attr : <a href="../RPM/FileAttrs.html">FileAttrs</a>)
+
+        <a class="method-permalink" href="#attr%3D%28attr%3AFileAttrs%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L17" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="config?-instance-method">
+      <div class="signature">
+        
+        def <strong>config?</strong>
+
+        <a class="method-permalink" href="#config%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L23" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="doc?-instance-method">
+      <div class="signature">
+        
+        def <strong>doc?</strong>
+
+        <a class="method-permalink" href="#doc%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L27" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ghost?-instance-method">
+      <div class="signature">
+        
+        def <strong>ghost?</strong>
+
+        <a class="method-permalink" href="#ghost%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L43" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="group:String-instance-method">
+      <div class="signature">
+        
+        def <strong>group</strong> : String
+
+        <a class="method-permalink" href="#group%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L11" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="group=(group:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>group=</strong>(group : String)
+
+        <a class="method-permalink" href="#group%3D%28group%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L15" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="is_missingok?-instance-method">
+      <div class="signature">
+        
+        def <strong>is_missingok?</strong>
+
+        <a class="method-permalink" href="#is_missingok%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L31" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="is_noreplace?-instance-method">
+      <div class="signature">
+        
+        def <strong>is_noreplace?</strong>
+
+        <a class="method-permalink" href="#is_noreplace%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L35" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="is_specfile?-instance-method">
+      <div class="signature">
+        
+        def <strong>is_specfile?</strong>
+
+        <a class="method-permalink" href="#is_specfile%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L39" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="license?-instance-method">
+      <div class="signature">
+        
+        def <strong>license?</strong>
+
+        <a class="method-permalink" href="#license%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L47" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="link_to:String-instance-method">
+      <div class="signature">
+        
+        def <strong>link_to</strong> : String
+
+        <a class="method-permalink" href="#link_to%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L7" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="link_to=(link_to:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>link_to=</strong>(link_to : String)
+
+        <a class="method-permalink" href="#link_to%3D%28link_to%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L11" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="md5sum:String-instance-method">
+      <div class="signature">
+        
+        def <strong>md5sum</strong> : String
+
+        <a class="method-permalink" href="#md5sum%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L6" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="md5sum=(md5sum:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>md5sum=</strong>(md5sum : String)
+
+        <a class="method-permalink" href="#md5sum%3D%28md5sum%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L10" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="missing?-instance-method">
+      <div class="signature">
+        
+        def <strong>missing?</strong>
+
+        <a class="method-permalink" href="#missing%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L67" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mode:UInt16-instance-method">
+      <div class="signature">
+        
+        def <strong>mode</strong> : UInt16
+
+        <a class="method-permalink" href="#mode%3AUInt16-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L12" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mode=(mode:UInt16)-instance-method">
+      <div class="signature">
+        
+        def <strong>mode=</strong>(mode : UInt16)
+
+        <a class="method-permalink" href="#mode%3D%28mode%3AUInt16%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L16" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mtime:Time-instance-method">
+      <div class="signature">
+        
+        def <strong>mtime</strong> : Time
+
+        <a class="method-permalink" href="#mtime%3ATime-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L9" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mtime=(mtime:Time)-instance-method">
+      <div class="signature">
+        
+        def <strong>mtime=</strong>(mtime : Time)
+
+        <a class="method-permalink" href="#mtime%3D%28mtime%3ATime%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L13" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="netshared?-instance-method">
+      <div class="signature">
+        
+        def <strong>netshared?</strong>
+
+        <a class="method-permalink" href="#netshared%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L63" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="notinstalled?-instance-method">
+      <div class="signature">
+        
+        def <strong>notinstalled?</strong>
+
+        <a class="method-permalink" href="#notinstalled%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L59" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="owner:String-instance-method">
+      <div class="signature">
+        
+        def <strong>owner</strong> : String
+
+        <a class="method-permalink" href="#owner%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L10" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="owner=(owner:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>owner=</strong>(owner : String)
+
+        <a class="method-permalink" href="#owner%3D%28owner%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L14" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="path:String-instance-method">
+      <div class="signature">
+        
+        def <strong>path</strong> : String
+
+        <a class="method-permalink" href="#path%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="path=(path:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>path=</strong>(path : String)
+
+        <a class="method-permalink" href="#path%3D%28path%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L9" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="rdev:UInt16-instance-method">
+      <div class="signature">
+        
+        def <strong>rdev</strong> : UInt16
+
+        <a class="method-permalink" href="#rdev%3AUInt16-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L15" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="rdev=(rdev:UInt16)-instance-method">
+      <div class="signature">
+        
+        def <strong>rdev=</strong>(rdev : UInt16)
+
+        <a class="method-permalink" href="#rdev%3D%28rdev%3AUInt16%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L19" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="readme?-instance-method">
+      <div class="signature">
+        
+        def <strong>readme?</strong>
+
+        <a class="method-permalink" href="#readme%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L51" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="replaced?-instance-method">
+      <div class="signature">
+        
+        def <strong>replaced?</strong>
+
+        <a class="method-permalink" href="#replaced%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L55" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="size:UInt32-instance-method">
+      <div class="signature">
+        
+        def <strong>size</strong> : UInt32
+
+        <a class="method-permalink" href="#size%3AUInt32-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L8" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="size=(size:UInt32)-instance-method">
+      <div class="signature">
+        
+        def <strong>size=</strong>(size : UInt32)
+
+        <a class="method-permalink" href="#size%3D%28size%3AUInt32%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L12" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="state:FileState-instance-method">
+      <div class="signature">
+        
+        def <strong>state</strong> : <a href="../RPM/FileState.html">FileState</a>
+
+        <a class="method-permalink" href="#state%3AFileState-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L14" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="state=(state:FileState)-instance-method">
+      <div class="signature">
+        
+        def <strong>state=</strong>(state : <a href="../RPM/FileState.html">FileState</a>)
+
+        <a class="method-permalink" href="#state%3D%28state%3AFileState%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L18" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="symlink?-instance-method">
+      <div class="signature">
+        
+        def <strong>symlink?</strong>
+
+        <a class="method-permalink" href="#symlink%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/760a1794cf8b487d3fa996c1ed6721f7166d7112/src/rpm/file.cr#L19" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
