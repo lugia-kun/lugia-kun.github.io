@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.28.0-dev">
+<meta name="generator" content="Crystal Docs 0.27.1">
 
 
 <link href="../../css/style.css" rel="stylesheet" type="text/css">
@@ -14,7 +14,7 @@
 </script>
 
   <meta id="repository-name" content="github.com/lugia-kun/crystal-rpm">
-  <title>RPM::Spec49::PackageIterator - github.com/lugia-kun/crystal-rpm</title>
+  <title>RPM::TagData::ElementUnion - github.com/lugia-kun/crystal-rpm</title>
 </head>
 <body>
 
@@ -171,23 +171,18 @@
       
     </li>
   
-  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Spec" data-name="rpm::spec">
+  <li class="parent " data-id="github.com/lugia-kun/crystal-rpm/RPM/Spec" data-name="rpm::spec">
       <a href="../../RPM/Spec.html">Spec</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Spec48" data-name="rpm::spec48">
-      <a href="../../RPM/Spec48.html">Spec48</a>
-      
-    </li>
-  
-  <li class="parent open current" data-id="github.com/lugia-kun/crystal-rpm/RPM/Spec49" data-name="rpm::spec49">
-      <a href="../../RPM/Spec49.html">Spec49</a>
       
         <ul>
   
-  <li class=" current" data-id="github.com/lugia-kun/crystal-rpm/RPM/Spec49/PackageIterator" data-name="rpm::spec49::packageiterator">
-      <a href="../../RPM/Spec49/PackageIterator.html">PackageIterator</a>
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Spec/PackageIterator" data-name="rpm::spec::packageiterator">
+      <a href="../../RPM/Spec/PackageIterator.html">PackageIterator</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Spec/SourceIterator" data-name="rpm::spec::sourceiterator">
+      <a href="../../RPM/Spec/SourceIterator.html">SourceIterator</a>
       
     </li>
   
@@ -196,18 +191,28 @@
       
     </li>
   
-  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/SpecCommonBase" data-name="rpm::speccommonbase">
-      <a href="../../RPM/SpecCommonBase.html">SpecCommonBase</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/SpecVersionDeps" data-name="rpm::specversiondeps">
-      <a href="../../RPM/SpecVersionDeps.html">SpecVersionDeps</a>
-      
-    </li>
-  
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Tag" data-name="rpm::tag">
       <a href="../../RPM/Tag.html">Tag</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData" data-name="rpm::tagdata">
+      <a href="../../RPM/TagData.html">TagData</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ElementUnion" data-name="rpm::tagdata::elementunion">
+      <a href="../../RPM/TagData/ElementUnion.html">ElementUnion</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/Iterator" data-name="rpm::tagdata::iterator(t)">
+      <a href="../../RPM/TagData/Iterator.html">Iterator</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -275,26 +280,20 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">class</span> RPM::Spec49::PackageIterator
+  <span class="kind">alias</span> RPM::TagData::ElementUnion
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../RPM/Spec49/PackageIterator.html">RPM::Spec49::PackageIterator</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
 
 
 
 
 
+  <h2>Alias Definition</h2>
+  <code>String | UInt16 | UInt32 | UInt64 | UInt8</code>
 
 
-
-  <h2>Included Modules</h2>
-  <ul class="other-types-list">
-  
-    <li class="other-type">Iterator(<a href="../../RPM/Package.html">RPM::Package</a>)</li>
-  
-  </ul>
 
 
 
@@ -308,8 +307,8 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/7c6c19aa7261af4dd47a185db44f7004157ef10c/src/rpm/spec.cr#L55" target="_blank">
-        rpm/spec.cr
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/54c1eff38867bc60471f8a91dc2aa94b9432ed6e/src/rpm/tagdata.cr#L5" target="_blank">
+        rpm/tagdata.cr
       </a>
     
     <br/>
@@ -319,39 +318,9 @@
 
 
 
-  <h2>Constructors</h2>
-  <ul class="list-summary">
-    
-      <li class="entry-summary">
-        <a href="#new%28spec%29-class-method" class="signature"><strong>.new</strong>(spec)</a>
-        
-      </li>
-    
-  </ul>
 
 
 
-
-
-  <h2>Instance Method Summary</h2>
-  <ul class="list-summary">
-    
-      <li class="entry-summary">
-        <a href="#finalize-instance-method" class="signature"><strong>#finalize</strong></a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#next-instance-method" class="signature"><strong>#next</strong></a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#rewind-instance-method" class="signature"><strong>#rewind</strong></a>
-        
-      </li>
-    
-  </ul>
 
 
 
@@ -359,122 +328,12 @@
 
 <div class="methods-inherited">
   
-    
-
-
-    
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
-  
 </div>
 
 
-  <h2>Constructor Detail</h2>
-  
-    <div class="entry-detail" id="new(spec)-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(spec)
-
-        <a class="method-permalink" href="#new%28spec%29-class-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/7c6c19aa7261af4dd47a185db44f7004157ef10c/src/rpm/spec.cr#L61" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
 
 
 
-
-
-  <h2>Instance Method Detail</h2>
-  
-    <div class="entry-detail" id="finalize-instance-method">
-      <div class="signature">
-        
-        def <strong>finalize</strong>
-
-        <a class="method-permalink" href="#finalize-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/7c6c19aa7261af4dd47a185db44f7004157ef10c/src/rpm/spec.cr#L67" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="next-instance-method">
-      <div class="signature">
-        
-        def <strong>next</strong>
-
-        <a class="method-permalink" href="#next-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/7c6c19aa7261af4dd47a185db44f7004157ef10c/src/rpm/spec.cr#L71" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="rewind-instance-method">
-      <div class="signature">
-        
-        def <strong>rewind</strong>
-
-        <a class="method-permalink" href="#rewind-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/7c6c19aa7261af4dd47a185db44f7004157ef10c/src/rpm/spec.cr#L80" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
 
 
 
