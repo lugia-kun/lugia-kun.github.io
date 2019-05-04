@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.27.1">
+<meta name="generator" content="Crystal Docs 0.28.0">
 
 
 <link href="css/style.css" rel="stylesheet" type="text/css">
@@ -334,12 +334,20 @@ pkg.obsoletes <span class="c"># =&gt; Array of Obsolstes.</span></code></pre>
 
 <pre><code class="language-crystal"><span class="c"># with given name</span>
 <span class="t">RPM</span>.transaction <span class="k">do</span> <span class="o">|</span>ts<span class="o">|</span>
+  iter <span class="o">-</span> ts.init_iterator(<span class="t">RPM</span><span class="t">::</span><span class="t">DbiTag</span><span class="t">::</span><span class="t">Name</span>, <span class="s">&quot;package-name-to-find&quot;</span>)
+  iter.each <span class="k">do</span> <span class="o">|</span>pkg<span class="o">|</span>
+    <span class="c"># Iterator over matching packages.</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c"># with given regexp</span>
+<span class="t">RPM</span>.transaction <span class="k">do</span> <span class="o">|</span>ts<span class="o">|</span>
   iter <span class="o">=</span> ts.init_iterator   <span class="c"># Create iterator of installed packages</span>
   
   <span class="c"># Set condition</span>
   iter.regexp(<span class="t">RPM</span><span class="t">::</span><span class="t">DbiTag</span><span class="t">::</span><span class="t">Name</span>, <span class="c"># &lt;= Entry to search (here, Name)</span>
-              <span class="t">RPM</span><span class="t">::</span><span class="t">MireMode</span><span class="t">::</span><span class="t">DEFAULT</span>, <span class="c"># &lt;= Default matching method</span>
-              <span class="s">&quot;simple&quot;</span>) <span class="c">#  &lt;= Name to search</span>
+              <span class="t">RPM</span><span class="t">::</span><span class="t">MireMode</span><span class="t">::</span><span class="t">REGEX</span>, <span class="c"># &lt;= Default matching method</span>
+              <span class="s">&quot;simple.*&quot;</span>) <span class="c">#  &lt;= Name to search</span>
 
   <span class="c"># Iterate over matching packages.</span>
   iter.each <span class="k">do</span> <span class="o">|</span>pkg<span class="o">|</span>
@@ -352,6 +360,24 @@ pkg.obsoletes <span class="c"># =&gt; Array of Obsolstes.</span></code></pre>
   iter <span class="o">=</span> ts.init_iterator
   iter.each <span class="k">do</span> <span class="o">|</span>pkg<span class="o">|</span>
     <span class="c"># ... iterates over all installed packages.</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c"># Lookup package(s) which contains a specific file</span>
+<span class="t">RPM</span>.transaction <span class="k">do</span> <span class="o">|</span>ts<span class="o">|</span>
+  iter <span class="o">=</span> ts.init_iterator(<span class="t">RPM</span><span class="t">::</span><span class="t">DbiTag</span><span class="t">::</span><span class="t">BaseNames</span>, <span class="s">&quot;/path/to/lookup&quot;</span>)
+  iter.each <span class="k">do</span> <span class="o">|</span>pkg<span class="o">|</span>
+    <span class="c"># ... iterates over packages contains &quot;/path/to/lookup&quot;</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c"># NOTE: Using regexp with BaseNames, it will search packages which</span>
+<span class="c"># contain a file whose basename is the given name.</span>
+<span class="t">RPM</span>.transaction <span class="k">do</span> <span class="o">|</span>ts<span class="o">|</span>
+  iter <span class="o">=</span> ts.init_iterator
+  iter.regexp(<span class="t">RPM</span><span class="t">::</span><span class="t">DbiTag</span><span class="t">::</span><span class="t">BaseNames</span>, <span class="t">RPM</span><span class="t">::</span><span class="t">MireMode</span><span class="t">::</span><span class="t">STRCMP</span>, <span class="s">&quot;README&quot;</span>)
+  iter.each <span class="k">do</span> <span class="o">|</span>pkg<span class="o">|</span>
+    <span class="c"># ... iterates over packages which contain a file named &quot;README&quot;</span>
   <span class="k">end</span>
 <span class="k">end</span></code></pre>
 
