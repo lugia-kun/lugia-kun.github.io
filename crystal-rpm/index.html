@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.28.0">
+<meta name="generator" content="Crystal Docs 0.27.1">
 
 
 <link href="css/style.css" rel="stylesheet" type="text/css">
@@ -53,11 +53,6 @@
   
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Conflict" data-name="rpm::conflict">
       <a href="RPM/Conflict.html">Conflict</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/DB" data-name="rpm::db">
-      <a href="RPM/DB.html">DB</a>
       
     </li>
   
@@ -322,12 +317,9 @@ pkg.obsoletes <span class="c"># =&gt; Array of Obsolstes.</span></code></pre>
 <pre><code class="language-crystal"><span class="t">RPM</span>.transaction <span class="k">do</span> <span class="o">|</span>ts<span class="o">|</span>
   path <span class="o">=</span> <span class="s">&quot;pkg_to_install-1.0-0.x86_64.rpm&quot;</span>
   pkg <span class="o">=</span> <span class="t">RPM</span><span class="t">::</span><span class="t">Package</span>.open(path)
-  <span class="k">begin</span>
-    ts.install(pkg, path) <span class="c"># Add installation package. Package path is required.</span>
-    ts.commit   <span class="c"># Run Transaction</span>
-  <span class="k">ensure</span>
-    ts.db.close <span class="c"># must close Database.</span>
-  <span class="k">end</span>
+  
+  ts.install(pkg, path) <span class="c"># Add installation package. Package path is required.</span>
+  ts.commit   <span class="c"># Run Transaction</span>
 <span class="k">end</span></code></pre>
 
 <h3>Search installed packages</h3>
@@ -387,14 +379,10 @@ pkg.obsoletes <span class="c"># =&gt; Array of Obsolstes.</span></code></pre>
 OpenSUSE (see #1).</p>
 
 <pre><code class="language-crystal"><span class="t">RPM</span>.transaction <span class="k">do</span> <span class="o">|</span>ts<span class="o">|</span>
-  <span class="k">begin</span>
-    ts.delete(pkg) <span class="c"># Add to removal package</span>
-    ts.order
-    ts.clean
-    ts.commit   <span class="c"># Run Transaction</span>
-  <span class="k">ensure</span>
-    ts.db.close <span class="c"># must close Database.</span>
-  <span class="k">end</span>
+  ts.delete(pkg) <span class="c"># Add to removal package</span>
+  ts.order
+  ts.clean
+  ts.commit   <span class="c"># Run Transaction</span>
 <span class="k">end</span></code></pre>
 
 <h3>Using Transaction without block</h3>
@@ -407,7 +395,7 @@ OpenSUSE (see #1).</p>
   ts.clean
   ts.commit
 <span class="k">ensure</span>
-  ts.db.close
+  ts.close_db <span class="c"># Must close DB</span>
 <span class="k">end</span>
 ts.finalize <span class="c"># Not nesseary, but recommended.</span></code></pre>
 
@@ -433,7 +421,7 @@ packages[<span class="n">1</span>][<span class="t">RPM</span><span class="t">::<
 
 spec.buildrequires <span class="c"># =&gt; Array of BuildRequires.</span></code></pre>
 
-<h3>Build RPM</h3>
+<h3>Build RPM (not yet available)</h3>
 
 <pre><code class="language-crystal">spec <span class="o">=</span> <span class="t">RPM</span><span class="t">::</span><span class="t">Spec</span>.open(<span class="s">&quot;foo.spec&quot;</span>)
 spec.build</code></pre>

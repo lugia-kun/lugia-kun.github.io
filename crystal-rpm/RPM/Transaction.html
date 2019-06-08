@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.28.0">
+<meta name="generator" content="Crystal Docs 0.27.1">
 
 
 <link href="../css/style.css" rel="stylesheet" type="text/css">
@@ -53,11 +53,6 @@
   
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Conflict" data-name="rpm::conflict">
       <a href="../RPM/Conflict.html">Conflict</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/DB" data-name="rpm::db">
-      <a href="../RPM/DB.html">DB</a>
       
     </li>
   
@@ -290,6 +285,11 @@
 
 
 
+  <h2>Overview</h2>
+
+  <p>Handles RPM transaction. Any RPM Database work must be accessed
+via the Transaction.</p>
+
 
 
 
@@ -306,7 +306,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L5" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L4" target="_blank">
         rpm/transaction.cr
       </a>
     
@@ -321,7 +321,9 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28%2A%2Aopts%29-class-method" class="signature"><strong>.new</strong>(**opts)</a>
+        <a href="#new%28%2A%2Croot%3AString%3D%26quot%3B%2F%26quot%3B%29-class-method" class="signature"><strong>.new</strong>(*, root : String = <span class="s">&quot;/&quot;</span>)</a>
+        
+          <div class="summary"><p>Initialize a new transaction object.</p></div>
         
       </li>
     
@@ -337,6 +339,8 @@
       <li class="entry-summary">
         <a href="#check-instance-method" class="signature"><strong>#check</strong></a>
         
+          <div class="summary"><p>Run transaction check</p></div>
+        
       </li>
     
       <li class="entry-summary">
@@ -347,52 +351,65 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#close_db-instance-method" class="signature"><strong>#close_db</strong></a>
+        
+          <div class="summary"><p>Closes the opened DB handle</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#commit%28%26block%3ACallback%29-instance-method" class="signature"><strong>#commit</strong>(&block : Callback)</a>
+        
+          <div class="summary"><p>Run the pending transaction, with given callback.</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#commit%28callback%3ACallback%3F%3Dnil%29-instance-method" class="signature"><strong>#commit</strong>(callback : Callback? = <span class="n">nil</span>)</a>
         
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#db-instance-method" class="signature"><strong>#db</strong></a>
+          <div class="summary"><p>Run the pending transaction</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#delete%28pkg%3ADependency%29-instance-method" class="signature"><strong>#delete</strong>(pkg : Dependency)</a>
         
+          <div class="summary"><p>Register given dependency to be deleted</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#delete%28pkg%3AString%29-instance-method" class="signature"><strong>#delete</strong>(pkg : String)</a>
+        
+          <div class="summary"><p>Register given package to be deleted (by a name)</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#delete%28pkg%3APackage%29-instance-method" class="signature"><strong>#delete</strong>(pkg : Package)</a>
         
+          <div class="summary"><p>Register given package to be deleted.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#delete_by_iterator%28iter%3AMatchIterator%29-instance-method" class="signature"><strong>#delete_by_iterator</strong>(iter : MatchIterator)</a>
+        
+          <div class="summary"><p>Register all matching packages to be deleted.</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#each%28%26block%29-instance-method" class="signature"><strong>#each</strong>(&block)</a>
         
+          <div class="summary"><p>Iterate over all packages.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#each_match%28key%2Cval%2C%26block%29-instance-method" class="signature"><strong>#each_match</strong>(key, val, &block)</a>
         
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#each_match%28key%2Cval%29-instance-method" class="signature"><strong>#each_match</strong>(key, val)</a>
+          <div class="summary"><p>Iterate over packages of matching key and value.</p></div>
         
       </li>
     
@@ -404,30 +421,35 @@
       <li class="entry-summary">
         <a href="#flags-instance-method" class="signature"><strong>#flags</strong></a>
         
+          <div class="summary"><p>Get transaction flags</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#flags%3D%28flg%29-instance-method" class="signature"><strong>#flags=</strong>(flg)</a>
         
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#init_iterator-instance-method" class="signature"><strong>#init_iterator</strong></a>
+          <div class="summary"><p>Set transaction flags</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#init_iterator%28tag%3ADbiTag%7CDbiTagValue%2Cval%3AString%7CSlice%28UInt8%29%7CNil%3Dnil%29-instance-method" class="signature"><strong>#init_iterator</strong>(tag : DbiTag | DbiTagValue, val : String | Slice(UInt8) | Nil = <span class="n">nil</span>)</a>
+        <a href="#init_iterator%28tag%3ADbiTag%7CDbiTagValue%3DDbiTag%3A%3APackages%2Cval%3AString%7CSlice%28UInt8%29%7CNil%3Dnil%29-instance-method" class="signature"><strong>#init_iterator</strong>(tag : DbiTag | DbiTagValue = <span class="t">DbiTag</span><span class="t">::</span><span class="t">Packages</span>, val : String | Slice(UInt8) | Nil = <span class="n">nil</span>)</a>
+        
+          <div class="summary"><p>Create a new package iterator with given <code>tag</code> and <code>val</code></p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#install%28pkg%3APackage%2Ckey%3AString%29-instance-method" class="signature"><strong>#install</strong>(pkg : Package, key : String)</a>
         
+          <div class="summary"><p>Register a package to be installed</p></div>
+        
       </li>
     
       <li class="entry-summary">
-        <a href="#install_element%28pkg%3APackage%2Ckey%3AString%2C%2A%2Aopts%29-instance-method" class="signature"><strong>#install_element</strong>(pkg : Package, key : String, **opts)</a>
+        <a href="#install_element%28pkg%3APackage%2Ckey%3AString%2C%2A%2Cupgrade%3ABool%3Dfalse%29-instance-method" class="signature"><strong>#install_element</strong>(pkg : Package, key : String, *, upgrade : Bool = <span class="n">false</span>)</a>
+        
+          <div class="summary"><p>Base method of install, upgrade and delete</p></div>
         
       </li>
     
@@ -446,20 +468,28 @@
       <li class="entry-summary">
         <a href="#root_dir-instance-method" class="signature"><strong>#root_dir</strong></a>
         
+          <div class="summary"><p>Gets rootdir</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#root_dir%3D%28dir%3AString%7C%3A%3APointer%28UInt8%29%29-instance-method" class="signature"><strong>#root_dir=</strong>(dir : String | ::Pointer(UInt8))</a>
+        
+          <div class="summary"><p>Sets rootdir</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#set_notify_callback%28closure%3ACallback%3F%2C%26block%29-instance-method" class="signature"><strong>#set_notify_callback</strong>(closure : Callback?, &block)</a>
         
+          <div class="summary"><p>Sets the callback method (for running under running transaction), and yields the given block.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#upgrade%28pkg%3APackage%2Ckey%3AString%29-instance-method" class="signature"><strong>#upgrade</strong>(pkg : Package, key : String)</a>
+        
+          <div class="summary"><p>Register a package to be upgraded</p></div>
         
       </li>
     
@@ -496,18 +526,23 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(**opts)-class-method">
+    <div class="entry-detail" id="new(*,root:String=&amp;quot;/&amp;quot;)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(**opts)
+        def self.<strong>new</strong>(*, root : String = <span class="s">&quot;/&quot;</span>)
 
-        <a class="method-permalink" href="#new%28%2A%2Aopts%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28%2A%2Croot%3AString%3D%26quot%3B%2F%26quot%3B%29-class-method">#</a>
       </div>
+      
+        <div class="doc"><p>Initialize a new transaction object.</p>
+
+<p>You must close the DB with <code><a href="../RPM/Transaction.html#close_db-instance-method">#close_db</a></code> after use.
+Recommended to use <code><a href="../RPM.html#transaction%28root%3D%26quot%3B%2F%26quot%3B%2C%26block%29-class-method">RPM.transaction</a></code> instead.</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L9" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L12" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -527,10 +562,16 @@
         <a class="method-permalink" href="#check-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Run transaction check</p>
+
+<p>Returns a ProblemSet with found problem.</p>
+
+<p>Raises exception if check errored.</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L38" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L31" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -548,7 +589,25 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L118" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L136" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="close_db-instance-method">
+      <div class="signature">
+        
+        def <strong>close_db</strong>
+
+        <a class="method-permalink" href="#close_db-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Closes the opened DB handle</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L168" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -561,10 +620,27 @@
         <a class="method-permalink" href="#commit%28%26block%3ACallback%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Run the pending transaction, with given callback.</p>
+
+<p>To handle exception, following form will be safe:</p>
+
+<pre><code class="language-crystal"> e : <span class="t">Exception</span>? <span class="o">=</span> <span class="n">nil</span>
+ ts.commit <span class="k">do</span> <span class="o">|</span>header, <span class="k">type</span>, amount, total, key<span class="o">|</span>
+   <span class="c"># do something here.</span>
+ <span class="k">rescue</span> ex : <span class="t">Exception</span>
+   <span class="k">if</span> e.<span class="k">nil?</span>
+     e <span class="o">=</span> ex
+   <span class="k">end</span>
+   <span class="t">Pointer</span>(<span class="t">Void</span>).null
+ <span class="k">end</span>
+ <span class="k">if</span> e
+   raise e
+ <span class="k">end</span></code></pre></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L243" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L310" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -577,26 +653,14 @@
         <a class="method-permalink" href="#commit%28callback%3ACallback%3F%3Dnil%29-instance-method">#</a>
       </div>
       
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L223" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="db-instance-method">
-      <div class="signature">
-        
-        def <strong>db</strong>
+        <div class="doc"><p>Run the pending transaction</p>
 
-        <a class="method-permalink" href="#db-instance-method">#</a>
-      </div>
+<p>If callback is not given, default callback will be used.</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L138" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L272" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -609,10 +673,12 @@
         <a class="method-permalink" href="#delete%28pkg%3ADependency%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Register given dependency to be deleted</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L102" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L119" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -625,10 +691,12 @@
         <a class="method-permalink" href="#delete%28pkg%3AString%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Register given package to be deleted (by a name)</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L97" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L113" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -641,10 +709,12 @@
         <a class="method-permalink" href="#delete%28pkg%3APackage%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Register given package to be deleted.</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L85" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L100" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -657,10 +727,15 @@
         <a class="method-permalink" href="#delete_by_iterator%28iter%3AMatchIterator%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Register all matching packages to be deleted.</p>
+
+<p>Note: No package will be rejected (even RPM itself). Exception
+will be raised when some error occured.</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L78" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L92" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -673,10 +748,12 @@
         <a class="method-permalink" href="#each%28%26block%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Iterate over all packages.</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L66" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L70" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -689,26 +766,12 @@
         <a class="method-permalink" href="#each_match%28key%2Cval%2C%26block%29-instance-method">#</a>
       </div>
       
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L61" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="each_match(key,val)-instance-method">
-      <div class="signature">
-        
-        def <strong>each_match</strong>(key, val)
-
-        <a class="method-permalink" href="#each_match%28key%2Cval%29-instance-method">#</a>
-      </div>
+        <div class="doc"><p>Iterate over packages of matching key and value.</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L57" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L64" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -724,7 +787,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L23" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L21" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -737,10 +800,12 @@
         <a class="method-permalink" href="#flags-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Get transaction flags</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L134" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L163" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -753,42 +818,38 @@
         <a class="method-permalink" href="#flags%3D%28flg%29-instance-method">#</a>
       </div>
       
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L130" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="init_iterator-instance-method">
-      <div class="signature">
-        
-        def <strong>init_iterator</strong>
-
-        <a class="method-permalink" href="#init_iterator-instance-method">#</a>
-      </div>
+        <div class="doc"><p>Set transaction flags</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L33" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L158" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="init_iterator(tag:DbiTag|DbiTagValue,val:String|Slice(UInt8)|Nil=nil)-instance-method">
+    <div class="entry-detail" id="init_iterator(tag:DbiTag|DbiTagValue=DbiTag::Packages,val:String|Slice(UInt8)|Nil=nil)-instance-method">
       <div class="signature">
         
-        def <strong>init_iterator</strong>(tag : <a href="../RPM/DbiTag.html">DbiTag</a> | <a href="../RPM/DbiTagValue.html">DbiTagValue</a>, val : String | Slice(UInt8) | Nil = <span class="n">nil</span>)
+        def <strong>init_iterator</strong>(tag : <a href="../RPM/DbiTag.html">DbiTag</a> | <a href="../RPM/DbiTagValue.html">DbiTagValue</a> = <span class="t">DbiTag</span><span class="t">::</span><span class="t">Packages</span>, val : String | Slice(UInt8) | Nil = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#init_iterator%28tag%3ADbiTag%7CDbiTagValue%2Cval%3AString%7CSlice%28UInt8%29%7CNil%3Dnil%29-instance-method">#</a>
+        <a class="method-permalink" href="#init_iterator%28tag%3ADbiTag%7CDbiTagValue%3DDbiTag%3A%3APackages%2Cval%3AString%7CSlice%28UInt8%29%7CNil%3Dnil%29-instance-method">#</a>
       </div>
+      
+        <div class="doc"><p>Create a new package iterator with given <code>tag</code> and <code>val</code></p>
+
+<p>Please refer RPM's <code>rpmtsInitIterator()</code> function for more
+details.</p>
+
+<p>Some examples are:</p>
+
+<ul><li>For package tag lookup, use <code><a href="../RPM/LibRPM/DbiTag.html#Packages">RPM::DbiTag::Packages</a></code>.</li><li>For package name lookup, use <code><a href="../RPM/LibRPM/DbiTag.html#Name">RPM::DbiTag::Name</a></code>.</li><li>For filename (fullpath) lookup, use <code><a href="../RPM/LibRPM/DbiTag.html#BaseNames">RPM::DbiTag::BaseNames</a></code>.</li><li>To lookup by a specific tag, initialize iterator with
+   <code><a href="../RPM/LibRPM/DbiTag.html#Packages">RPM::DbiTag::Packages</a></code>, and use <code>#regexp</code> method.</li></ul></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L45" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L50" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -801,26 +862,32 @@
         <a class="method-permalink" href="#install%28pkg%3APackage%2Ckey%3AString%29-instance-method">#</a>
       </div>
       
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L70" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="install_element(pkg:Package,key:String,**opts)-instance-method">
-      <div class="signature">
-        
-        def <strong>install_element</strong>(pkg : <a href="../RPM/Package.html">Package</a>, key : String, **opts)
+        <div class="doc"><p>Register a package to be installed</p>
 
-        <a class="method-permalink" href="#install_element%28pkg%3APackage%2Ckey%3AString%2C%2A%2Aopts%29-instance-method">#</a>
-      </div>
+<p><code>key</code> should (must?) be the path of the source package.</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L143" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L77" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="install_element(pkg:Package,key:String,*,upgrade:Bool=false)-instance-method">
+      <div class="signature">
+        
+        def <strong>install_element</strong>(pkg : <a href="../RPM/Package.html">Package</a>, key : String, *, upgrade : Bool = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#install_element%28pkg%3APackage%2Ckey%3AString%2C%2A%2Cupgrade%3ABool%3Dfalse%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Base method of install, upgrade and delete</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L176" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -843,7 +910,7 @@ following the new package to be installed.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L113" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L131" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -859,7 +926,7 @@ following the new package to be installed.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L8" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L7" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -872,10 +939,16 @@ following the new package to be installed.</p></div>
         <a class="method-permalink" href="#root_dir-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Gets rootdir</p>
+
+<p>Optimization NOTE: The rootdir will not be cached. Each time
+this method is called, this method allocates a new memory space
+to store the rootdir pathname, and return it.</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L126" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L153" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -888,10 +961,15 @@ following the new package to be installed.</p></div>
         <a class="method-permalink" href="#root_dir%3D%28dir%3AString%7C%3A%3APointer%28UInt8%29%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Sets rootdir</p>
+
+<p>This is possible only while no iterators are bound and no
+installations and/or deletions are set.</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L122" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L144" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -904,10 +982,25 @@ following the new package to be installed.</p></div>
         <a class="method-permalink" href="#set_notify_callback%28closure%3ACallback%3F%2C%26block%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Sets the callback method (for running under running
+transaction), and yields the given block. Callback is set only
+while the block is yielded.</p>
+
+<p>For user-friendly way to apply callback, use following form
+instead:</p>
+
+<pre><code class="language-crystal"> ts.commit <span class="k">do</span> <span class="o">|</span>header, <span class="k">type</span>, amount, total, key<span class="o">|</span>
+   <span class="c"># do something here.</span>
+ <span class="k">end</span></code></pre>
+
+<p><span class="flag purple">NOTE</span>  We notifies <code>rpmtsRun</code> (<code><a href="../RPM/Transaction.html#commit%28%26block%3ACallback%29-instance-method">#commit</a></code>) may raises an Exception
+to the compiler, but raising an exception is highly discouraged.
+It may break the RPM database.</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L168" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L214" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -920,10 +1013,14 @@ following the new package to be installed.</p></div>
         <a class="method-permalink" href="#upgrade%28pkg%3APackage%2Ckey%3AString%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Register a package to be upgraded</p>
+
+<p><code>key</code> should (must?) be the path of the source package.</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/428ec69b2ac4cb6f4f6075ce608daa3dc8636ae0/src/rpm/transaction.cr#L74" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L84" target="_blank">View source</a>]
         
       </div>
     </div>
