@@ -290,8 +290,10 @@
 <div class="main-content">
 <h1>crystal-rpm</h1>
 
-<p>The [RPM] bindings for [Crystal] language based on [ruby-rpm] and
-[ruby-rpm-ffi].</p>
+<p>The <a href="http://rpm.org/" target="_blank">RPM</a> bindings for
+<a href="https://crystal-lang.org/" target="_blank">Crystal</a> language based on
+<a href="https://github.com/dmacvicar/ruby-rpm" target="_blank">ruby-rpm</a> and
+<a href="https://github.com/dmacvicar/ruby-rpm-ffi" target="_blank">ruby-rpm-ffi</a>.</p>
 
 <p>It supports RPM 4.8.0 or later.</p>
 
@@ -341,40 +343,58 @@ pkg.obsoletes <span class="c"># =&gt; Array of Obsolstes.</span></code></pre>
 
 <pre><code class="language-crystal"><span class="c"># with given name</span>
 <span class="t">RPM</span>.transaction <span class="k">do</span> <span class="o">|</span>ts<span class="o">|</span>
-  iter <span class="o">-</span> ts.init_iterator(<span class="t">RPM</span><span class="t">::</span><span class="t">DbiTag</span><span class="t">::</span><span class="t">Name</span>, <span class="s">&quot;package-name-to-find&quot;</span>)
-  iter.each <span class="k">do</span> <span class="o">|</span>pkg<span class="o">|</span>
-    <span class="c"># Iterator over matching packages.</span>
+  iter <span class="o">=</span> ts.init_iterator(<span class="t">RPM</span><span class="t">::</span><span class="t">DbiTag</span><span class="t">::</span><span class="t">Name</span>, <span class="s">&quot;package-name-to-find&quot;</span>)
+  
+  <span class="c"># You should make sure iterator has finalized (for closing database)</span>
+  <span class="k">begin</span>
+    iter.each <span class="k">do</span> <span class="o">|</span>pkg<span class="o">|</span>
+      <span class="c"># Iterator over matching packages.</span>
+    <span class="k">end</span>
+  <span class="k">ensure</span>
+    iter.finalize
   <span class="k">end</span>
 <span class="k">end</span>
 
 <span class="c"># with given regexp</span>
 <span class="t">RPM</span>.transaction <span class="k">do</span> <span class="o">|</span>ts<span class="o">|</span>
   iter <span class="o">=</span> ts.init_iterator   <span class="c"># Create iterator of installed packages</span>
-  
-  <span class="c"># Set condition</span>
-  iter.regexp(<span class="t">RPM</span><span class="t">::</span><span class="t">DbiTag</span><span class="t">::</span><span class="t">Name</span>, <span class="c"># &lt;= Entry to search (here, Name)</span>
-              <span class="t">RPM</span><span class="t">::</span><span class="t">MireMode</span><span class="t">::</span><span class="t">REGEX</span>, <span class="c"># &lt;= Default matching method</span>
-              <span class="s">&quot;simple.*&quot;</span>) <span class="c">#  &lt;= Name to search</span>
 
-  <span class="c"># Iterate over matching packages.</span>
-  iter.each <span class="k">do</span> <span class="o">|</span>pkg<span class="o">|</span>
-    puts pkg[<span class="t">RPM</span><span class="t">::</span><span class="t">Tag</span><span class="t">::</span><span class="t">Version</span>].<span class="k">as</span>(<span class="t">String</span>) <span class="c"># =&gt; (Version of package &quot;simple&quot;)</span>
+  <span class="k">begin</span>
+    <span class="c"># Set condition</span>
+    iter.regexp(<span class="t">RPM</span><span class="t">::</span><span class="t">DbiTag</span><span class="t">::</span><span class="t">Name</span>, <span class="c"># &lt;= Entry to search (here, Name)</span>
+                <span class="t">RPM</span><span class="t">::</span><span class="t">MireMode</span><span class="t">::</span><span class="t">REGEX</span>, <span class="c"># &lt;= Default matching method</span>
+                <span class="s">&quot;simple.*&quot;</span>) <span class="c">#  &lt;= Name to search</span>
+    
+    <span class="c"># Iterate over matching packages.</span>
+    iter.each <span class="k">do</span> <span class="o">|</span>pkg<span class="o">|</span>
+      puts pkg[<span class="t">RPM</span><span class="t">::</span><span class="t">Tag</span><span class="t">::</span><span class="t">Version</span>].<span class="k">as</span>(<span class="t">String</span>) <span class="c"># =&gt; (Version of package &quot;simple&quot;)</span>
+    <span class="k">end</span>
+  <span class="k">ensure</span>
+    iter.finalize
   <span class="k">end</span>
 <span class="k">end</span>
 
 <span class="c"># Iterate over all installed packages</span>
 <span class="t">RPM</span>.transaction <span class="k">do</span> <span class="o">|</span>ts<span class="o">|</span>
   iter <span class="o">=</span> ts.init_iterator
-  iter.each <span class="k">do</span> <span class="o">|</span>pkg<span class="o">|</span>
-    <span class="c"># ... iterates over all installed packages.</span>
+  <span class="k">begin</span>
+    iter.each <span class="k">do</span> <span class="o">|</span>pkg<span class="o">|</span>
+      <span class="c"># ... iterates over all installed packages.</span>
+    <span class="k">end</span>
+  <span class="k">ensure</span>
+    iter.finalize
   <span class="k">end</span>
 <span class="k">end</span>
 
 <span class="c"># Lookup package(s) which contains a specific file</span>
 <span class="t">RPM</span>.transaction <span class="k">do</span> <span class="o">|</span>ts<span class="o">|</span>
   iter <span class="o">=</span> ts.init_iterator(<span class="t">RPM</span><span class="t">::</span><span class="t">DbiTag</span><span class="t">::</span><span class="t">BaseNames</span>, <span class="s">&quot;/path/to/lookup&quot;</span>)
-  iter.each <span class="k">do</span> <span class="o">|</span>pkg<span class="o">|</span>
-    <span class="c"># ... iterates over packages contains &quot;/path/to/lookup&quot;</span>
+  <span class="k">begin</span>
+    iter.each <span class="k">do</span> <span class="o">|</span>pkg<span class="o">|</span>
+      <span class="c"># ... iterates over packages contains &quot;/path/to/lookup&quot;</span>
+    <span class="k">end</span>
+  <span class="k">ensure</span>
+    iter.finalize
   <span class="k">end</span>
 <span class="k">end</span>
 
@@ -382,9 +402,13 @@ pkg.obsoletes <span class="c"># =&gt; Array of Obsolstes.</span></code></pre>
 <span class="c"># contain a file whose basename is the given name.</span>
 <span class="t">RPM</span>.transaction <span class="k">do</span> <span class="o">|</span>ts<span class="o">|</span>
   iter <span class="o">=</span> ts.init_iterator
-  iter.regexp(<span class="t">RPM</span><span class="t">::</span><span class="t">DbiTag</span><span class="t">::</span><span class="t">BaseNames</span>, <span class="t">RPM</span><span class="t">::</span><span class="t">MireMode</span><span class="t">::</span><span class="t">STRCMP</span>, <span class="s">&quot;README&quot;</span>)
-  iter.each <span class="k">do</span> <span class="o">|</span>pkg<span class="o">|</span>
-    <span class="c"># ... iterates over packages which contain a file named &quot;README&quot;</span>
+  <span class="k">begin</span>
+    iter.regexp(<span class="t">RPM</span><span class="t">::</span><span class="t">DbiTag</span><span class="t">::</span><span class="t">BaseNames</span>, <span class="t">RPM</span><span class="t">::</span><span class="t">MireMode</span><span class="t">::</span><span class="t">STRCMP</span>, <span class="s">&quot;README&quot;</span>)
+    iter.each <span class="k">do</span> <span class="o">|</span>pkg<span class="o">|</span>
+      <span class="c"># ... iterates over packages which contain a file named &quot;README&quot;</span>
+    <span class="k">end</span>
+  <span class="k">ensure</span>
+    iter.finalize
   <span class="k">end</span>
 <span class="k">end</span></code></pre>
 
@@ -420,9 +444,11 @@ ts.finalize <span class="c"># Not nesseary, but recommended.</span></code></pre>
   ts.install(...)
   ts.order
   ts.clean
-  problems <span class="o">=</span> ts.check
-  problems.each <span class="k">do</span> <span class="o">|</span>problem<span class="o">|</span>
-    puts problem.to_s <span class="c"># =&gt; Output install (typically dependency) problems.</span>
+  ts.check
+  <span class="k">if</span> (problems <span class="o">=</span> ts.problems?)
+    problems.each <span class="k">do</span> <span class="o">|</span>problem<span class="o">|</span>
+      puts problem.to_s <span class="c"># =&gt; Output install (typically dependency) problems.</span>
+    <span class="k">end</span>
   <span class="k">end</span>
 <span class="k">end</span></code></pre>
 
@@ -436,18 +462,19 @@ packages[<span class="n">1</span>][<span class="t">RPM</span><span class="t">::<
 
 spec.buildrequires <span class="c"># =&gt; Array of BuildRequires.</span></code></pre>
 
-<h3>Build RPM (not yet available)</h3>
+<h3>Build RPM</h3>
 
 <pre><code class="language-crystal">spec <span class="o">=</span> <span class="t">RPM</span><span class="t">::</span><span class="t">Spec</span>.open(<span class="s">&quot;foo.spec&quot;</span>)
 spec.build</code></pre>
 
 <h2>Development</h2>
 
-<p>The definitiions of structs are written by hand. Tests can check their
+<p>The definitions of structs are written by hand. Tests can check their
 size and member offsets if you have a C compiler (optional).</p>
 
-<p>[fakechroot] (recommended) or root permission (i.e., <code>sudo</code>) is
-required to run <code>crystal spec</code>, since this spec uses <code>chroot()</code>.</p>
+<p><a href="https://github.com/dex4er/fakechroot/wiki" target="_blank">fakechroot</a> (recommended)
+or root permission (i.e., <code>sudo</code>) is required to run <code>crystal spec</code>,
+since this spec uses <code>chroot()</code>.</p>
 
 <p>Alternatively, using Docker is another method to test:</p>
 
@@ -465,12 +492,6 @@ is too old and does not work with shards).</p>
 <h2>Contributors</h2>
 
 <ul><li><a href="https://github.com/lugia-kun" target="_blank">Hajime Yoshimori</a> - creator and maintainer</li></ul>
-
-<p>[RPM]: http://rpm.org/
-[Crystal]: https://crystal-lang.org/
-[ruby-rpm]: https://github.com/dmacvicar/ruby-rpm
-[ruby-rpm-ffi]: https://github.com/dmacvicar/ruby-rpm-ffi
-[fakechroot]: https://github.com/dex4er/fakechroot/wiki</p>
 </div>
 </body>
 </html>
