@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.27.1">
+<meta name="generator" content="Crystal Docs 0.28.0">
 
 
 <link href="../css/style.css" rel="stylesheet" type="text/css">
@@ -40,6 +40,16 @@
       <a href="../RPM.html">RPM</a>
       
         <ul>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/BuildFlags" data-name="rpm::buildflags">
+      <a href="../RPM/BuildFlags.html">BuildFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/BuildPkgFlags" data-name="rpm::buildpkgflags">
+      <a href="../RPM/BuildPkgFlags.html">BuildPkgFlags</a>
+      
+    </li>
   
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/CallbackType" data-name="rpm::callbacktype">
       <a href="../RPM/CallbackType.html">CallbackType</a>
@@ -251,6 +261,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TransactionError" data-name="rpm::transactionerror">
+      <a href="../RPM/TransactionError.html">TransactionError</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TransactionFlags" data-name="rpm::transactionflags">
       <a href="../RPM/TransactionFlags.html">TransactionFlags</a>
       
@@ -308,7 +323,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/version.cr#L2" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/version.cr#L2" target="_blank">
         rpm/version.cr
       </a>
     
@@ -323,17 +338,17 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28str%3AString%2Cepoch%3AInt%29-class-method" class="signature"><strong>.new</strong>(str : String, epoch : Int)</a>
+        <a href="#new(str:String,epoch:Int)-class-method" class="signature"><strong>.new</strong>(str : String, epoch : Int)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28v%3AString%2Cr%3AString%2Cepoch%3AInt%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(v : String, r : String, epoch : Int? = <span class="n">nil</span>)</a>
+        <a href="#new(v:String,r:String,epoch:Int?=nil)-class-method" class="signature"><strong>.new</strong>(v : String, r : String, epoch : Int? = <span class="n">nil</span>)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28str%3AString%29-class-method" class="signature"><strong>.new</strong>(str : String)</a>
+        <a href="#new(str:String)-class-method" class="signature"><strong>.new</strong>(str : String)</a>
         
       </li>
     
@@ -345,7 +360,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#parse_evr%28evr%3AString%29-class-method" class="signature"><strong>.parse_evr</strong>(evr : String)</a>
+        <a href="#parse_evr(evr:String)-class-method" class="signature"><strong>.parse_evr</strong>(evr : String)</a>
         
       </li>
     
@@ -357,12 +372,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#%28other%3AVersion%29-instance-method" class="signature"><strong>#<=></strong>(other : Version)</a>
+        <a href="#(other:Version)-instance-method" class="signature"><strong>#<=></strong>(other : Version)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#e%3AInt32%3F-instance-method" class="signature"><strong>#e</strong> : Int32?</a>
+        <a href="#e:Int32?-instance-method" class="signature"><strong>#e</strong> : Int32?</a>
         
       </li>
     
@@ -372,17 +387,17 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#newer%3F%28other%3AVersion%29-instance-method" class="signature"><strong>#newer?</strong>(other : Version)</a>
+        <a href="#newer?(other:Version)-instance-method" class="signature"><strong>#newer?</strong>(other : Version)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#older%3F%28other%3AVersion%29-instance-method" class="signature"><strong>#older?</strong>(other : Version)</a>
+        <a href="#older?(other:Version)-instance-method" class="signature"><strong>#older?</strong>(other : Version)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#r%3AString%3F-instance-method" class="signature"><strong>#r</strong> : String?</a>
+        <a href="#r:String?-instance-method" class="signature"><strong>#r</strong> : String?</a>
         
       </li>
     
@@ -407,7 +422,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#v%3AString-instance-method" class="signature"><strong>#v</strong> : String</a>
+        <a href="#v:String-instance-method" class="signature"><strong>#v</strong> : String</a>
         
       </li>
     
@@ -459,13 +474,13 @@
         
         def self.<strong>new</strong>(str : String, epoch : Int)
 
-        <a class="method-permalink" href="#new%28str%3AString%2Cepoch%3AInt%29-class-method">#</a>
+        <a class="method-permalink" href="#new(str:String,epoch:Int)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/version.cr#L34" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/version.cr#L34" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -475,13 +490,13 @@
         
         def self.<strong>new</strong>(v : String, r : String, epoch : Int? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new%28v%3AString%2Cr%3AString%2Cepoch%3AInt%3F%3Dnil%29-class-method">#</a>
+        <a class="method-permalink" href="#new(v:String,r:String,epoch:Int?=nil)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/version.cr#L39" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/version.cr#L39" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -491,13 +506,13 @@
         
         def self.<strong>new</strong>(str : String)
 
-        <a class="method-permalink" href="#new%28str%3AString%29-class-method">#</a>
+        <a class="method-permalink" href="#new(str:String)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/version.cr#L30" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/version.cr#L30" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -512,13 +527,13 @@
         
         def self.<strong>parse_evr</strong>(evr : String)
 
-        <a class="method-permalink" href="#parse_evr%28evr%3AString%29-class-method">#</a>
+        <a class="method-permalink" href="#parse_evr(evr:String)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/version.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/version.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -533,13 +548,13 @@
         
         def <strong><=></strong>(other : <a href="../RPM/Version.html">Version</a>)
 
-        <a class="method-permalink" href="#%28other%3AVersion%29-instance-method">#</a>
+        <a class="method-permalink" href="#(other:Version)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/version.cr#L47" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/version.cr#L47" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -549,13 +564,13 @@
         
         def <strong>e</strong> : Int32?
 
-        <a class="method-permalink" href="#e%3AInt32%3F-instance-method">#</a>
+        <a class="method-permalink" href="#e:Int32?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/version.cr#L28" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/version.cr#L28" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -571,7 +586,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/version.cr#L77" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/version.cr#L77" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -581,13 +596,13 @@
         
         def <strong>newer?</strong>(other : <a href="../RPM/Version.html">Version</a>)
 
-        <a class="method-permalink" href="#newer%3F%28other%3AVersion%29-instance-method">#</a>
+        <a class="method-permalink" href="#newer?(other:Version)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/version.cr#L51" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/version.cr#L51" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -597,13 +612,13 @@
         
         def <strong>older?</strong>(other : <a href="../RPM/Version.html">Version</a>)
 
-        <a class="method-permalink" href="#older%3F%28other%3AVersion%29-instance-method">#</a>
+        <a class="method-permalink" href="#older?(other:Version)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/version.cr#L55" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/version.cr#L55" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -613,13 +628,13 @@
         
         def <strong>r</strong> : String?
 
-        <a class="method-permalink" href="#r%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#r:String?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/version.cr#L30" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/version.cr#L30" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -635,7 +650,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/version.cr#L63" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/version.cr#L63" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -651,7 +666,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/version.cr#L59" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/version.cr#L59" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -667,7 +682,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/version.cr#L67" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/version.cr#L67" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -683,7 +698,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/version.cr#L72" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/version.cr#L72" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -693,13 +708,13 @@
         
         def <strong>v</strong> : String
 
-        <a class="method-permalink" href="#v%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#v:String-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/version.cr#L29" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/version.cr#L29" target="_blank">View source</a>]
         
       </div>
     </div>

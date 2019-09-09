@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.27.1">
+<meta name="generator" content="Crystal Docs 0.28.0">
 
 
 <link href="../css/style.css" rel="stylesheet" type="text/css">
@@ -40,6 +40,16 @@
       <a href="../RPM.html">RPM</a>
       
         <ul>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/BuildFlags" data-name="rpm::buildflags">
+      <a href="../RPM/BuildFlags.html">BuildFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/BuildPkgFlags" data-name="rpm::buildpkgflags">
+      <a href="../RPM/BuildPkgFlags.html">BuildPkgFlags</a>
+      
+    </li>
   
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/CallbackType" data-name="rpm::callbacktype">
       <a href="../RPM/CallbackType.html">CallbackType</a>
@@ -251,6 +261,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TransactionError" data-name="rpm::transactionerror">
+      <a href="../RPM/TransactionError.html">TransactionError</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TransactionFlags" data-name="rpm::transactionflags">
       <a href="../RPM/TransactionFlags.html">TransactionFlags</a>
       
@@ -308,7 +323,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/match_iterator.cr#L2" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/match_iterator.cr#L2" target="_blank">
         rpm/match_iterator.cr
       </a>
     
@@ -323,7 +338,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28ptr%29-class-method" class="signature"><strong>.new</strong>(ptr)</a>
+        <a href="#new(ptr)-class-method" class="signature"><strong>.new</strong>(ptr)</a>
         
       </li>
     
@@ -337,7 +352,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#each%28%26block%29-instance-method" class="signature"><strong>#each</strong>(&block)</a>
+        <a href="#each(&block)-instance-method" class="signature"><strong>#each</strong>(&block)</a>
         
       </li>
     
@@ -357,22 +372,22 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#regexp%28%2Aargs%29-instance-method" class="signature"><strong>#regexp</strong>(*args)</a>
+        <a href="#regexp(*args)-instance-method" class="signature"><strong>#regexp</strong>(*args)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_iterator_re%28tag%3ADbiTag%7CDbiTagValue%2Cmode%3AMireMode%2Cstring%3AString%29-instance-method" class="signature"><strong>#set_iterator_re</strong>(tag : DbiTag | DbiTagValue, mode : MireMode, string : String)</a>
+        <a href="#set_iterator_re(tag:DbiTag%7CDbiTagValue,mode:MireMode,string:String)-instance-method" class="signature"><strong>#set_iterator_re</strong>(tag : DbiTag | DbiTagValue, mode : MireMode, string : String)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_iterator_version%28version%3ARPM%3A%3AVersion%29-instance-method" class="signature"><strong>#set_iterator_version</strong>(version : RPM::Version)</a>
+        <a href="#set_iterator_version(version:RPM::Version)-instance-method" class="signature"><strong>#set_iterator_version</strong>(version : RPM::Version)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#version%28%2Aargs%29-instance-method" class="signature"><strong>#version</strong>(*args)</a>
+        <a href="#version(*args)-instance-method" class="signature"><strong>#version</strong>(*args)</a>
         
       </li>
     
@@ -424,13 +439,13 @@
         
         def self.<strong>new</strong>(ptr)
 
-        <a class="method-permalink" href="#new%28ptr%29-class-method">#</a>
+        <a class="method-permalink" href="#new(ptr)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/match_iterator.cr#L7" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/match_iterator.cr#L7" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -447,13 +462,13 @@
         
         def <strong>each</strong>(&block)
 
-        <a class="method-permalink" href="#each%28%26block%29-instance-method">#</a>
+        <a class="method-permalink" href="#each(&block)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/match_iterator.cr#L14" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/match_iterator.cr#L14" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -469,7 +484,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/match_iterator.cr#L10" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/match_iterator.cr#L10" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -485,7 +500,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/match_iterator.cr#L20" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/match_iterator.cr#L20" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -501,7 +516,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/match_iterator.cr#L33" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/match_iterator.cr#L33" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -511,13 +526,13 @@
         
         def <strong>regexp</strong>(*args)
 
-        <a class="method-permalink" href="#regexp%28%2Aargs%29-instance-method">#</a>
+        <a class="method-permalink" href="#regexp(*args)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/match_iterator.cr#L47" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/match_iterator.cr#L47" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -527,13 +542,13 @@
         
         def <strong>set_iterator_re</strong>(tag : <a href="../RPM/DbiTag.html">DbiTag</a> | <a href="../RPM/DbiTagValue.html">DbiTagValue</a>, mode : <a href="../RPM/MireMode.html">MireMode</a>, string : String)
 
-        <a class="method-permalink" href="#set_iterator_re%28tag%3ADbiTag%7CDbiTagValue%2Cmode%3AMireMode%2Cstring%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#set_iterator_re(tag:DbiTag%7CDbiTagValue,mode:MireMode,string:String)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/match_iterator.cr#L41" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/match_iterator.cr#L41" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -543,13 +558,13 @@
         
         def <strong>set_iterator_version</strong>(version : <a href="../RPM/Version.html">RPM::Version</a>)
 
-        <a class="method-permalink" href="#set_iterator_version%28version%3ARPM%3A%3AVersion%29-instance-method">#</a>
+        <a class="method-permalink" href="#set_iterator_version(version:RPM::Version)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/match_iterator.cr#L51" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/match_iterator.cr#L51" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -559,13 +574,13 @@
         
         def <strong>version</strong>(*args)
 
-        <a class="method-permalink" href="#version%28%2Aargs%29-instance-method">#</a>
+        <a class="method-permalink" href="#version(*args)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/match_iterator.cr#L62" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/match_iterator.cr#L62" target="_blank">View source</a>]
         
       </div>
     </div>

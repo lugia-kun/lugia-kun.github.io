@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.27.1">
+<meta name="generator" content="Crystal Docs 0.28.0">
 
 
 <link href="../css/style.css" rel="stylesheet" type="text/css">
@@ -40,6 +40,16 @@
       <a href="../RPM.html">RPM</a>
       
         <ul>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/BuildFlags" data-name="rpm::buildflags">
+      <a href="../RPM/BuildFlags.html">BuildFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/BuildPkgFlags" data-name="rpm::buildpkgflags">
+      <a href="../RPM/BuildPkgFlags.html">BuildPkgFlags</a>
+      
+    </li>
   
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/CallbackType" data-name="rpm::callbacktype">
       <a href="../RPM/CallbackType.html">CallbackType</a>
@@ -251,6 +261,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TransactionError" data-name="rpm::transactionerror">
+      <a href="../RPM/TransactionError.html">TransactionError</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TransactionFlags" data-name="rpm::transactionflags">
       <a href="../RPM/TransactionFlags.html">TransactionFlags</a>
       
@@ -301,14 +316,14 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/dependency.cr#L2" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/dependency.cr#L2" target="_blank">
         rpm/dependency.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/package.cr#L13" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/package.cr#L13" target="_blank">
         rpm/package.cr
       </a>
     
@@ -323,12 +338,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28hdr%3ALibRPM%3A%3AHeader%29-class-method" class="signature"><strong>.new</strong>(hdr : LibRPM::Header)</a>
+        <a href="#new(hdr:LibRPM::Header)-class-method" class="signature"><strong>.new</strong>(hdr : LibRPM::Header)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28filename%3AString%29-class-method" class="signature"><strong>.new</strong>(filename : String)</a>
+        <a href="#new(filename:String)-class-method" class="signature"><strong>.new</strong>(filename : String)</a>
         
       </li>
     
@@ -340,12 +355,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#create%28name%3AString%2Cversion%3AVersion%29-class-method" class="signature"><strong>.create</strong>(name : String, version : Version)</a>
+        <a href="#create(name:String,version:Version)-class-method" class="signature"><strong>.create</strong>(name : String, version : Version)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#open%28filename%3AString%29-class-method" class="signature"><strong>.open</strong>(filename : String)</a>
+        <a href="#open(filename:String)-class-method" class="signature"><strong>.open</strong>(filename : String)</a>
         
       </li>
     
@@ -357,12 +372,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#%5B%5D%28tag%3ADbiTag%29-instance-method" class="signature"><strong>#[]</strong>(tag : DbiTag)</a>
+        <a href="#[](tag:DbiTag)-instance-method" class="signature"><strong>#[]</strong>(tag : DbiTag)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%5B%5D%28tag%3ATag%7CTagValue%29-instance-method" class="signature"><strong>#[]</strong>(tag : Tag | TagValue)</a>
+        <a href="#[](tag:Tag%7CTagValue)-instance-method" class="signature"><strong>#[]</strong>(tag : Tag | TagValue)</a>
         
       </li>
     
@@ -382,7 +397,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#hdr%3ALibRPM%3A%3AHeader-instance-method" class="signature"><strong>#hdr</strong> : LibRPM::Header</a>
+        <a href="#hdr:LibRPM::Header-instance-method" class="signature"><strong>#hdr</strong> : LibRPM::Header</a>
         
       </li>
     
@@ -412,7 +427,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#sprintf%28fmt%29-instance-method" class="signature"><strong>#sprintf</strong>(fmt)</a>
+        <a href="#sprintf(fmt)-instance-method" class="signature"><strong>#sprintf</strong>(fmt)</a>
         
       </li>
     
@@ -454,13 +469,13 @@
         
         def self.<strong>new</strong>(hdr : LibRPM::Header)
 
-        <a class="method-permalink" href="#new%28hdr%3ALibRPM%3A%3AHeader%29-class-method">#</a>
+        <a class="method-permalink" href="#new(hdr:LibRPM::Header)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/package.cr#L42" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/package.cr#L42" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -470,13 +485,13 @@
         
         def self.<strong>new</strong>(filename : String)
 
-        <a class="method-permalink" href="#new%28filename%3AString%29-class-method">#</a>
+        <a class="method-permalink" href="#new(filename:String)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/package.cr#L50" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/package.cr#L50" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -491,13 +506,13 @@
         
         def self.<strong>create</strong>(name : String, version : <a href="../RPM/Version.html">Version</a>)
 
-        <a class="method-permalink" href="#create%28name%3AString%2Cversion%3AVersion%29-class-method">#</a>
+        <a class="method-permalink" href="#create(name:String,version:Version)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/package.cr#L16" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/package.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -507,13 +522,13 @@
         
         def self.<strong>open</strong>(filename : String)
 
-        <a class="method-permalink" href="#open%28filename%3AString%29-class-method">#</a>
+        <a class="method-permalink" href="#open(filename:String)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/package.cr#L38" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/package.cr#L38" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -528,13 +543,13 @@
         
         def <strong>[]</strong>(tag : <a href="../RPM/DbiTag.html">DbiTag</a>)
 
-        <a class="method-permalink" href="#%5B%5D%28tag%3ADbiTag%29-instance-method">#</a>
+        <a class="method-permalink" href="#[](tag:DbiTag)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/package.cr#L196" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/package.cr#L196" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -544,13 +559,13 @@
         
         def <strong>[]</strong>(tag : <a href="../RPM/Tag.html">Tag</a> | <a href="../RPM/TagValue.html">TagValue</a>)
 
-        <a class="method-permalink" href="#%5B%5D%28tag%3ATag%7CTagValue%29-instance-method">#</a>
+        <a class="method-permalink" href="#[](tag:Tag%7CTagValue)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/package.cr#L205" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/package.cr#L205" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -566,7 +581,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/package.cr#L179" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/package.cr#L179" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -582,7 +597,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/package.cr#L85" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/package.cr#L85" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -598,7 +613,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/package.cr#L63" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/package.cr#L63" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -608,13 +623,13 @@
         
         def <strong>hdr</strong> : LibRPM::Header
 
-        <a class="method-permalink" href="#hdr%3ALibRPM%3A%3AHeader-instance-method">#</a>
+        <a class="method-permalink" href="#hdr:LibRPM::Header-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/package.cr#L16" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/package.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -630,7 +645,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/package.cr#L81" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/package.cr#L81" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -646,7 +661,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/package.cr#L175" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/package.cr#L175" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -662,7 +677,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/package.cr#L171" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/package.cr#L171" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -678,7 +693,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/package.cr#L167" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/package.cr#L167" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -694,7 +709,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/package.cr#L77" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/package.cr#L77" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -704,13 +719,13 @@
         
         def <strong>sprintf</strong>(fmt)
 
-        <a class="method-permalink" href="#sprintf%28fmt%29-instance-method">#</a>
+        <a class="method-permalink" href="#sprintf(fmt)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/package.cr#L70" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/package.cr#L70" target="_blank">View source</a>]
         
       </div>
     </div>

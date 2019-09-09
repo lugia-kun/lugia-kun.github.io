@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.27.1">
+<meta name="generator" content="Crystal Docs 0.28.0">
 
 
 <link href="../../css/style.css" rel="stylesheet" type="text/css">
@@ -40,6 +40,16 @@
       <a href="../../RPM.html">RPM</a>
       
         <ul>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/BuildFlags" data-name="rpm::buildflags">
+      <a href="../../RPM/BuildFlags.html">BuildFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/BuildPkgFlags" data-name="rpm::buildpkgflags">
+      <a href="../../RPM/BuildPkgFlags.html">BuildPkgFlags</a>
+      
+    </li>
   
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/CallbackType" data-name="rpm::callbacktype">
       <a href="../../RPM/CallbackType.html">CallbackType</a>
@@ -251,6 +261,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TransactionError" data-name="rpm::transactionerror">
+      <a href="../../RPM/TransactionError.html">TransactionError</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TransactionFlags" data-name="rpm::transactionflags">
       <a href="../../RPM/TransactionFlags.html">TransactionFlags</a>
       
@@ -301,7 +316,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L190" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L203" target="_blank">
         rpm/transaction.cr
       </a>
     
@@ -316,7 +331,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28transaction%2Ccallback%29-class-method" class="signature"><strong>.new</strong>(transaction, callback)</a>
+        <a href="#new(transaction,callback)-class-method" class="signature"><strong>.new</strong>(transaction, callback)</a>
         
       </li>
     
@@ -330,32 +345,42 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#callback%3ACallback-instance-method" class="signature"><strong>#callback</strong> : Callback</a>
+        <a href="#callback:Callback-instance-method" class="signature"><strong>#callback</strong> : Callback</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#callback%3D%28callback%3ACallback%29-instance-method" class="signature"><strong>#callback=</strong>(callback : Callback)</a>
+        <a href="#callback=(callback:Callback)-instance-method" class="signature"><strong>#callback=</strong>(callback : Callback)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#fdt%3AFileDescriptor%3F-instance-method" class="signature"><strong>#fdt</strong> : FileDescriptor?</a>
+        <a href="#cfd:IO::FileDescriptor?-instance-method" class="signature"><strong>#cfd</strong> : IO::FileDescriptor?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#fdt%3D%28fdt%3AFileDescriptor%3F%29-instance-method" class="signature"><strong>#fdt=</strong>(fdt : FileDescriptor?)</a>
+        <a href="#cfd=(cfd:IO::FileDescriptor?)-instance-method" class="signature"><strong>#cfd=</strong>(cfd : IO::FileDescriptor?)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#transaction%3ATransaction-instance-method" class="signature"><strong>#transaction</strong> : Transaction</a>
+        <a href="#fdt:FileDescriptor?-instance-method" class="signature"><strong>#fdt</strong> : FileDescriptor?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#transaction%3D%28transaction%3ATransaction%29-instance-method" class="signature"><strong>#transaction=</strong>(transaction : Transaction)</a>
+        <a href="#fdt=(fdt:FileDescriptor?)-instance-method" class="signature"><strong>#fdt=</strong>(fdt : FileDescriptor?)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#transaction:Transaction-instance-method" class="signature"><strong>#transaction</strong> : Transaction</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#transaction=(transaction:Transaction)-instance-method" class="signature"><strong>#transaction=</strong>(transaction : Transaction)</a>
         
       </li>
     
@@ -397,13 +422,13 @@
         
         def self.<strong>new</strong>(transaction, callback)
 
-        <a class="method-permalink" href="#new%28transaction%2Ccallback%29-class-method">#</a>
+        <a class="method-permalink" href="#new(transaction,callback)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L195" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L209" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -420,13 +445,13 @@
         
         def <strong>callback</strong> : <a href="../../RPM/Transaction/Callback.html">Callback</a>
 
-        <a class="method-permalink" href="#callback%3ACallback-instance-method">#</a>
+        <a class="method-permalink" href="#callback:Callback-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L194" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L207" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -436,13 +461,45 @@
         
         def <strong>callback=</strong>(callback : <a href="../../RPM/Transaction/Callback.html">Callback</a>)
 
-        <a class="method-permalink" href="#callback%3D%28callback%3ACallback%29-instance-method">#</a>
+        <a class="method-permalink" href="#callback=(callback:Callback)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L198" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L211" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cfd:IO::FileDescriptor?-instance-method">
+      <div class="signature">
+        
+        def <strong>cfd</strong> : IO::FileDescriptor?
+
+        <a class="method-permalink" href="#cfd:IO::FileDescriptor?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L209" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cfd=(cfd:IO::FileDescriptor?)-instance-method">
+      <div class="signature">
+        
+        def <strong>cfd=</strong>(cfd : IO::FileDescriptor?)
+
+        <a class="method-permalink" href="#cfd=(cfd:IO::FileDescriptor?)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L213" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -452,13 +509,13 @@
         
         def <strong>fdt</strong> : <a href="../../RPM/FileDescriptor.html">FileDescriptor</a>?
 
-        <a class="method-permalink" href="#fdt%3AFileDescriptor%3F-instance-method">#</a>
+        <a class="method-permalink" href="#fdt:FileDescriptor?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L195" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L208" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -468,13 +525,13 @@
         
         def <strong>fdt=</strong>(fdt : <a href="../../RPM/FileDescriptor.html">FileDescriptor</a>?)
 
-        <a class="method-permalink" href="#fdt%3D%28fdt%3AFileDescriptor%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#fdt=(fdt:FileDescriptor?)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L199" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L212" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -484,13 +541,13 @@
         
         def <strong>transaction</strong> : <a href="../../RPM/Transaction.html">Transaction</a>
 
-        <a class="method-permalink" href="#transaction%3ATransaction-instance-method">#</a>
+        <a class="method-permalink" href="#transaction:Transaction-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L193" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L206" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -500,13 +557,13 @@
         
         def <strong>transaction=</strong>(transaction : <a href="../../RPM/Transaction.html">Transaction</a>)
 
-        <a class="method-permalink" href="#transaction%3D%28transaction%3ATransaction%29-instance-method">#</a>
+        <a class="method-permalink" href="#transaction=(transaction:Transaction)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/transaction.cr#L197" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L210" target="_blank">View source</a>]
         
       </div>
     </div>

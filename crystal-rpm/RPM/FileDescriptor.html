@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.27.1">
+<meta name="generator" content="Crystal Docs 0.28.0">
 
 
 <link href="../css/style.css" rel="stylesheet" type="text/css">
@@ -40,6 +40,16 @@
       <a href="../RPM.html">RPM</a>
       
         <ul>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/BuildFlags" data-name="rpm::buildflags">
+      <a href="../RPM/BuildFlags.html">BuildFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/BuildPkgFlags" data-name="rpm::buildpkgflags">
+      <a href="../RPM/BuildPkgFlags.html">BuildPkgFlags</a>
+      
+    </li>
   
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/CallbackType" data-name="rpm::callbacktype">
       <a href="../RPM/CallbackType.html">CallbackType</a>
@@ -251,6 +261,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TransactionError" data-name="rpm::transactionerror">
+      <a href="../RPM/TransactionError.html">TransactionError</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TransactionFlags" data-name="rpm::transactionflags">
       <a href="../RPM/TransactionFlags.html">TransactionFlags</a>
       
@@ -301,7 +316,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/fd.cr#L2" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/fd.cr#L2" target="_blank">
         rpm/fd.cr
       </a>
     
@@ -316,7 +331,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28fd%29-class-method" class="signature"><strong>.new</strong>(fd)</a>
+        <a href="#new(fd)-class-method" class="signature"><strong>.new</strong>(fd)</a>
         
       </li>
     
@@ -328,12 +343,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#for_fd%28fd%3AInt32%29-class-method" class="signature"><strong>.for_fd</strong>(fd : Int32)</a>
+        <a href="#for_fd(fd:Int32)-class-method" class="signature"><strong>.for_fd</strong>(fd : Int32)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#open%28file%2Cmode%29-class-method" class="signature"><strong>.open</strong>(file, mode)</a>
+        <a href="#open(file,mode)-class-method" class="signature"><strong>.open</strong>(file, mode)</a>
         
       </li>
     
@@ -350,7 +365,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#fd%3ALibRPM%3A%3AFD-instance-method" class="signature"><strong>#fd</strong> : LibRPM::FD</a>
+        <a href="#fd:LibRPM::FD-instance-method" class="signature"><strong>#fd</strong> : LibRPM::FD</a>
         
       </li>
     
@@ -360,7 +375,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#opened%3F%3ABool-instance-method" class="signature"><strong>#opened?</strong> : Bool</a>
+        <a href="#opened?:Bool-instance-method" class="signature"><strong>#opened?</strong> : Bool</a>
         
       </li>
     
@@ -402,13 +417,13 @@
         
         def self.<strong>new</strong>(fd)
 
-        <a class="method-permalink" href="#new%28fd%29-class-method">#</a>
+        <a class="method-permalink" href="#new(fd)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/fd.cr#L25" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/fd.cr#L25" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -423,13 +438,13 @@
         
         def self.<strong>for_fd</strong>(fd : Int32)
 
-        <a class="method-permalink" href="#for_fd%28fd%3AInt32%29-class-method">#</a>
+        <a class="method-permalink" href="#for_fd(fd:Int32)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/fd.cr#L17" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/fd.cr#L17" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -439,13 +454,13 @@
         
         def self.<strong>open</strong>(file, mode)
 
-        <a class="method-permalink" href="#open%28file%2Cmode%29-class-method">#</a>
+        <a class="method-permalink" href="#open(file,mode)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/fd.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/fd.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -466,7 +481,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/fd.cr#L33" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/fd.cr#L33" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -476,13 +491,13 @@
         
         def <strong>fd</strong> : LibRPM::FD
 
-        <a class="method-permalink" href="#fd%3ALibRPM%3A%3AFD-instance-method">#</a>
+        <a class="method-permalink" href="#fd:LibRPM::FD-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/fd.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/fd.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -498,7 +513,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/fd.cr#L40" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/fd.cr#L40" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -508,13 +523,13 @@
         
         def <strong>opened?</strong> : Bool
 
-        <a class="method-permalink" href="#opened%3F%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#opened?:Bool-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/fd.cr#L29" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/fd.cr#L29" target="_blank">View source</a>]
         
       </div>
     </div>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.27.1">
+<meta name="generator" content="Crystal Docs 0.28.0">
 
 
 <link href="../css/style.css" rel="stylesheet" type="text/css">
@@ -40,6 +40,16 @@
       <a href="../RPM.html">RPM</a>
       
         <ul>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/BuildFlags" data-name="rpm::buildflags">
+      <a href="../RPM/BuildFlags.html">BuildFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/BuildPkgFlags" data-name="rpm::buildpkgflags">
+      <a href="../RPM/BuildPkgFlags.html">BuildPkgFlags</a>
+      
+    </li>
   
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/CallbackType" data-name="rpm::callbacktype">
       <a href="../RPM/CallbackType.html">CallbackType</a>
@@ -251,6 +261,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TransactionError" data-name="rpm::transactionerror">
+      <a href="../RPM/TransactionError.html">TransactionError</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TransactionFlags" data-name="rpm::transactionflags">
       <a href="../RPM/TransactionFlags.html">TransactionFlags</a>
       
@@ -314,8 +329,8 @@ VERIFY        target pkg    (unused)        content        (unused)
 <p>~RPM4.8</p>
 
 <p>(note: the function arguments requires dirname and filename
- separatedly, but it simply joins them, so set dirname to <code>nil</code> is
- suffice.)</p>
+ separatedly, but the upstream implementation simply joins them,
+ so set dirname to <code>nil</code> is suffice.)</p>
 
 <p>========================================================================
 type          pkg_nevr      alt_nevr        str            number</p>
@@ -356,7 +371,7 @@ REQUIRES or CONFLICTS.</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/problem.cr#L58" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/problem.cr#L58" target="_blank">
         rpm/problem.cr
       </a>
     
@@ -371,17 +386,17 @@ REQUIRES or CONFLICTS.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28type%2Cpkg_nevr%2Ckey%2Cdir%2Cfile%2Calt_nevr%2Cnumber%29-class-method" class="signature"><strong>.new</strong>(type, pkg_nevr, key, dir, file, alt_nevr, number)</a>
+        <a href="#new(type,pkg_nevr,key,dir,file,alt_nevr,number)-class-method" class="signature"><strong>.new</strong>(type, pkg_nevr, key, dir, file, alt_nevr, number)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28type%2Cpkg_nevr%2Ckey%2Calt_nevr%2Cstr%2Cnumber%29-class-method" class="signature"><strong>.new</strong>(type, pkg_nevr, key, alt_nevr, str, number)</a>
+        <a href="#new(type,pkg_nevr,key,alt_nevr,str,number)-class-method" class="signature"><strong>.new</strong>(type, pkg_nevr, key, alt_nevr, str, number)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28ptr%2C%2A%2Cneed_gc%3Dfalse%29-class-method" class="signature"><strong>.new</strong>(ptr, *, need_gc = <span class="n">false</span>)</a>
+        <a href="#new(ptr,*,need_gc=false)-class-method" class="signature"><strong>.new</strong>(ptr, *, need_gc = <span class="n">false</span>)</a>
         
       </li>
     
@@ -395,7 +410,7 @@ REQUIRES or CONFLICTS.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#%28other%29-instance-method" class="signature"><strong>#<=></strong>(other)</a>
+        <a href="#(other)-instance-method" class="signature"><strong>#<=></strong>(other)</a>
         
       </li>
     
@@ -415,17 +430,22 @@ REQUIRES or CONFLICTS.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#ptr%3ALibRPM%3A%3AProblem-instance-method" class="signature"><strong>#ptr</strong> : LibRPM::Problem</a>
+        <a href="#ptr:LibRPM::Problem-instance-method" class="signature"><strong>#ptr</strong> : LibRPM::Problem</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#ptr%3D%28ptr%3ALibRPM%3A%3AProblem%29-instance-method" class="signature"><strong>#ptr=</strong>(ptr : LibRPM::Problem)</a>
+        <a href="#ptr=(ptr:LibRPM::Problem)-instance-method" class="signature"><strong>#ptr=</strong>(ptr : LibRPM::Problem)</a>
         
       </li>
     
       <li class="entry-summary">
         <a href="#str-instance-method" class="signature"><strong>#str</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_s(io)-instance-method" class="signature"><strong>#to_s</strong>(io)</a>
         
       </li>
     
@@ -477,13 +497,13 @@ REQUIRES or CONFLICTS.</p>
         
         def self.<strong>new</strong>(type, pkg_nevr, key, dir, file, alt_nevr, number)
 
-        <a class="method-permalink" href="#new%28type%2Cpkg_nevr%2Ckey%2Cdir%2Cfile%2Calt_nevr%2Cnumber%29-class-method">#</a>
+        <a class="method-permalink" href="#new(type,pkg_nevr,key,dir,file,alt_nevr,number)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/problem.cr#L77" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/problem.cr#L77" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -493,13 +513,13 @@ REQUIRES or CONFLICTS.</p>
         
         def self.<strong>new</strong>(type, pkg_nevr, key, alt_nevr, str, number)
 
-        <a class="method-permalink" href="#new%28type%2Cpkg_nevr%2Ckey%2Calt_nevr%2Cstr%2Cnumber%29-class-method">#</a>
+        <a class="method-permalink" href="#new(type,pkg_nevr,key,alt_nevr,str,number)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/problem.cr#L71" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/problem.cr#L71" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -509,13 +529,13 @@ REQUIRES or CONFLICTS.</p>
         
         def self.<strong>new</strong>(ptr, *, need_gc = <span class="n">false</span>)
 
-        <a class="method-permalink" href="#new%28ptr%2C%2A%2Cneed_gc%3Dfalse%29-class-method">#</a>
+        <a class="method-permalink" href="#new(ptr,*,need_gc=false)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/problem.cr#L68" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/problem.cr#L68" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -532,13 +552,13 @@ REQUIRES or CONFLICTS.</p>
         
         def <strong><=></strong>(other)
 
-        <a class="method-permalink" href="#%28other%29-instance-method">#</a>
+        <a class="method-permalink" href="#(other)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/problem.cr#L117" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/problem.cr#L125" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -554,7 +574,7 @@ REQUIRES or CONFLICTS.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/problem.cr#L83" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/problem.cr#L83" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -570,7 +590,7 @@ REQUIRES or CONFLICTS.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/problem.cr#L62" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/problem.cr#L62" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -586,7 +606,7 @@ REQUIRES or CONFLICTS.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/problem.cr#L93" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/problem.cr#L93" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -596,13 +616,13 @@ REQUIRES or CONFLICTS.</p>
         
         def <strong>ptr</strong> : LibRPM::Problem
 
-        <a class="method-permalink" href="#ptr%3ALibRPM%3A%3AProblem-instance-method">#</a>
+        <a class="method-permalink" href="#ptr:LibRPM::Problem-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/problem.cr#L62" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/problem.cr#L62" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -612,13 +632,13 @@ REQUIRES or CONFLICTS.</p>
         
         def <strong>ptr=</strong>(ptr : LibRPM::Problem)
 
-        <a class="method-permalink" href="#ptr%3D%28ptr%3ALibRPM%3A%3AProblem%29-instance-method">#</a>
+        <a class="method-permalink" href="#ptr=(ptr:LibRPM::Problem)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/problem.cr#L66" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/problem.cr#L66" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -634,7 +654,23 @@ REQUIRES or CONFLICTS.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/problem.cr#L97" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/problem.cr#L97" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_s(io)-instance-method">
+      <div class="signature">
+        
+        def <strong>to_s</strong>(io)
+
+        <a class="method-permalink" href="#to_s(io)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/problem.cr#L117" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -650,7 +686,7 @@ REQUIRES or CONFLICTS.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/problem.cr#L106" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/problem.cr#L121" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -666,7 +702,7 @@ REQUIRES or CONFLICTS.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/problem.cr#L89" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/problem.cr#L89" target="_blank">View source</a>]
         
       </div>
     </div>

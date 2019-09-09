@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.27.1">
+<meta name="generator" content="Crystal Docs 0.28.0">
 
 
 <link href="../css/style.css" rel="stylesheet" type="text/css">
@@ -40,6 +40,16 @@
       <a href="../RPM.html">RPM</a>
       
         <ul>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/BuildFlags" data-name="rpm::buildflags">
+      <a href="../RPM/BuildFlags.html">BuildFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/BuildPkgFlags" data-name="rpm::buildpkgflags">
+      <a href="../RPM/BuildPkgFlags.html">BuildPkgFlags</a>
+      
+    </li>
   
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/CallbackType" data-name="rpm::callbacktype">
       <a href="../RPM/CallbackType.html">CallbackType</a>
@@ -251,6 +261,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TransactionError" data-name="rpm::transactionerror">
+      <a href="../RPM/TransactionError.html">TransactionError</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TransactionFlags" data-name="rpm::transactionflags">
       <a href="../RPM/TransactionFlags.html">TransactionFlags</a>
       
@@ -301,7 +316,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/spec.cr#L2" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/spec.cr#L2" target="_blank">
         rpm/spec.cr
       </a>
     
@@ -316,9 +331,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28specfile%3AString%2Cflags%3ALibRPM%3A%3ASpecFlags%2Cbuildroot%3AString%3F%29-class-method" class="signature"><strong>.new</strong>(specfile : String, flags : LibRPM::SpecFlags, buildroot : String?)</a>
-        
-          <div class="summary"><p>Open a specfile and parse it.</p></div>
+        <a href="#new(specfile:String,flags:LibRPM::SpecFlags,buildroot:String?,rootdir:String?=&quot;/&quot;)-class-method" class="signature"><strong>.new</strong>(specfile : String, flags : LibRPM::SpecFlags, buildroot : String?, rootdir : String? = <span class="s">&quot;/&quot;</span>)</a>
         
       </li>
     
@@ -330,7 +343,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#open%28specfile%3AString%2Cflags%3ALibRPM%3A%3ASpecFlags%3DLibRPM%3A%3ASpecFlags%3A%3AFORCE%7CLibRPM%3A%3ASpecFlags%3A%3AANYARCH%2Cbuildroot%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.open</strong>(specfile : String, flags : LibRPM::SpecFlags = <span class="t">LibRPM</span><span class="t">::</span><span class="t">SpecFlags</span><span class="t">::</span><span class="t">FORCE</span> <span class="o">|</span> <span class="t">LibRPM</span><span class="t">::</span><span class="t">SpecFlags</span><span class="t">::</span><span class="t">ANYARCH</span>, buildroot : String? = <span class="n">nil</span>)</a>
+        <a href="#open(specfile:String,flags:LibRPM::SpecFlags=LibRPM::SpecFlags::FORCE%7CLibRPM::SpecFlags::ANYARCH,buildroot:String?=nil,rootdir:String?=&quot;/&quot;)-class-method" class="signature"><strong>.open</strong>(specfile : String, flags : LibRPM::SpecFlags = <span class="t">LibRPM</span><span class="t">::</span><span class="t">SpecFlags</span><span class="t">::</span><span class="t">FORCE</span> <span class="o">|</span> <span class="t">LibRPM</span><span class="t">::</span><span class="t">SpecFlags</span><span class="t">::</span><span class="t">ANYARCH</span>, buildroot : String? = <span class="n">nil</span>, rootdir : String? = <span class="s">&quot;/&quot;</span>)</a>
         
           <div class="summary"><p>Open a specfile</p></div>
         
@@ -344,7 +357,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#build%28flags%2Ctest%29-instance-method" class="signature"><strong>#build</strong>(flags, test)</a>
+        <a href="#build(*,build_amount:BuildFlags,pkg_flags:BuildPkgFlags=BuildPkgFlags::NONE)-instance-method" class="signature"><strong>#build</strong>(*, build_amount : BuildFlags, pkg_flags : BuildPkgFlags = <span class="t">BuildPkgFlags</span><span class="t">::</span><span class="t">NONE</span>)</a>
         
       </li>
     
@@ -377,7 +390,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#header%3ARPM%3A%3APackage-instance-method" class="signature"><strong>#header</strong> : RPM::Package</a>
+        <a href="#header:RPM::Package-instance-method" class="signature"><strong>#header</strong> : RPM::Package</a>
         
           <div class="summary"><p>Header data would be stored into SRPM, as a <code><a href="../RPM/Package.html">RPM::Package</a></code>.</p></div>
         
@@ -391,7 +404,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#ptr%3ALibRPM%3A%3ASpec-instance-method" class="signature"><strong>#ptr</strong> : LibRPM::Spec</a>
+        <a href="#ptr:LibRPM::Spec-instance-method" class="signature"><strong>#ptr</strong> : LibRPM::Spec</a>
         
       </li>
     
@@ -435,22 +448,18 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(specfile:String,flags:LibRPM::SpecFlags,buildroot:String?)-class-method">
+    <div class="entry-detail" id="new(specfile:String,flags:LibRPM::SpecFlags,buildroot:String?,rootdir:String?=&amp;quot;/&amp;quot;)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(specfile : String, flags : LibRPM::SpecFlags, buildroot : String?)
+        def self.<strong>new</strong>(specfile : String, flags : LibRPM::SpecFlags, buildroot : String?, rootdir : String? = <span class="s">&quot;/&quot;</span>)
 
-        <a class="method-permalink" href="#new%28specfile%3AString%2Cflags%3ALibRPM%3A%3ASpecFlags%2Cbuildroot%3AString%3F%29-class-method">#</a>
+        <a class="method-permalink" href="#new(specfile:String,flags:LibRPM::SpecFlags,buildroot:String?,rootdir:String?=&quot;/&quot;)-class-method">#</a>
       </div>
-      
-        <div class="doc"><p>Open a specfile and parse it.</p>
-
-<p>Recommend to use <code><a href="../RPM/Spec.html#open%28specfile%3AString%2Cflags%3ALibRPM%3A%3ASpecFlags%3DLibRPM%3A%3ASpecFlags%3A%3AFORCE%7CLibRPM%3A%3ASpecFlags%3A%3AANYARCH%2Cbuildroot%3AString%3F%3Dnil%29-class-method">RPM::Spec.open</a></code>.</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/spec.cr#L2" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/spec.cr#L143" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -460,12 +469,12 @@
 
   <h2>Class Method Detail</h2>
   
-    <div class="entry-detail" id="open(specfile:String,flags:LibRPM::SpecFlags=LibRPM::SpecFlags::FORCE|LibRPM::SpecFlags::ANYARCH,buildroot:String?=nil)-class-method">
+    <div class="entry-detail" id="open(specfile:String,flags:LibRPM::SpecFlags=LibRPM::SpecFlags::FORCE|LibRPM::SpecFlags::ANYARCH,buildroot:String?=nil,rootdir:String?=&amp;quot;/&amp;quot;)-class-method">
       <div class="signature">
         
-        def self.<strong>open</strong>(specfile : String, flags : LibRPM::SpecFlags = <span class="t">LibRPM</span><span class="t">::</span><span class="t">SpecFlags</span><span class="t">::</span><span class="t">FORCE</span> <span class="o">|</span> <span class="t">LibRPM</span><span class="t">::</span><span class="t">SpecFlags</span><span class="t">::</span><span class="t">ANYARCH</span>, buildroot : String? = <span class="n">nil</span>)
+        def self.<strong>open</strong>(specfile : String, flags : LibRPM::SpecFlags = <span class="t">LibRPM</span><span class="t">::</span><span class="t">SpecFlags</span><span class="t">::</span><span class="t">FORCE</span> <span class="o">|</span> <span class="t">LibRPM</span><span class="t">::</span><span class="t">SpecFlags</span><span class="t">::</span><span class="t">ANYARCH</span>, buildroot : String? = <span class="n">nil</span>, rootdir : String? = <span class="s">&quot;/&quot;</span>)
 
-        <a class="method-permalink" href="#open%28specfile%3AString%2Cflags%3ALibRPM%3A%3ASpecFlags%3DLibRPM%3A%3ASpecFlags%3A%3AFORCE%7CLibRPM%3A%3ASpecFlags%3A%3AANYARCH%2Cbuildroot%3AString%3F%3Dnil%29-class-method">#</a>
+        <a class="method-permalink" href="#open(specfile:String,flags:LibRPM::SpecFlags=LibRPM::SpecFlags::FORCE%7CLibRPM::SpecFlags::ANYARCH,buildroot:String?=nil,rootdir:String?=&quot;/&quot;)-class-method">#</a>
       </div>
       
         <div class="doc"><p>Open a specfile</p>
@@ -475,7 +484,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/spec.cr#L2" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/spec.cr#L270" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -485,18 +494,18 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="build(flags,test)-instance-method">
+    <div class="entry-detail" id="build(*,build_amount:BuildFlags,pkg_flags:BuildPkgFlags=BuildPkgFlags::NONE)-instance-method">
       <div class="signature">
         
-        def <strong>build</strong>(flags, test)
+        def <strong>build</strong>(*, build_amount : <a href="../RPM/BuildFlags.html">BuildFlags</a>, pkg_flags : <a href="../RPM/BuildPkgFlags.html">BuildPkgFlags</a> = <span class="t">BuildPkgFlags</span><span class="t">::</span><span class="t">NONE</span>)
 
-        <a class="method-permalink" href="#build%28flags%2Ctest%29-instance-method">#</a>
+        <a class="method-permalink" href="#build(*,build_amount:BuildFlags,pkg_flags:BuildPkgFlags=BuildPkgFlags::NONE)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/spec.cr#L2" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/spec.cr#L226" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -514,7 +523,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/spec.cr#L2" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/spec.cr#L222" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -532,7 +541,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/spec.cr#L2" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/spec.cr#L217" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -554,7 +563,7 @@ simultaneously, you may get incorrect result.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/spec.cr#L2" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/spec.cr#L175" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -572,7 +581,7 @@ simultaneously, you may get incorrect result.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/spec.cr#L2" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/spec.cr#L259" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -582,7 +591,7 @@ simultaneously, you may get incorrect result.</p></div>
         
         def <strong>header</strong> : <a href="../RPM/Package.html">RPM::Package</a>
 
-        <a class="method-permalink" href="#header%3ARPM%3A%3APackage-instance-method">#</a>
+        <a class="method-permalink" href="#header:RPM::Package-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Header data would be stored into SRPM, as a <code><a href="../RPM/Package.html">RPM::Package</a></code>.</p>
@@ -593,7 +602,7 @@ simultaneously, you may get incorrect result.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/spec.cr#L2" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/spec.cr#L187" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -611,7 +620,7 @@ simultaneously, you may get incorrect result.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/spec.cr#L2" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/spec.cr#L199" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -621,11 +630,13 @@ simultaneously, you may get incorrect result.</p></div>
         
         def <strong>ptr</strong> : LibRPM::Spec
 
-        <a class="method-permalink" href="#ptr%3ALibRPM%3A%3ASpec-instance-method">#</a>
+        <a class="method-permalink" href="#ptr:LibRPM::Spec-instance-method">#</a>
       </div>
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/spec.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -643,7 +654,7 @@ simultaneously, you may get incorrect result.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/spec.cr#L2" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/spec.cr#L208" target="_blank">View source</a>]
         
       </div>
     </div>

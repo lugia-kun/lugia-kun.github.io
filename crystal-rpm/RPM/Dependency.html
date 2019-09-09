@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.27.1">
+<meta name="generator" content="Crystal Docs 0.28.0">
 
 
 <link href="../css/style.css" rel="stylesheet" type="text/css">
@@ -40,6 +40,16 @@
       <a href="../RPM.html">RPM</a>
       
         <ul>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/BuildFlags" data-name="rpm::buildflags">
+      <a href="../RPM/BuildFlags.html">BuildFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/BuildPkgFlags" data-name="rpm::buildpkgflags">
+      <a href="../RPM/BuildPkgFlags.html">BuildPkgFlags</a>
+      
+    </li>
   
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/CallbackType" data-name="rpm::callbacktype">
       <a href="../RPM/CallbackType.html">CallbackType</a>
@@ -251,6 +261,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TransactionError" data-name="rpm::transactionerror">
+      <a href="../RPM/TransactionError.html">TransactionError</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TransactionFlags" data-name="rpm::transactionflags">
       <a href="../RPM/TransactionFlags.html">TransactionFlags</a>
       
@@ -314,7 +329,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/dependency.cr#L5" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/dependency.cr#L5" target="_blank">
         rpm/dependency.cr
       </a>
     
@@ -329,7 +344,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28name%2Cversion%2Cflags%2Cowner%29-class-method" class="signature"><strong>.new</strong>(name, version, flags, owner)</a>
+        <a href="#new(name,version,flags,owner)-class-method" class="signature"><strong>.new</strong>(name, version, flags, owner)</a>
         
       </li>
     
@@ -343,107 +358,107 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#eq%3F-instance-method" class="signature"><strong>#eq?</strong></a>
+        <a href="#eq?-instance-method" class="signature"><strong>#eq?</strong></a>
         
           <div class="summary"><p>Returns true if '=', '&lt;=' or '>=' are used to compare the version</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#flags%3ASense-instance-method" class="signature"><strong>#flags</strong> : Sense</a>
+        <a href="#flags:Sense-instance-method" class="signature"><strong>#flags</strong> : Sense</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#flags%3D%28flags%3ASense%29-instance-method" class="signature"><strong>#flags=</strong>(flags : Sense)</a>
+        <a href="#flags=(flags:Sense)-instance-method" class="signature"><strong>#flags=</strong>(flags : Sense)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#flagstag%3ATag%3F-instance-method" class="signature"><strong>#flagstag</strong> : Tag?</a>
+        <a href="#flagstag:Tag?-instance-method" class="signature"><strong>#flagstag</strong> : Tag?</a>
         
           <div class="summary"><p>Flags Tag value which is (was) used to obtain this dependency</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#ge%3F-instance-method" class="signature"><strong>#ge?</strong></a>
+        <a href="#ge?-instance-method" class="signature"><strong>#ge?</strong></a>
         
           <div class="summary"><p>Returns true if '>=' are used to compare the version</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#gt%3F-instance-method" class="signature"><strong>#gt?</strong></a>
+        <a href="#gt?-instance-method" class="signature"><strong>#gt?</strong></a>
         
           <div class="summary"><p>Returns true if '>' or '>=' are used to compare the version</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#le%3F-instance-method" class="signature"><strong>#le?</strong></a>
+        <a href="#le?-instance-method" class="signature"><strong>#le?</strong></a>
         
           <div class="summary"><p>Returns true if '&lt;=' are used to compare the version</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#lt%3F-instance-method" class="signature"><strong>#lt?</strong></a>
+        <a href="#lt?-instance-method" class="signature"><strong>#lt?</strong></a>
         
           <div class="summary"><p>Returns true if '&lt;' or '&lt;=' are used to compare the version</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#name%3AString-instance-method" class="signature"><strong>#name</strong> : String</a>
+        <a href="#name:String-instance-method" class="signature"><strong>#name</strong> : String</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#name%3D%28name%3AString%29-instance-method" class="signature"><strong>#name=</strong>(name : String)</a>
+        <a href="#name=(name:String)-instance-method" class="signature"><strong>#name=</strong>(name : String)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#nametag%3ATag%3F-instance-method" class="signature"><strong>#nametag</strong> : Tag?</a>
+        <a href="#nametag:Tag?-instance-method" class="signature"><strong>#nametag</strong> : Tag?</a>
         
           <div class="summary"><p>Name Tag value which is (was) used to obtain this dependency</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#owner%3APackage%3F-instance-method" class="signature"><strong>#owner</strong> : Package?</a>
+        <a href="#owner:Package?-instance-method" class="signature"><strong>#owner</strong> : Package?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#owner%3D%28owner%3APackage%3F%29-instance-method" class="signature"><strong>#owner=</strong>(owner : Package?)</a>
+        <a href="#owner=(owner:Package?)-instance-method" class="signature"><strong>#owner=</strong>(owner : Package?)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#pre%3F-instance-method" class="signature"><strong>#pre?</strong></a>
+        <a href="#pre?-instance-method" class="signature"><strong>#pre?</strong></a>
         
           <div class="summary"><p>Returns true if this is a pre-requires</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#satisfies%3F%28dep%3ADependency%29-instance-method" class="signature"><strong>#satisfies?</strong>(dep : Dependency)</a>
+        <a href="#satisfies?(dep:Dependency)-instance-method" class="signature"><strong>#satisfies?</strong>(dep : Dependency)</a>
         
           <div class="summary"><p>Test whether a given dependency satisfies this dependecy.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#satisfies%3F%28pkg%3APackage%29-instance-method" class="signature"><strong>#satisfies?</strong>(pkg : Package)</a>
+        <a href="#satisfies?(pkg:Package)-instance-method" class="signature"><strong>#satisfies?</strong>(pkg : Package)</a>
         
           <div class="summary"><p>Test whether a given package satisfies (or provides) this dependency.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#satisfies%3F%28ver%3AVersion%29-instance-method" class="signature"><strong>#satisfies?</strong>(ver : Version)</a>
+        <a href="#satisfies?(ver:Version)-instance-method" class="signature"><strong>#satisfies?</strong>(ver : Version)</a>
         
           <div class="summary"><p>Test whether a given version satisfies this dependecy.</p></div>
         
@@ -455,17 +470,17 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#version%3AVersion-instance-method" class="signature"><strong>#version</strong> : Version</a>
+        <a href="#version:Version-instance-method" class="signature"><strong>#version</strong> : Version</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#version%3D%28version%3AVersion%29-instance-method" class="signature"><strong>#version=</strong>(version : Version)</a>
+        <a href="#version=(version:Version)-instance-method" class="signature"><strong>#version=</strong>(version : Version)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#versiontag%3ATag%3F-instance-method" class="signature"><strong>#versiontag</strong> : Tag?</a>
+        <a href="#versiontag:Tag?-instance-method" class="signature"><strong>#versiontag</strong> : Tag?</a>
         
           <div class="summary"><p>Version Tag value which is (was) used to obtain this dependency</p></div>
         
@@ -479,7 +494,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#define_dependency_class%28name%29-macro" class="signature"><strong>define_dependency_class</strong>(name)</a>
+        <a href="#define_dependency_class(name)-macro" class="signature"><strong>define_dependency_class</strong>(name)</a>
         
       </li>
     
@@ -519,13 +534,13 @@
         
         def self.<strong>new</strong>(name, version, flags, owner)
 
-        <a class="method-permalink" href="#new%28name%2Cversion%2Cflags%2Cowner%29-class-method">#</a>
+        <a class="method-permalink" href="#new(name,version,flags,owner)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/dependency.cr#L11" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/dependency.cr#L11" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -542,7 +557,7 @@
         
         def <strong>eq?</strong>
 
-        <a class="method-permalink" href="#eq%3F-instance-method">#</a>
+        <a class="method-permalink" href="#eq?-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Returns true if '=', '&lt;=' or '>=' are used to compare the version</p></div>
@@ -550,7 +565,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/dependency.cr#L90" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/dependency.cr#L90" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -560,13 +575,13 @@
         
         def <strong>flags</strong> : <a href="../RPM/Sense.html">Sense</a>
 
-        <a class="method-permalink" href="#flags%3ASense-instance-method">#</a>
+        <a class="method-permalink" href="#flags:Sense-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/dependency.cr#L10" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/dependency.cr#L10" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -576,13 +591,13 @@
         
         def <strong>flags=</strong>(flags : <a href="../RPM/Sense.html">Sense</a>)
 
-        <a class="method-permalink" href="#flags%3D%28flags%3ASense%29-instance-method">#</a>
+        <a class="method-permalink" href="#flags=(flags:Sense)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/dependency.cr#L14" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/dependency.cr#L14" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -592,7 +607,7 @@
         
         def <strong>flagstag</strong> : <a href="../RPM/Tag.html">Tag</a>?
 
-        <a class="method-permalink" href="#flagstag%3ATag%3F-instance-method">#</a>
+        <a class="method-permalink" href="#flagstag:Tag?-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Flags Tag value which is (was) used to obtain this dependency</p>
@@ -602,7 +617,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/dependency.cr#L116" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/dependency.cr#L116" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -612,7 +627,7 @@
         
         def <strong>ge?</strong>
 
-        <a class="method-permalink" href="#ge%3F-instance-method">#</a>
+        <a class="method-permalink" href="#ge?-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Returns true if '>=' are used to compare the version</p></div>
@@ -620,7 +635,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/dependency.cr#L85" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/dependency.cr#L85" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -630,7 +645,7 @@
         
         def <strong>gt?</strong>
 
-        <a class="method-permalink" href="#gt%3F-instance-method">#</a>
+        <a class="method-permalink" href="#gt?-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Returns true if '>' or '>=' are used to compare the version</p></div>
@@ -638,7 +653,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/dependency.cr#L75" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/dependency.cr#L75" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -648,7 +663,7 @@
         
         def <strong>le?</strong>
 
-        <a class="method-permalink" href="#le%3F-instance-method">#</a>
+        <a class="method-permalink" href="#le?-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Returns true if '&lt;=' are used to compare the version</p></div>
@@ -656,7 +671,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/dependency.cr#L80" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/dependency.cr#L80" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -666,7 +681,7 @@
         
         def <strong>lt?</strong>
 
-        <a class="method-permalink" href="#lt%3F-instance-method">#</a>
+        <a class="method-permalink" href="#lt?-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Returns true if '&lt;' or '&lt;=' are used to compare the version</p></div>
@@ -674,7 +689,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/dependency.cr#L70" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/dependency.cr#L70" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -684,13 +699,13 @@
         
         def <strong>name</strong> : String
 
-        <a class="method-permalink" href="#name%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#name:String-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/dependency.cr#L8" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/dependency.cr#L8" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -700,13 +715,13 @@
         
         def <strong>name=</strong>(name : String)
 
-        <a class="method-permalink" href="#name%3D%28name%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#name=(name:String)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/dependency.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/dependency.cr#L12" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -716,7 +731,7 @@
         
         def <strong>nametag</strong> : <a href="../RPM/Tag.html">Tag</a>?
 
-        <a class="method-permalink" href="#nametag%3ATag%3F-instance-method">#</a>
+        <a class="method-permalink" href="#nametag:Tag?-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Name Tag value which is (was) used to obtain this dependency</p>
@@ -726,7 +741,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/dependency.cr#L102" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/dependency.cr#L102" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -736,13 +751,13 @@
         
         def <strong>owner</strong> : <a href="../RPM/Package.html">Package</a>?
 
-        <a class="method-permalink" href="#owner%3APackage%3F-instance-method">#</a>
+        <a class="method-permalink" href="#owner:Package?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/dependency.cr#L11" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/dependency.cr#L11" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -752,13 +767,13 @@
         
         def <strong>owner=</strong>(owner : <a href="../RPM/Package.html">Package</a>?)
 
-        <a class="method-permalink" href="#owner%3D%28owner%3APackage%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#owner=(owner:Package?)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/dependency.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/dependency.cr#L15" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -768,7 +783,7 @@
         
         def <strong>pre?</strong>
 
-        <a class="method-permalink" href="#pre%3F-instance-method">#</a>
+        <a class="method-permalink" href="#pre?-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Returns true if this is a pre-requires</p></div>
@@ -776,7 +791,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/dependency.cr#L95" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/dependency.cr#L95" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -786,7 +801,7 @@
         
         def <strong>satisfies?</strong>(dep : <a href="../RPM/Dependency.html">Dependency</a>)
 
-        <a class="method-permalink" href="#satisfies%3F%28dep%3ADependency%29-instance-method">#</a>
+        <a class="method-permalink" href="#satisfies?(dep:Dependency)-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Test whether a given dependency satisfies this dependecy.</p></div>
@@ -794,7 +809,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/dependency.cr#L36" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/dependency.cr#L36" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -804,7 +819,7 @@
         
         def <strong>satisfies?</strong>(pkg : <a href="../RPM/Package.html">Package</a>)
 
-        <a class="method-permalink" href="#satisfies%3F%28pkg%3APackage%29-instance-method">#</a>
+        <a class="method-permalink" href="#satisfies?(pkg:Package)-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Test whether a given package satisfies (or provides) this
@@ -813,7 +828,7 @@ dependency.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/dependency.cr#L29" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/dependency.cr#L29" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -823,7 +838,7 @@ dependency.</p></div>
         
         def <strong>satisfies?</strong>(ver : <a href="../RPM/Version.html">Version</a>)
 
-        <a class="method-permalink" href="#satisfies%3F%28ver%3AVersion%29-instance-method">#</a>
+        <a class="method-permalink" href="#satisfies?(ver:Version)-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Test whether a given version satisfies this dependecy.</p></div>
@@ -831,7 +846,7 @@ dependency.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/dependency.cr#L43" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/dependency.cr#L43" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -847,7 +862,7 @@ dependency.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/dependency.cr#L62" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/dependency.cr#L62" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -857,13 +872,13 @@ dependency.</p></div>
         
         def <strong>version</strong> : <a href="../RPM/Version.html">Version</a>
 
-        <a class="method-permalink" href="#version%3AVersion-instance-method">#</a>
+        <a class="method-permalink" href="#version:Version-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/dependency.cr#L9" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/dependency.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -873,13 +888,13 @@ dependency.</p></div>
         
         def <strong>version=</strong>(version : <a href="../RPM/Version.html">Version</a>)
 
-        <a class="method-permalink" href="#version%3D%28version%3AVersion%29-instance-method">#</a>
+        <a class="method-permalink" href="#version=(version:Version)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/dependency.cr#L13" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/dependency.cr#L13" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -889,7 +904,7 @@ dependency.</p></div>
         
         def <strong>versiontag</strong> : <a href="../RPM/Tag.html">Tag</a>?
 
-        <a class="method-permalink" href="#versiontag%3ATag%3F-instance-method">#</a>
+        <a class="method-permalink" href="#versiontag:Tag?-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Version Tag value which is (was) used to obtain this dependency</p>
@@ -899,7 +914,7 @@ dependency.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/dependency.cr#L109" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/dependency.cr#L109" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -914,13 +929,13 @@ dependency.</p></div>
         
         macro <strong>define_dependency_class</strong>(name)
 
-        <a class="method-permalink" href="#define_dependency_class%28name%29-macro">#</a>
+        <a class="method-permalink" href="#define_dependency_class(name)-macro">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/e5be016c7e372717e8a6fc8c5edf240b92a578b0/src/rpm/dependency.cr#L120" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/dependency.cr#L120" target="_blank">View source</a>]
         
       </div>
     </div>
