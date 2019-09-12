@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.28.0">
+
+
+<link href="../../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../../";
+</script>
+
+  <meta id="repository-name" content="github.com/lugia-kun/crystal-rpm">
+  <title>RPM::Transaction::Element - github.com/lugia-kun/crystal-rpm</title>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="../../index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="github.com/lugia-kun/crystal-rpm/RPM" data-name="rpm">
+      <a href="../../RPM.html">RPM</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/BuildFlags" data-name="rpm::buildflags">
+      <a href="../../RPM/BuildFlags.html">BuildFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/BuildPkgFlags" data-name="rpm::buildpkgflags">
+      <a href="../../RPM/BuildPkgFlags.html">BuildPkgFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/CallbackType" data-name="rpm::callbacktype">
+      <a href="../../RPM/CallbackType.html">CallbackType</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/ChangeLog" data-name="rpm::changelog">
+      <a href="../../RPM/ChangeLog.html">ChangeLog</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Conflict" data-name="rpm::conflict">
+      <a href="../../RPM/Conflict.html">Conflict</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/DbiTag" data-name="rpm::dbitag">
+      <a href="../../RPM/DbiTag.html">DbiTag</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/DbiTagValue" data-name="rpm::dbitagvalue">
+      <a href="../../RPM/DbiTagValue.html">DbiTagValue</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Dependency" data-name="rpm::dependency">
+      <a href="../../RPM/Dependency.html">Dependency</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/ElementType" data-name="rpm::elementtype">
+      <a href="../../RPM/ElementType.html">ElementType</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/ElementTypes" data-name="rpm::elementtypes">
+      <a href="../../RPM/ElementTypes.html">ElementTypes</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/File" data-name="rpm::file">
+      <a href="../../RPM/File.html">File</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/FileAttrs" data-name="rpm::fileattrs">
+      <a href="../../RPM/FileAttrs.html">FileAttrs</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/FileDescriptor" data-name="rpm::filedescriptor">
+      <a href="../../RPM/FileDescriptor.html">FileDescriptor</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/FileState" data-name="rpm::filestate">
+      <a href="../../RPM/FileState.html">FileState</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Icon" data-name="rpm::icon">
+      <a href="../../RPM/Icon.html">Icon</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/MatchIterator" data-name="rpm::matchiterator">
+      <a href="../../RPM/MatchIterator.html">MatchIterator</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/MireMode" data-name="rpm::miremode">
+      <a href="../../RPM/MireMode.html">MireMode</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Obsolete" data-name="rpm::obsolete">
+      <a href="../../RPM/Obsolete.html">Obsolete</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Package" data-name="rpm::package">
+      <a href="../../RPM/Package.html">Package</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Patch" data-name="rpm::patch">
+      <a href="../../RPM/Patch.html">Patch</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Problem" data-name="rpm::problem">
+      <a href="../../RPM/Problem.html">Problem</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/ProblemSet" data-name="rpm::problemset">
+      <a href="../../RPM/ProblemSet.html">ProblemSet</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/ProblemSetIterator" data-name="rpm::problemsetiterator">
+      <a href="../../RPM/ProblemSetIterator.html">ProblemSetIterator</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/ProblemType" data-name="rpm::problemtype">
+      <a href="../../RPM/ProblemType.html">ProblemType</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Provide" data-name="rpm::provide">
+      <a href="../../RPM/Provide.html">Provide</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Require" data-name="rpm::require">
+      <a href="../../RPM/Require.html">Require</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Sense" data-name="rpm::sense">
+      <a href="../../RPM/Sense.html">Sense</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Source" data-name="rpm::source">
+      <a href="../../RPM/Source.html">Source</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/SourceBase" data-name="rpm::sourcebase">
+      <a href="../../RPM/SourceBase.html">SourceBase</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/lugia-kun/crystal-rpm/RPM/Spec" data-name="rpm::spec">
+      <a href="../../RPM/Spec.html">Spec</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Spec/PackageIterator" data-name="rpm::spec::packageiterator">
+      <a href="../../RPM/Spec/PackageIterator.html">PackageIterator</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Spec/SourceIterator" data-name="rpm::spec::sourceiterator">
+      <a href="../../RPM/Spec/SourceIterator.html">SourceIterator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Tag" data-name="rpm::tag">
+      <a href="../../RPM/Tag.html">Tag</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData" data-name="rpm::tagdata">
+      <a href="../../RPM/TagData.html">TagData</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ElementUnion" data-name="rpm::tagdata::elementunion">
+      <a href="../../RPM/TagData/ElementUnion.html">ElementUnion</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/Iterator" data-name="rpm::tagdata::iterator(t)">
+      <a href="../../RPM/TagData/Iterator.html">Iterator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagReturnType" data-name="rpm::tagreturntype">
+      <a href="../../RPM/TagReturnType.html">TagReturnType</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagType" data-name="rpm::tagtype">
+      <a href="../../RPM/TagType.html">TagType</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagValue" data-name="rpm::tagvalue">
+      <a href="../../RPM/TagValue.html">TagValue</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="github.com/lugia-kun/crystal-rpm/RPM/Transaction" data-name="rpm::transaction">
+      <a href="../../RPM/Transaction.html">Transaction</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Transaction/Callback" data-name="rpm::transaction::callback">
+      <a href="../../RPM/Transaction/Callback.html">Callback</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Transaction/CallbackBoxData" data-name="rpm::transaction::callbackboxdata">
+      <a href="../../RPM/Transaction/CallbackBoxData.html">CallbackBoxData</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Transaction/CallbackReturnType" data-name="rpm::transaction::callbackreturntype">
+      <a href="../../RPM/Transaction/CallbackReturnType.html">CallbackReturnType</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/lugia-kun/crystal-rpm/RPM/Transaction/Element" data-name="rpm::transaction::element">
+      <a href="../../RPM/Transaction/Element.html">Element</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Transaction/Iterator" data-name="rpm::transaction::iterator">
+      <a href="../../RPM/Transaction/Iterator.html">Iterator</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TransactionError" data-name="rpm::transactionerror">
+      <a href="../../RPM/TransactionError.html">TransactionError</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TransactionFlags" data-name="rpm::transactionflags">
+      <a href="../../RPM/TransactionFlags.html">TransactionFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Version" data-name="rpm::version">
+      <a href="../../RPM/Version.html">Version</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">struct</span> RPM::Transaction::Element
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../RPM/Transaction/Element.html">RPM::Transaction::Element</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>Element in transaction (install/remove/update)</p>
+
+<p>Transaction Element is valid only while the transaction which
+this element belongs to is allocated.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L12" target="_blank">
+        rpm/transaction.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction_element.cr#L3" target="_blank">
+        rpm/transaction_element.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>Constructors</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new(ptr)-class-method" class="signature"><strong>.new</strong>(ptr)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#arch:String-instance-method" class="signature"><strong>#arch</strong> : String</a>
+        
+          <div class="summary"><p>Returns package architecture to install, update or remove</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#clean_dependency_set-instance-method" class="signature"><strong>#clean_dependency_set</strong></a>
+        
+          <div class="summary"><p>Clear dependency in the element</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#clean_problems-instance-method" class="signature"><strong>#clean_problems</strong></a>
+        
+          <div class="summary"><p>Clear problems in the element</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#db_offset-instance-method" class="signature"><strong>#db_offset</strong></a>
+        
+          <div class="summary"><p>Returns the value DB Offset</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#depends_on-instance-method" class="signature"><strong>#depends_on</strong></a>
+        
+          <div class="summary"><p>Get depends on</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#depends_on=(e:Element)-instance-method" class="signature"><strong>#depends_on=</strong>(e : Element)</a>
+        
+          <div class="summary"><p>Set depends on (only meaningful for removing)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#epoch:String?-instance-method" class="signature"><strong>#epoch</strong> : String?</a>
+        
+          <div class="summary"><p>Returns package epoch to install, update or remove</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#failed?:Bool-instance-method" class="signature"><strong>#failed?</strong> : Bool</a>
+        
+          <div class="summary"><p>Returns failed status</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#is_source?:Bool-instance-method" class="signature"><strong>#is_source?</strong> : Bool</a>
+        
+          <div class="summary"><p>Returns true if source package</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#key:String?-instance-method" class="signature"><strong>#key</strong> : String?</a>
+        
+          <div class="summary"><p>Returns package key to install, update or remove</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#name:String-instance-method" class="signature"><strong>#name</strong> : String</a>
+        
+          <div class="summary"><p>Returns package name to install, update or remove</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#package_file_size:LibRPM::Loff-instance-method" class="signature"><strong>#package_file_size</strong> : LibRPM::Loff</a>
+        
+          <div class="summary"><p>Returns file size of package</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#parent:Element?-instance-method" class="signature"><strong>#parent</strong> : Element?</a>
+        
+          <div class="summary"><p>Returns parent element</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#parent=(e:Element)-instance-method" class="signature"><strong>#parent=</strong>(e : Element)</a>
+        
+          <div class="summary"><p>Sets parent element</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#problems:ProblemSet?-instance-method" class="signature"><strong>#problems</strong> : ProblemSet?</a>
+        
+          <div class="summary"><p>Returns problems belongs to this element</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#release:String-instance-method" class="signature"><strong>#release</strong> : String</a>
+        
+          <div class="summary"><p>Returns package release to install, update or remove</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_EVR-instance-method" class="signature"><strong>#to_EVR</strong></a>
+        
+          <div class="summary"><p>Returns EVR string</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_NEVR-instance-method" class="signature"><strong>#to_NEVR</strong></a>
+        
+          <div class="summary"><p>Returns NEVR string</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_NEVRA-instance-method" class="signature"><strong>#to_NEVRA</strong></a>
+        
+          <div class="summary"><p>Returns NEVRA String</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#type:ElementType-instance-method" class="signature"><strong>#type</strong> : ElementType</a>
+        
+          <div class="summary"><p>Returns type of element</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#version:String-instance-method" class="signature"><strong>#version</strong> : String</a>
+        
+          <div class="summary"><p>Returns package version to install, update or remove</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new(ptr)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(ptr)
+
+        <a class="method-permalink" href="#new(ptr)-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L15" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="arch:String-instance-method">
+      <div class="signature">
+        
+        def <strong>arch</strong> : String
+
+        <a class="method-permalink" href="#arch:String-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns package architecture to install, update or remove</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction_element.cr#L40" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="clean_dependency_set-instance-method">
+      <div class="signature">
+        
+        def <strong>clean_dependency_set</strong>
+
+        <a class="method-permalink" href="#clean_dependency_set-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Clear dependency in the element</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction_element.cr#L105" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="clean_problems-instance-method">
+      <div class="signature">
+        
+        def <strong>clean_problems</strong>
+
+        <a class="method-permalink" href="#clean_problems-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Clear problems in the element</p>
+
+<p><span class="flag purple">NOTE</span>  RPM 4.8 does not support this method.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction_element.cr#L100" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="db_offset-instance-method">
+      <div class="signature">
+        
+        def <strong>db_offset</strong>
+
+        <a class="method-permalink" href="#db_offset-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns the value DB Offset</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction_element.cr#L126" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="depends_on-instance-method">
+      <div class="signature">
+        
+        def <strong>depends_on</strong>
+
+        <a class="method-permalink" href="#depends_on-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get depends on</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction_element.cr#L116" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="depends_on=(e:Element)-instance-method">
+      <div class="signature">
+        
+        def <strong>depends_on=</strong>(e : <a href="../../RPM/Transaction/Element.html">Element</a>)
+
+        <a class="method-permalink" href="#depends_on=(e:Element)-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set depends on (only meaningful for removing)</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction_element.cr#L110" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="epoch:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>epoch</strong> : String?
+
+        <a class="method-permalink" href="#epoch:String?-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns package epoch to install, update or remove</p>
+
+<p><span class="flag purple">NOTE</span>  Upstream API returns a string for this function.
+So, this method returns a String.</p>
+
+<p>If the package has no epoch, this method returns <code>nil</code>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction_element.cr#L20" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="failed?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>failed?</strong> : Bool
+
+        <a class="method-permalink" href="#failed?:Bool-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns failed status</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction_element.cr#L146" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="is_source?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>is_source?</strong> : Bool
+
+        <a class="method-permalink" href="#is_source?:Bool-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns true if source package</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction_element.cr#L60" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="key:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>key</strong> : String?
+
+        <a class="method-permalink" href="#key:String?-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns package key to install, update or remove</p>
+
+<p><span class="flag purple">NOTE</span>  This method returns a string, because crystal-rpm passes
+a string to 'key', and some RPM features needs that it must be
+a string. Since the type of key is actually <code>void*</code>, so you can
+set non-string object elsewhere crystal-rpm.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction_element.cr#L50" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="name:String-instance-method">
+      <div class="signature">
+        
+        def <strong>name</strong> : String
+
+        <a class="method-permalink" href="#name:String-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns package name to install, update or remove</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction_element.cr#L10" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="package_file_size:LibRPM::Loff-instance-method">
+      <div class="signature">
+        
+        def <strong>package_file_size</strong> : LibRPM::Loff
+
+        <a class="method-permalink" href="#package_file_size:LibRPM::Loff-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns file size of package</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction_element.cr#L65" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="parent:Element?-instance-method">
+      <div class="signature">
+        
+        def <strong>parent</strong> : <a href="../../RPM/Transaction/Element.html">Element</a>?
+
+        <a class="method-permalink" href="#parent:Element?-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns parent element</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction_element.cr#L70" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="parent=(e:Element)-instance-method">
+      <div class="signature">
+        
+        def <strong>parent=</strong>(e : <a href="../../RPM/Transaction/Element.html">Element</a>)
+
+        <a class="method-permalink" href="#parent=(e:Element)-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Sets parent element</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction_element.cr#L80" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="problems:ProblemSet?-instance-method">
+      <div class="signature">
+        
+        def <strong>problems</strong> : <a href="../../RPM/ProblemSet.html">ProblemSet</a>?
+
+        <a class="method-permalink" href="#problems:ProblemSet?-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns problems belongs to this element</p>
+
+<p><span class="flag purple">NOTE</span>  RPM 4.8 does not support this method.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction_element.cr#L88" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="release:String-instance-method">
+      <div class="signature">
+        
+        def <strong>release</strong> : String
+
+        <a class="method-permalink" href="#release:String-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns package release to install, update or remove</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction_element.cr#L35" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_EVR-instance-method">
+      <div class="signature">
+        
+        def <strong>to_EVR</strong>
+
+        <a class="method-permalink" href="#to_EVR-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns EVR string</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction_element.cr#L131" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_NEVR-instance-method">
+      <div class="signature">
+        
+        def <strong>to_NEVR</strong>
+
+        <a class="method-permalink" href="#to_NEVR-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns NEVR string</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction_element.cr#L136" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_NEVRA-instance-method">
+      <div class="signature">
+        
+        def <strong>to_NEVRA</strong>
+
+        <a class="method-permalink" href="#to_NEVRA-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns NEVRA String</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction_element.cr#L141" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="type:ElementType-instance-method">
+      <div class="signature">
+        
+        def <strong>type</strong> : <a href="../../RPM/ElementType.html">ElementType</a>
+
+        <a class="method-permalink" href="#type:ElementType-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns type of element</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction_element.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="version:String-instance-method">
+      <div class="signature">
+        
+        def <strong>version</strong> : String
+
+        <a class="method-permalink" href="#version:String-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns package version to install, update or remove</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction_element.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

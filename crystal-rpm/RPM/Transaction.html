@@ -81,6 +81,16 @@
       
     </li>
   
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/ElementType" data-name="rpm::elementtype">
+      <a href="../RPM/ElementType.html">ElementType</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/ElementTypes" data-name="rpm::elementtypes">
+      <a href="../RPM/ElementTypes.html">ElementTypes</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/File" data-name="rpm::file">
       <a href="../RPM/File.html">File</a>
       
@@ -256,6 +266,16 @@
       
     </li>
   
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Transaction/Element" data-name="rpm::transaction::element">
+      <a href="../RPM/Transaction/Element.html">Element</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Transaction/Iterator" data-name="rpm::transaction::iterator">
+      <a href="../RPM/Transaction/Iterator.html">Iterator</a>
+      
+    </li>
+  
 </ul>
 
       
@@ -309,6 +329,15 @@ via the Transaction.</p>
 
 
 
+  <h2>Included Modules</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type">Enumerable(<a href="../RPM/Transaction/Element.html">RPM::Transaction::Element</a>)</li>
+  
+    <li class="other-type">Iterable(<a href="../RPM/Transaction/Element.html">RPM::Transaction::Element</a>)</li>
+  
+  </ul>
+
 
 
 
@@ -321,7 +350,7 @@ via the Transaction.</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L7" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L7" target="_blank">
         rpm/transaction.cr
       </a>
     
@@ -387,6 +416,13 @@ via the Transaction.</p>
       </li>
     
       <li class="entry-summary">
+        <a href="#db_iterator(tag=DbiTag::Packages,val=nil,&block:MatchIterator-%3EUNDERSCORE)-instance-method" class="signature"><strong>#db_iterator</strong>(tag = <span class="t">DbiTag</span><span class="t">::</span><span class="t">Packages</span>, val = <span class="n">nil</span>, &block : MatchIterator -> UNDERSCORE)</a>
+        
+          <div class="summary"><p>Init DB iterator, yield block and cleanup.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#delete(pkg:Dependency)-instance-method" class="signature"><strong>#delete</strong>(pkg : Dependency)</a>
         
           <div class="summary"><p>Register given dependency to be deleted</p></div>
@@ -415,16 +451,16 @@ via the Transaction.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#each(&block)-instance-method" class="signature"><strong>#each</strong>(&block)</a>
+        <a href="#each(etypes:ElementTypes=ElementTypes::ANY,&block)-instance-method" class="signature"><strong>#each</strong>(etypes : ElementTypes = <span class="t">ElementTypes</span><span class="t">::</span><span class="t">ANY</span>, &block)</a>
         
-          <div class="summary"><p>Iterate over all packages.</p></div>
+          <div class="summary"><p>Iterate over each transaction element</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#each_match(key,val,&block)-instance-method" class="signature"><strong>#each_match</strong>(key, val, &block)</a>
+        <a href="#each(etypes:ElementTypes=ElementTypes::ANY)-instance-method" class="signature"><strong>#each</strong>(etypes : ElementTypes = <span class="t">ElementTypes</span><span class="t">::</span><span class="t">ANY</span>)</a>
         
-          <div class="summary"><p>Iterate over packages of matching key and value.</p></div>
+          <div class="summary"><p>Returns iterator for transaction elements</p></div>
         
       </li>
     
@@ -483,7 +519,9 @@ via the Transaction.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#ptr:LibRPM::Transaction-instance-method" class="signature"><strong>#ptr</strong> : LibRPM::Transaction</a>
+        <a href="#read_package_file(filename:String%7CPath):Package-instance-method" class="signature"><strong>#read_package_file</strong>(filename : String | Path) : Package</a>
+        
+          <div class="summary"><p>Read RPM package file</p></div>
         
       </li>
     
@@ -543,6 +581,26 @@ via the Transaction.</p>
 
 
   
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
 </div>
 
 
@@ -564,7 +622,7 @@ Recommended to use <code><a href="../RPM.html#transaction(root=&quot;/&quot;,&bl
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L53" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -591,7 +649,7 @@ Recommended to use <code><a href="../RPM.html#transaction(root=&quot;/&quot;,&bl
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L32" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L69" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -609,7 +667,7 @@ Recommended to use <code><a href="../RPM.html#transaction(root=&quot;/&quot;,&bl
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L149" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L251" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -627,7 +685,7 @@ Recommended to use <code><a href="../RPM.html#transaction(root=&quot;/&quot;,&bl
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L181" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L283" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -665,7 +723,7 @@ different by RPM version.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L344" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L446" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -690,7 +748,33 @@ false if transaction has problem(s).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L307" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L409" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="db_iterator(tag=DbiTag::Packages,val=nil,&amp;block:MatchIterator-&gt;UNDERSCORE)-instance-method">
+      <div class="signature">
+        
+        def <strong>db_iterator</strong>(tag = <span class="t">DbiTag</span><span class="t">::</span><span class="t">Packages</span>, val = <span class="n">nil</span>, &block : <a href="../RPM/MatchIterator.html">MatchIterator</a> -> UNDERSCORE)
+
+        <a class="method-permalink" href="#db_iterator(tag=DbiTag::Packages,val=nil,&block:MatchIterator-%3EUNDERSCORE)-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Init DB iterator, yield block and cleanup.</p>
+
+<p>Please refer RPM's <code>rpmtsInitIterator()</code> function for more
+details.</p>
+
+<p>Some examples are:</p>
+
+<ul><li>For package tag lookup, use <code><a href="../RPM/LibRPM/DbiTag.html#Packages">RPM::DbiTag::Packages</a></code>.</li><li>For package name lookup, use <code><a href="../RPM/LibRPM/DbiTag.html#Name">RPM::DbiTag::Name</a></code>.</li><li>For filename (fullpath) lookup, use <code><a href="../RPM/LibRPM/DbiTag.html#BaseNames">RPM::DbiTag::BaseNames</a></code>.</li><li>To lookup by a specific tag, initialize iterator with
+   <code><a href="../RPM/LibRPM/DbiTag.html#Packages">RPM::DbiTag::Packages</a></code>, and use <code>#regexp</code> method.</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L158" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -708,7 +792,7 @@ false if transaction has problem(s).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L132" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L234" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -726,7 +810,7 @@ false if transaction has problem(s).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L126" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L228" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -744,7 +828,7 @@ false if transaction has problem(s).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L113" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L215" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -765,43 +849,43 @@ will be raised when some error occured.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L105" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L207" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="each(&amp;block)-instance-method">
+    <div class="entry-detail" id="each(etypes:ElementTypes=ElementTypes::ANY,&amp;block)-instance-method">
       <div class="signature">
         
-        def <strong>each</strong>(&block)
+        def <strong>each</strong>(etypes : <a href="../RPM/ElementTypes.html">ElementTypes</a> = <span class="t">ElementTypes</span><span class="t">::</span><span class="t">ANY</span>, &block)
 
-        <a class="method-permalink" href="#each(&block)-instance-method">#</a>
+        <a class="method-permalink" href="#each(etypes:ElementTypes=ElementTypes::ANY,&block)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Iterate over all packages.</p></div>
+        <div class="doc"><p>Iterate over each transaction element</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L83" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L174" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="each_match(key,val,&amp;block)-instance-method">
+    <div class="entry-detail" id="each(etypes:ElementTypes=ElementTypes::ANY)-instance-method">
       <div class="signature">
         
-        def <strong>each_match</strong>(key, val, &block)
+        def <strong>each</strong>(etypes : <a href="../RPM/ElementTypes.html">ElementTypes</a> = <span class="t">ElementTypes</span><span class="t">::</span><span class="t">ANY</span>)
 
-        <a class="method-permalink" href="#each_match(key,val,&block)-instance-method">#</a>
+        <a class="method-permalink" href="#each(etypes:ElementTypes=ElementTypes::ANY)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Iterate over packages of matching key and value.</p></div>
+        <div class="doc"><p>Returns iterator for transaction elements</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L77" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L168" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -817,7 +901,7 @@ will be raised when some error occured.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L24" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L61" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -835,7 +919,7 @@ will be raised when some error occured.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L176" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L278" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -853,7 +937,7 @@ will be raised when some error occured.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L171" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L273" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -879,7 +963,7 @@ details.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L63" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L133" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -899,7 +983,7 @@ details.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L90" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L192" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -917,7 +1001,7 @@ details.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L189" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L291" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -940,7 +1024,7 @@ following the new package to be installed.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L144" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L246" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -960,23 +1044,27 @@ following the new package to be installed.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L41" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L78" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="ptr:LibRPM::Transaction-instance-method">
+    <div class="entry-detail" id="read_package_file(filename:String|Path):Package-instance-method">
       <div class="signature">
         
-        def <strong>ptr</strong> : LibRPM::Transaction
+        def <strong>read_package_file</strong>(filename : String | Path) : <a href="../RPM/Package.html">Package</a>
 
-        <a class="method-permalink" href="#ptr:LibRPM::Transaction-instance-method">#</a>
+        <a class="method-permalink" href="#read_package_file(filename:String%7CPath):Package-instance-method">#</a>
       </div>
+      
+        <div class="doc"><p>Read RPM package file</p>
+
+<p>For independent use, <code><a href="../RPM/Package.html#open(filename)-class-method">RPM::Package.open</a></code>.</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L10" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L91" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -998,7 +1086,7 @@ to store the rootdir pathname, and return it.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L166" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L268" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1019,7 +1107,7 @@ installations and/or deletions are set.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L157" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L259" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1053,7 +1141,7 @@ different by RPM version.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L231" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L333" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1073,7 +1161,7 @@ different by RPM version.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/3ea7205e482b22e878494d63c672308ec72b2ac9/src/rpm/transaction.cr#L97" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/transaction.cr#L199" target="_blank">View source</a>]
         
       </div>
     </div>
