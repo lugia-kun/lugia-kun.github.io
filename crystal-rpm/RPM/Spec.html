@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.28.0">
+<meta name="generator" content="Crystal Docs 0.30.1">
 
 
 <link href="../css/style.css" rel="stylesheet" type="text/css">
@@ -40,6 +40,11 @@
       <a href="../RPM.html">RPM</a>
       
         <ul>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/AllocationError" data-name="rpm::allocationerror">
+      <a href="../RPM/AllocationError.html">AllocationError</a>
+      
+    </li>
   
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/BuildFlags" data-name="rpm::buildflags">
       <a href="../RPM/BuildFlags.html">BuildFlags</a>
@@ -136,6 +141,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/PackageError" data-name="rpm::packageerror">
+      <a href="../RPM/PackageError.html">PackageError</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Patch" data-name="rpm::patch">
       <a href="../RPM/Patch.html">Patch</a>
       
@@ -216,18 +226,63 @@
       
         <ul>
   
-  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ElementUnion" data-name="rpm::tagdata::elementunion">
-      <a href="../RPM/TagData/ElementUnion.html">ElementUnion</a>
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnType" data-name="rpm::tagdata::returntype(t)">
+      <a href="../RPM/TagData/ReturnType.html">ReturnType</a>
       
     </li>
   
-  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/Iterator" data-name="rpm::tagdata::iterator(t)">
-      <a href="../RPM/TagData/Iterator.html">Iterator</a>
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeBase" data-name="rpm::tagdata::returntypebase">
+      <a href="../RPM/TagData/ReturnTypeBase.html">ReturnTypeBase</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeBin" data-name="rpm::tagdata::returntypebin">
+      <a href="../RPM/TagData/ReturnTypeBin.html">ReturnTypeBin</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeChar" data-name="rpm::tagdata::returntypechar">
+      <a href="../RPM/TagData/ReturnTypeChar.html">ReturnTypeChar</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeInt16" data-name="rpm::tagdata::returntypeint16">
+      <a href="../RPM/TagData/ReturnTypeInt16.html">ReturnTypeInt16</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeInt32" data-name="rpm::tagdata::returntypeint32">
+      <a href="../RPM/TagData/ReturnTypeInt32.html">ReturnTypeInt32</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeInt64" data-name="rpm::tagdata::returntypeint64">
+      <a href="../RPM/TagData/ReturnTypeInt64.html">ReturnTypeInt64</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeInt8" data-name="rpm::tagdata::returntypeint8">
+      <a href="../RPM/TagData/ReturnTypeInt8.html">ReturnTypeInt8</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeModule" data-name="rpm::tagdata::returntypemodule">
+      <a href="../RPM/TagData/ReturnTypeModule.html">ReturnTypeModule</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeString" data-name="rpm::tagdata::returntypestring">
+      <a href="../RPM/TagData/ReturnTypeString.html">ReturnTypeString</a>
       
     </li>
   
 </ul>
 
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagDataFormat" data-name="rpm::tagdataformat">
+      <a href="../RPM/TagDataFormat.html">TagDataFormat</a>
       
     </li>
   
@@ -336,7 +391,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/spec.cr#L2" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/spec.cr#L2" target="_blank">
         rpm/spec.cr
       </a>
     
@@ -479,7 +534,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/spec.cr#L143" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/spec.cr#L143" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -497,14 +552,17 @@
         <a class="method-permalink" href="#open(specfile:String,flags:LibRPM::SpecFlags=LibRPM::SpecFlags::FORCE%7CLibRPM::SpecFlags::ANYARCH,buildroot:String?=nil,rootdir:String?=&quot;/&quot;)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Open a specfile</p>
+        <div class="doc">
+          
+          <p>Open a specfile</p>
 
-<p>This method gives reasonable defaults for each parameters.</p></div>
+<p>This method gives reasonable defaults for each parameters.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/spec.cr#L270" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/spec.cr#L270" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -525,7 +583,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/spec.cr#L226" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/spec.cr#L226" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -538,12 +596,15 @@
         <a class="method-permalink" href="#buildconflicts-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Returns array of BuildConflicts specified in the spec file.</p></div>
+        <div class="doc">
+          
+          <p>Returns array of BuildConflicts specified in the spec file.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/spec.cr#L222" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/spec.cr#L222" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -556,12 +617,15 @@
         <a class="method-permalink" href="#buildrequires-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Returns array of BuildRequires specified in the spec file.</p></div>
+        <div class="doc">
+          
+          <p>Returns array of BuildRequires specified in the spec file.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/spec.cr#L217" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/spec.cr#L217" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -574,16 +638,19 @@
         <a class="method-permalink" href="#buildroot-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Returns buildroot associated with the specfile.</p>
+        <div class="doc">
+          
+          <p>Returns buildroot associated with the specfile.</p>
 
 <p>Warning: In rpm 4.9 or later, this is the result of expanding
 <code>%{buildroot}</code>. So, if you open two or more specfiles
-simultaneously, you may get incorrect result.</p></div>
+simultaneously, you may get incorrect result.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/spec.cr#L175" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/spec.cr#L175" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -596,12 +663,15 @@ simultaneously, you may get incorrect result.</p></div>
         <a class="method-permalink" href="#finalize-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Cleanup</p></div>
+        <div class="doc">
+          
+          <p>Cleanup</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/spec.cr#L259" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/spec.cr#L259" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -614,15 +684,18 @@ simultaneously, you may get incorrect result.</p></div>
         <a class="method-permalink" href="#header:RPM::Package-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Header data would be stored into SRPM, as a <code><a href="../RPM/Package.html">RPM::Package</a></code>.</p>
+        <div class="doc">
+          
+          <p>Header data would be stored into SRPM, as a <code><a href="../RPM/Package.html">RPM::Package</a></code>.</p>
 
 <p>Warning: In rpm 4.8, this method returns the header data from
-<code>buildRestrictions</code>. Some tags may not be set.</p></div>
+<code>buildRestrictions</code>. Some tags may not be set.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/spec.cr#L187" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/spec.cr#L187" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -635,12 +708,15 @@ simultaneously, you may get incorrect result.</p></div>
         <a class="method-permalink" href="#packages-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Returns array of packages defined in the spec file.</p></div>
+        <div class="doc">
+          
+          <p>Returns array of packages defined in the spec file.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/spec.cr#L199" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/spec.cr#L199" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -656,7 +732,7 @@ simultaneously, you may get incorrect result.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/spec.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/spec.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -669,12 +745,15 @@ simultaneously, you may get incorrect result.</p></div>
         <a class="method-permalink" href="#sources-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Returns array of sources defined in the spec file.</p></div>
+        <div class="doc">
+          
+          <p>Returns array of sources defined in the spec file.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/spec.cr#L208" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/spec.cr#L208" target="_blank">View source</a>]
         
       </div>
     </div>

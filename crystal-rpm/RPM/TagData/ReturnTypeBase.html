@@ -14,7 +14,7 @@
 </script>
 
   <meta id="repository-name" content="github.com/lugia-kun/crystal-rpm">
-  <title>RPM::Spec::SourceIterator - github.com/lugia-kun/crystal-rpm</title>
+  <title>RPM::TagData::ReturnTypeBase - github.com/lugia-kun/crystal-rpm</title>
 </head>
 <body>
 
@@ -196,7 +196,7 @@
       
     </li>
   
-  <li class="parent open current" data-id="github.com/lugia-kun/crystal-rpm/RPM/Spec" data-name="rpm::spec">
+  <li class="parent " data-id="github.com/lugia-kun/crystal-rpm/RPM/Spec" data-name="rpm::spec">
       <a href="../../RPM/Spec.html">Spec</a>
       
         <ul>
@@ -206,7 +206,7 @@
       
     </li>
   
-  <li class=" current" data-id="github.com/lugia-kun/crystal-rpm/RPM/Spec/SourceIterator" data-name="rpm::spec::sourceiterator">
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Spec/SourceIterator" data-name="rpm::spec::sourceiterator">
       <a href="../../RPM/Spec/SourceIterator.html">SourceIterator</a>
       
     </li>
@@ -221,7 +221,7 @@
       
     </li>
   
-  <li class="parent " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData" data-name="rpm::tagdata">
+  <li class="parent open current" data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData" data-name="rpm::tagdata">
       <a href="../../RPM/TagData.html">TagData</a>
       
         <ul>
@@ -231,7 +231,7 @@
       
     </li>
   
-  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeBase" data-name="rpm::tagdata::returntypebase">
+  <li class=" current" data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeBase" data-name="rpm::tagdata::returntypebase">
       <a href="../../RPM/TagData/ReturnTypeBase.html">ReturnTypeBase</a>
       
     </li>
@@ -365,12 +365,19 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">class</span> RPM::Spec::SourceIterator
+  <span class="kind">abstract struct</span> RPM::TagData::ReturnTypeBase
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../RPM/Spec/SourceIterator.html">RPM::Spec::SourceIterator</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../RPM/TagData/ReturnTypeBase.html">RPM::TagData::ReturnTypeBase</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>Base class of <code><a href="../../RPM/TagData/ReturnType.html">ReturnType</a></code> classes.</p>
 
 
 
@@ -379,16 +386,21 @@
 
 
 
-  <h2>Included Modules</h2>
+
+  <h2>Direct Known Subclasses</h2>
   <ul class="other-types-list">
   
-    <li class="other-type">Iterator(<a href="../../RPM/SourceBase.html">RPM::SourceBase</a>)</li>
+    <li class="other-type"><a href="../../RPM/TagData/ReturnType.html">RPM::TagData::ReturnType(T)</a></li>
+  
+    <li class="other-type"><a href="../../RPM/TagData/ReturnTypeBin.html">RPM::TagData::ReturnTypeBin</a></li>
+  
+    <li class="other-type"><a href="../../RPM/TagData/ReturnTypeChar.html">RPM::TagData::ReturnTypeChar</a></li>
+  
+    <li class="other-type"><a href="../../RPM/TagData/ReturnTypeInt8.html">RPM::TagData::ReturnTypeInt8</a></li>
+  
+    <li class="other-type"><a href="../../RPM/TagData/ReturnTypeString.html">RPM::TagData::ReturnTypeString</a></li>
   
   </ul>
-
-
-
-
 
 
 
@@ -398,8 +410,8 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/spec.cr#L69" target="_blank">
-        rpm/spec.cr
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/tagdata.cr#L32" target="_blank">
+        rpm/tagdata.cr
       </a>
     
     <br/>
@@ -413,7 +425,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new(spec)-class-method" class="signature"><strong>.new</strong>(spec)</a>
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
         
       </li>
     
@@ -427,19 +439,44 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#finalize-instance-method" class="signature"><strong>#finalize</strong></a>
+        <a href="#detach-instance-method" class="signature"><strong>#detach</strong></a>
+        
+          <div class="summary"><p>Deallocates the tagdata.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#next-instance-method" class="signature"><strong>#next</strong></a>
+        <a href="#format(io:IO,fmt:TagDataFormat)-instance-method" class="signature"><strong>#format</strong>(io : IO, fmt : TagDataFormat)</a>
         
-          <div class="summary"><p>Returns the next element in this iterator, or <code>Iterator::Stop::INSTANCE</code> if there are no more elements.</p></div>
+          <div class="summary"><p>Format the TagData to a string also represents array and empty TagData, and send to given IO.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#rewind-instance-method" class="signature"><strong>#rewind</strong></a>
+        <a href="#format1(fmt:TagDataFormat)-instance-method" class="signature"><strong>#format1</strong>(fmt : TagDataFormat)</a>
+        
+          <div class="summary"><p>Format the TagData at current index in given format.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tag-instance-method" class="signature"><strong>#tag</strong></a>
+        
+          <div class="summary"><p>Returns the tag value.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tag=(tag:Tag%7CTagValue)-instance-method" class="signature"><strong>#tag=</strong>(tag : Tag | TagValue)</a>
+        
+          <div class="summary"><p>Sets tag value.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#type-instance-method" class="signature"><strong>#type</strong></a>
+        
+          <div class="summary"><p>Returns the type of TagData</p></div>
         
       </li>
     
@@ -481,33 +518,23 @@
 
 
   
-    
-
-
-    
-
-
-    
-
-
-  
 </div>
 
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(spec)-class-method">
+    <div class="entry-detail" id="new-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(spec)
+        def self.<strong>new</strong>
 
-        <a class="method-permalink" href="#new(spec)-class-method">#</a>
+        <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/spec.cr#L79" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/tagdata.cr#L32" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -519,60 +546,134 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="finalize-instance-method">
+    <div class="entry-detail" id="detach-instance-method">
       <div class="signature">
         
-        def <strong>finalize</strong>
+        def <strong>detach</strong>
 
-        <a class="method-permalink" href="#finalize-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/spec.cr#L89" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="next-instance-method">
-      <div class="signature">
-        
-        def <strong>next</strong>
-
-        <a class="method-permalink" href="#next-instance-method">#</a>
+        <a class="method-permalink" href="#detach-instance-method">#</a>
       </div>
       
         <div class="doc">
           
-            <div class="doc-inherited">
-              Description copied from module Iterator(<a href="../../RPM/SourceBase.html">RPM::SourceBase</a>)
-            </div>
-          
-          <p>Returns the next element in this iterator, or <code>Iterator::Stop::INSTANCE</code> if there
-are no more elements.</p>
+          <p>Deallocates the tagdata.</p>
+
+<p>This method modifies <code>self</code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/spec.cr#L111" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/tagdata.cr#L48" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="rewind-instance-method">
+    <div class="entry-detail" id="format(io:IO,fmt:TagDataFormat)-instance-method">
       <div class="signature">
         
-        def <strong>rewind</strong>
+        def <strong>format</strong>(io : IO, fmt : <a href="../../RPM/TagDataFormat.html">TagDataFormat</a>)
 
-        <a class="method-permalink" href="#rewind-instance-method">#</a>
+        <a class="method-permalink" href="#format(io:IO,fmt:TagDataFormat)-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+          <p>Format the TagData to a string also represents array and empty
+TagData, and send to given IO.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/spec.cr#L134" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/tagdata.cr#L85" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="format1(fmt:TagDataFormat)-instance-method">
+      <div class="signature">
+        
+        def <strong>format1</strong>(fmt : <a href="../../RPM/TagDataFormat.html">TagDataFormat</a>)
+
+        <a class="method-permalink" href="#format1(fmt:TagDataFormat)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Format the TagData at current index in given format.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/tagdata.cr#L71" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tag-instance-method">
+      <div class="signature">
+        
+        def <strong>tag</strong>
+
+        <a class="method-permalink" href="#tag-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns the tag value.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/tagdata.cr#L36" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tag=(tag:Tag|TagValue)-instance-method">
+      <div class="signature">
+        
+        def <strong>tag=</strong>(tag : <a href="../../RPM/Tag.html">Tag</a> | <a href="../../RPM/TagValue.html">TagValue</a>)
+
+        <a class="method-permalink" href="#tag=(tag:Tag%7CTagValue)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Sets tag value.</p>
+
+<p><span class="flag purple">NOTE</span>  RPM allows to change tag value only to same type. If
+not, this method raises <code>TypeCastError</code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/tagdata.cr#L56" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="type-instance-method">
+      <div class="signature">
+        
+        def <strong>type</strong>
+
+        <a class="method-permalink" href="#type-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns the type of TagData</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/tagdata.cr#L41" target="_blank">View source</a>]
         
       </div>
     </div>

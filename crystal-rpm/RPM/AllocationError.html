@@ -14,7 +14,7 @@
 </script>
 
   <meta id="repository-name" content="github.com/lugia-kun/crystal-rpm">
-  <title>RPM::Patch - github.com/lugia-kun/crystal-rpm</title>
+  <title>RPM::AllocationError - github.com/lugia-kun/crystal-rpm</title>
 </head>
 <body>
 
@@ -41,7 +41,7 @@
       
         <ul>
   
-  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/AllocationError" data-name="rpm::allocationerror">
+  <li class=" current" data-id="github.com/lugia-kun/crystal-rpm/RPM/AllocationError" data-name="rpm::allocationerror">
       <a href="../RPM/AllocationError.html">AllocationError</a>
       
     </li>
@@ -146,7 +146,7 @@
       
     </li>
   
-  <li class=" current" data-id="github.com/lugia-kun/crystal-rpm/RPM/Patch" data-name="rpm::patch">
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Patch" data-name="rpm::patch">
       <a href="../RPM/Patch.html">Patch</a>
       
     </li>
@@ -365,15 +365,19 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">class</span> RPM::Patch
+  <span class="kind">class</span> RPM::AllocationError
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../RPM/Patch.html">RPM::Patch</a></li><li class="superclass"><a href="../RPM/SourceBase.html">RPM::SourceBase</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../RPM/AllocationError.html">RPM::AllocationError</a></li><li class="superclass">Errno</li><li class="superclass">Exception</li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
 
 
 
+
+  <h2>Overview</h2>
+
+  <p>Allocation Error occured within librpm API</p>
 
 
 
@@ -391,8 +395,8 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/source.cr#L22" target="_blank">
-        rpm/source.cr
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm.cr#L81" target="_blank">
+        rpm.cr
       </a>
     
     <br/>
@@ -401,6 +405,16 @@
 
 
 
+
+  <h2>Constructors</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new(name:String)-class-method" class="signature"><strong>.new</strong>(name : String)</a>
+        
+      </li>
+    
+  </ul>
 
 
 
@@ -414,61 +428,18 @@
   
     
 
-  <h3>Instance methods inherited from class <code><a href="../RPM/SourceBase.html">RPM::SourceBase</a></code></h3>
-  
-  
-    <a href="../RPM/SourceBase.html#filename-instance-method" class="tooltip">
-      <span>filename</span>
-    filename</a>, 
+
     
-  
-    <a href="../RPM/SourceBase.html#fullname:String-instance-method" class="tooltip">
-      <span>fullname : String</span>
-    fullname</a>, 
-    
-  
-    <a href="../RPM/SourceBase.html#fullname=(fullname:String)-instance-method" class="tooltip">
-      <span>fullname=(fullname : String)</span>
-    fullname=</a>, 
-    
-  
-    <a href="../RPM/SourceBase.html#no=(no)-instance-method" class="tooltip">
-      <span>no=(no)</span>
-    no=</a>, 
-    
-  
-    <a href="../RPM/SourceBase.html#no?:Bool-instance-method" class="tooltip">
-      <span>no? : Bool</span>
-    no?</a>, 
-    
-  
-    <a href="../RPM/SourceBase.html#number:Int32-instance-method" class="tooltip">
-      <span>number : Int32</span>
-    number</a>, 
-    
-  
-    <a href="../RPM/SourceBase.html#number=(number:Int32)-instance-method" class="tooltip">
-      <span>number=(number : Int32)</span>
-    number=</a>, 
-    
-  
-    <a href="../RPM/SourceBase.html#to_s:String-instance-method" class="tooltip">
-      <span>to_s : String</span>
-    to_s</a>
-    
-  
 
 
     
 
-  <h3>Constructor methods inherited from class <code><a href="../RPM/SourceBase.html">RPM::SourceBase</a></code></h3>
+
   
-  
-    <a href="../RPM/SourceBase.html#new(fullname,number,no=false)-class-method" class="tooltip">
-      <span>new(fullname, number, no = <span class="n">false</span>)</span>
-    new</a>
     
-  
+
+
+    
 
 
     
@@ -497,6 +468,25 @@
   
 </div>
 
+
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new(name:String)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(name : String)
+
+        <a class="method-permalink" href="#new(name:String)-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm.cr#L82" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
 
 
 

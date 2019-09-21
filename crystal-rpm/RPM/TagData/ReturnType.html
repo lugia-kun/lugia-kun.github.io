@@ -14,7 +14,7 @@
 </script>
 
   <meta id="repository-name" content="github.com/lugia-kun/crystal-rpm">
-  <title>RPM::Spec::SourceIterator - github.com/lugia-kun/crystal-rpm</title>
+  <title>RPM::TagData::ReturnType(T) - github.com/lugia-kun/crystal-rpm</title>
 </head>
 <body>
 
@@ -196,7 +196,7 @@
       
     </li>
   
-  <li class="parent open current" data-id="github.com/lugia-kun/crystal-rpm/RPM/Spec" data-name="rpm::spec">
+  <li class="parent " data-id="github.com/lugia-kun/crystal-rpm/RPM/Spec" data-name="rpm::spec">
       <a href="../../RPM/Spec.html">Spec</a>
       
         <ul>
@@ -206,7 +206,7 @@
       
     </li>
   
-  <li class=" current" data-id="github.com/lugia-kun/crystal-rpm/RPM/Spec/SourceIterator" data-name="rpm::spec::sourceiterator">
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Spec/SourceIterator" data-name="rpm::spec::sourceiterator">
       <a href="../../RPM/Spec/SourceIterator.html">SourceIterator</a>
       
     </li>
@@ -221,12 +221,12 @@
       
     </li>
   
-  <li class="parent " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData" data-name="rpm::tagdata">
+  <li class="parent open current" data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData" data-name="rpm::tagdata">
       <a href="../../RPM/TagData.html">TagData</a>
       
         <ul>
   
-  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnType" data-name="rpm::tagdata::returntype(t)">
+  <li class=" current" data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnType" data-name="rpm::tagdata::returntype(t)">
       <a href="../../RPM/TagData/ReturnType.html">ReturnType</a>
       
     </li>
@@ -365,12 +365,19 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">class</span> RPM::Spec::SourceIterator
+  <span class="kind">abstract struct</span> RPM::TagData::ReturnType(T)
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../RPM/Spec/SourceIterator.html">RPM::Spec::SourceIterator</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../RPM/TagData/ReturnType.html">RPM::TagData::ReturnType(T)</a></li><li class="superclass"><a href="../../RPM/TagData/ReturnTypeBase.html">RPM::TagData::ReturnTypeBase</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>Generic ReturnType class for integral types.</p>
 
 
 
@@ -379,16 +386,17 @@
 
 
 
-  <h2>Included Modules</h2>
+
+  <h2>Direct Known Subclasses</h2>
   <ul class="other-types-list">
   
-    <li class="other-type">Iterator(<a href="../../RPM/SourceBase.html">RPM::SourceBase</a>)</li>
+    <li class="other-type"><a href="../../RPM/TagData/ReturnTypeInt16.html">RPM::TagData::ReturnTypeInt16</a></li>
+  
+    <li class="other-type"><a href="../../RPM/TagData/ReturnTypeInt32.html">RPM::TagData::ReturnTypeInt32</a></li>
+  
+    <li class="other-type"><a href="../../RPM/TagData/ReturnTypeInt64.html">RPM::TagData::ReturnTypeInt64</a></li>
   
   </ul>
-
-
-
-
 
 
 
@@ -398,8 +406,8 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/spec.cr#L69" target="_blank">
-        rpm/spec.cr
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/tagdata.cr#L110" target="_blank">
+        rpm/tagdata.cr
       </a>
     
     <br/>
@@ -409,16 +417,6 @@
 
 
 
-  <h2>Constructors</h2>
-  <ul class="list-summary">
-    
-      <li class="entry-summary">
-        <a href="#new(spec)-class-method" class="signature"><strong>.new</strong>(spec)</a>
-        
-      </li>
-    
-  </ul>
-
 
 
 
@@ -427,19 +425,30 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#finalize-instance-method" class="signature"><strong>#finalize</strong></a>
+        <a href="#bytes:Slice(T)-instance-method" class="signature"><strong>#bytes</strong> : Slice(T)</a>
+        
+          <div class="summary"><p>Returns binary raw array of expecting type.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#next-instance-method" class="signature"><strong>#next</strong></a>
+        <a href="#bytes?:Slice(T)?-instance-method" class="signature"><strong>#bytes?</strong> : Slice(T)?</a>
         
-          <div class="summary"><p>Returns the next element in this iterator, or <code>Iterator::Stop::INSTANCE</code> if there are no more elements.</p></div>
+          <div class="summary"><p>Returns binary raw array of expecting type.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#rewind-instance-method" class="signature"><strong>#rewind</strong></a>
+        <a href="#fetch_ptr:Pointer(T)-instance-method" class="signature"><strong>#fetch_ptr</strong> : Pointer(T)</a>
+        
+          <div class="summary"><p>We needs a method to get pointer data.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_a_from_bytes:Array(T)-instance-method" class="signature"><strong>#to_a_from_bytes</strong> : Array(T)</a>
+        
+          <div class="summary"><p>Returns the array of values using <code><a href="../../RPM/TagData/ReturnType.html#bytes:Slice(T)-instance-method">#bytes</a></code></p></div>
         
       </li>
     
@@ -453,8 +462,51 @@
   
     
 
+  <h3>Instance methods inherited from struct <code><a href="../../RPM/TagData/ReturnTypeBase.html">RPM::TagData::ReturnTypeBase</a></code></h3>
+  
+  
+    <a href="../../RPM/TagData/ReturnTypeBase.html#detach-instance-method" class="tooltip">
+      <span>detach</span>
+    detach</a>, 
+    
+  
+    <a href="../../RPM/TagData/ReturnTypeBase.html#format(io:IO,fmt:TagDataFormat)-instance-method" class="tooltip">
+      <span>format(io : IO, fmt : TagDataFormat)</span>
+    format</a>, 
+    
+  
+    <a href="../../RPM/TagData/ReturnTypeBase.html#format1(fmt:TagDataFormat)-instance-method" class="tooltip">
+      <span>format1(fmt : TagDataFormat)</span>
+    format1</a>, 
+    
+  
+    <a href="../../RPM/TagData/ReturnTypeBase.html#tag-instance-method" class="tooltip">
+      <span>tag</span>
+    tag</a>, 
+    
+  
+    <a href="../../RPM/TagData/ReturnTypeBase.html#tag=(tag:Tag%7CTagValue)-instance-method" class="tooltip">
+      <span>tag=(tag : Tag | TagValue)</span>
+    tag=</a>, 
+    
+  
+    <a href="../../RPM/TagData/ReturnTypeBase.html#type-instance-method" class="tooltip">
+      <span>type</span>
+    type</a>
+    
+  
+
 
     
+
+  <h3>Constructor methods inherited from struct <code><a href="../../RPM/TagData/ReturnTypeBase.html">RPM::TagData::ReturnTypeBase</a></code></h3>
+  
+  
+    <a href="../../RPM/TagData/ReturnTypeBase.html#new-class-method" class="tooltip">
+      <span>new</span>
+    new</a>
+    
+  
 
 
     
@@ -494,85 +546,99 @@
 </div>
 
 
-  <h2>Constructor Detail</h2>
-  
-    <div class="entry-detail" id="new(spec)-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(spec)
-
-        <a class="method-permalink" href="#new(spec)-class-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/spec.cr#L79" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-
 
 
 
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="finalize-instance-method">
+    <div class="entry-detail" id="bytes:Slice(T)-instance-method">
       <div class="signature">
         
-        def <strong>finalize</strong>
+        def <strong>bytes</strong> : Slice(T)
 
-        <a class="method-permalink" href="#finalize-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/spec.cr#L89" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="next-instance-method">
-      <div class="signature">
-        
-        def <strong>next</strong>
-
-        <a class="method-permalink" href="#next-instance-method">#</a>
+        <a class="method-permalink" href="#bytes:Slice(T)-instance-method">#</a>
       </div>
       
         <div class="doc">
           
-            <div class="doc-inherited">
-              Description copied from module Iterator(<a href="../../RPM/SourceBase.html">RPM::SourceBase</a>)
-            </div>
-          
-          <p>Returns the next element in this iterator, or <code>Iterator::Stop::INSTANCE</code> if there
-are no more elements.</p>
+          <p>Returns binary raw array of expecting type.</p>
+
+<p>Raises <code>NilAssertionError</code> if <code><a href="../../RPM/TagData/ReturnType.html#fetch_ptr:Pointer(T)-instance-method">#fetch_ptr</a></code> returns <code>NULL</code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/spec.cr#L111" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/tagdata.cr#L117" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="rewind-instance-method">
+    <div class="entry-detail" id="bytes?:Slice(T)?-instance-method">
       <div class="signature">
         
-        def <strong>rewind</strong>
+        def <strong>bytes?</strong> : Slice(T)?
 
-        <a class="method-permalink" href="#rewind-instance-method">#</a>
+        <a class="method-permalink" href="#bytes?:Slice(T)?-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+          <p>Returns binary raw array of expecting type.</p>
+
+<p>Returns <code>nil</code> if <code><a href="../../RPM/TagData/ReturnType.html#fetch_ptr:Pointer(T)-instance-method">#fetch_ptr</a></code> returns <code>NULL</code>.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/spec.cr#L134" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/tagdata.cr#L124" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="fetch_ptr:Pointer(T)-instance-method">
+      <div class="signature">
+        abstract 
+        def <strong>fetch_ptr</strong> : Pointer(T)
+
+        <a class="method-permalink" href="#fetch_ptr:Pointer(T)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>We needs a method to get pointer data.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/tagdata.cr#L112" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_a_from_bytes:Array(T)-instance-method">
+      <div class="signature">
+        
+        def <strong>to_a_from_bytes</strong> : Array(T)
+
+        <a class="method-permalink" href="#to_a_from_bytes:Array(T)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns the array of values using <code><a href="../../RPM/TagData/ReturnType.html#bytes:Slice(T)-instance-method">#bytes</a></code></p>
+
+<p>This may be faster than <code>Indexable#to_a</code> (via
+<code>Enumerable#to_a</code>).</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/tagdata.cr#L138" target="_blank">View source</a>]
         
       </div>
     </div>

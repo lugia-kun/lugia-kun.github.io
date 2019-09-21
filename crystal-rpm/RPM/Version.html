@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.28.0">
+<meta name="generator" content="Crystal Docs 0.30.1">
 
 
 <link href="../css/style.css" rel="stylesheet" type="text/css">
@@ -40,6 +40,11 @@
       <a href="../RPM.html">RPM</a>
       
         <ul>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/AllocationError" data-name="rpm::allocationerror">
+      <a href="../RPM/AllocationError.html">AllocationError</a>
+      
+    </li>
   
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/BuildFlags" data-name="rpm::buildflags">
       <a href="../RPM/BuildFlags.html">BuildFlags</a>
@@ -136,6 +141,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/PackageError" data-name="rpm::packageerror">
+      <a href="../RPM/PackageError.html">PackageError</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Patch" data-name="rpm::patch">
       <a href="../RPM/Patch.html">Patch</a>
       
@@ -216,18 +226,63 @@
       
         <ul>
   
-  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ElementUnion" data-name="rpm::tagdata::elementunion">
-      <a href="../RPM/TagData/ElementUnion.html">ElementUnion</a>
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnType" data-name="rpm::tagdata::returntype(t)">
+      <a href="../RPM/TagData/ReturnType.html">ReturnType</a>
       
     </li>
   
-  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/Iterator" data-name="rpm::tagdata::iterator(t)">
-      <a href="../RPM/TagData/Iterator.html">Iterator</a>
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeBase" data-name="rpm::tagdata::returntypebase">
+      <a href="../RPM/TagData/ReturnTypeBase.html">ReturnTypeBase</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeBin" data-name="rpm::tagdata::returntypebin">
+      <a href="../RPM/TagData/ReturnTypeBin.html">ReturnTypeBin</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeChar" data-name="rpm::tagdata::returntypechar">
+      <a href="../RPM/TagData/ReturnTypeChar.html">ReturnTypeChar</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeInt16" data-name="rpm::tagdata::returntypeint16">
+      <a href="../RPM/TagData/ReturnTypeInt16.html">ReturnTypeInt16</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeInt32" data-name="rpm::tagdata::returntypeint32">
+      <a href="../RPM/TagData/ReturnTypeInt32.html">ReturnTypeInt32</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeInt64" data-name="rpm::tagdata::returntypeint64">
+      <a href="../RPM/TagData/ReturnTypeInt64.html">ReturnTypeInt64</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeInt8" data-name="rpm::tagdata::returntypeint8">
+      <a href="../RPM/TagData/ReturnTypeInt8.html">ReturnTypeInt8</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeModule" data-name="rpm::tagdata::returntypemodule">
+      <a href="../RPM/TagData/ReturnTypeModule.html">ReturnTypeModule</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeString" data-name="rpm::tagdata::returntypestring">
+      <a href="../RPM/TagData/ReturnTypeString.html">ReturnTypeString</a>
       
     </li>
   
 </ul>
 
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagDataFormat" data-name="rpm::tagdataformat">
+      <a href="../RPM/TagDataFormat.html">TagDataFormat</a>
       
     </li>
   
@@ -343,7 +398,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/version.cr#L2" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/version.cr#L2" target="_blank">
         rpm/version.cr
       </a>
     
@@ -363,7 +418,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#new(v:String,r:String,epoch:Int?=nil)-class-method" class="signature"><strong>.new</strong>(v : String, r : String, epoch : Int? = <span class="n">nil</span>)</a>
+        <a href="#new(v,r,epoch:Int?=nil)-class-method" class="signature"><strong>.new</strong>(v, r, epoch : Int? = <span class="n">nil</span>)</a>
         
       </li>
     
@@ -392,17 +447,21 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#(other:Version)-instance-method" class="signature"><strong>#<=></strong>(other : Version)</a>
+        <a href="#(other:Version):Int32-instance-method" class="signature"><strong>#<=></strong>(other : Version) : Int32</a>
+        
+          <div class="summary"><p>Compare to other versions.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#e:Int32?-instance-method" class="signature"><strong>#e</strong> : Int32?</a>
+        <a href="#e:UInt32?-instance-method" class="signature"><strong>#e</strong> : UInt32?</a>
         
       </li>
     
       <li class="entry-summary">
         <a href="#hash-instance-method" class="signature"><strong>#hash</strong></a>
+        
+          <div class="summary"><p>Generates an <code>UInt64</code> hash value for this object.</p></div>
         
       </li>
     
@@ -422,22 +481,58 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#to_s(io)-instance-method" class="signature"><strong>#to_s</strong>(io)</a>
+        
+          <div class="summary"><p>Equivalent to <code><a href="../RPM/Version.html#to_vre(io)-instance-method">#to_vre(io)</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#to_s-instance-method" class="signature"><strong>#to_s</strong></a>
+        
+          <div class="summary"><p>Equivalent to <code><a href="../RPM/Version.html#to_vre-instance-method">#to_vre</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_vr(io)-instance-method" class="signature"><strong>#to_vr</strong>(io)</a>
+        
+          <div class="summary"><p>Send the string represents the version and release, to given IO.</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#to_vr-instance-method" class="signature"><strong>#to_vr</strong></a>
         
+          <div class="summary"><p>Returns the string represents the version and release.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_vre(io)-instance-method" class="signature"><strong>#to_vre</strong>(io)</a>
+        
+          <div class="summary"><p>Send the string represents the version, release and epoch if set, to given IO.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#to_vre-instance-method" class="signature"><strong>#to_vre</strong></a>
         
+          <div class="summary"><p>Returns the string represents the version, release and epoch if set.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_vre_epoch_zero(io)-instance-method" class="signature"><strong>#to_vre_epoch_zero</strong>(io)</a>
+        
+          <div class="summary"><p>Send the string represents the version, release and epoch where epoch is filled with 0, to given IO.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#to_vre_epoch_zero-instance-method" class="signature"><strong>#to_vre_epoch_zero</strong></a>
+        
+          <div class="summary"><p>Returns the string represents the version, release and epoch where epoch is filled with 0.</p></div>
         
       </li>
     
@@ -500,23 +595,23 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/version.cr#L34" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/version.cr#L34" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new(v:String,r:String,epoch:Int?=nil)-class-method">
+    <div class="entry-detail" id="new(v,r,epoch:Int?=nil)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(v : String, r : String, epoch : Int? = <span class="n">nil</span>)
+        def self.<strong>new</strong>(v, r, epoch : Int? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new(v:String,r:String,epoch:Int?=nil)-class-method">#</a>
+        <a class="method-permalink" href="#new(v,r,epoch:Int?=nil)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/version.cr#L39" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/version.cr#L39" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -532,7 +627,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/version.cr#L30" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/version.cr#L30" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -553,7 +648,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/version.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/version.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -563,34 +658,50 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="(other:Version)-instance-method">
+    <div class="entry-detail" id="(other:Version):Int32-instance-method">
       <div class="signature">
         
-        def <strong><=></strong>(other : <a href="../RPM/Version.html">Version</a>)
+        def <strong><=></strong>(other : <a href="../RPM/Version.html">Version</a>) : Int32
 
-        <a class="method-permalink" href="#(other:Version)-instance-method">#</a>
+        <a class="method-permalink" href="#(other:Version):Int32-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+          <p>Compare to other versions.</p>
+
+<p>If <code>self</code> is newer, returns 1. If <code>other</code> is newer, returns -1.
+If two versions are equal, returns 0.</p>
+
+<p>If one's epoch is <code>nil</code>, it will be evaluated as 0 for
+comparison. If one's release is <code>nil</code>, it will be evaluated as
+empty string.</p>
+
+<p><span class="flag purple">NOTE</span>  Using the semantic of RPM's <code>rpmVersionCompare</code> function,</p>
+
+<pre><code>  except <span class="k">for</span> the process <span class="k">for</span> <span class="n">nil</span><span class="o">-</span>releases.</code></pre>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/version.cr#L47" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/version.cr#L58" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="e:Int32?-instance-method">
+    <div class="entry-detail" id="e:UInt32?-instance-method">
       <div class="signature">
         
-        def <strong>e</strong> : Int32?
+        def <strong>e</strong> : UInt32?
 
-        <a class="method-permalink" href="#e:Int32?-instance-method">#</a>
+        <a class="method-permalink" href="#e:UInt32?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/version.cr#L28" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/version.cr#L28" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -603,10 +714,27 @@
         <a class="method-permalink" href="#hash-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class Object
+            </div>
+          
+          <p>Generates an <code>UInt64</code> hash value for this object.</p>
+
+<p>This method must have the property that <code>a == b</code> implies <code>a<a href="../RPM/Version.html#hash-instance-method">.hash</a> == b<a href="../RPM/Version.html#hash-instance-method">.hash</a></code>.</p>
+
+<p>The hash value is used along with <code>==</code> by the <code>Hash</code> class to determine if two objects
+reference the same hash key.</p>
+
+<p>Subclasses must not override this method. Instead, they must define <code>hash(hasher)</code>,
+though usually the macro <code>def_hash</code> can be used to generate this method.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/version.cr#L77" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/version.cr#L181" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -622,7 +750,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/version.cr#L51" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/version.cr#L102" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -638,7 +766,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/version.cr#L55" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/version.cr#L106" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -654,7 +782,28 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/version.cr#L30" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/version.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_s(io)-instance-method">
+      <div class="signature">
+        
+        def <strong>to_s</strong>(io)
+
+        <a class="method-permalink" href="#to_s(io)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Equivalent to <code><a href="../RPM/Version.html#to_vre(io)-instance-method">#to_vre(io)</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/version.cr#L131" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -667,10 +816,36 @@
         <a class="method-permalink" href="#to_s-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Equivalent to <code><a href="../RPM/Version.html#to_vre-instance-method">#to_vre</a></code></p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/version.cr#L63" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/version.cr#L126" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_vr(io)-instance-method">
+      <div class="signature">
+        
+        def <strong>to_vr</strong>(io)
+
+        <a class="method-permalink" href="#to_vr(io)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Send the string represents the version and release, to given IO.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/version.cr#L118" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -683,10 +858,37 @@
         <a class="method-permalink" href="#to_vr-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Returns the string represents the version and release.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/version.cr#L59" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/version.cr#L111" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_vre(io)-instance-method">
+      <div class="signature">
+        
+        def <strong>to_vre</strong>(io)
+
+        <a class="method-permalink" href="#to_vre(io)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Send the string represents the version, release and epoch if
+set, to given IO.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/version.cr#L145" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -699,10 +901,43 @@
         <a class="method-permalink" href="#to_vre-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Returns the string represents the version, release and epoch if
+set.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/version.cr#L67" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/version.cr#L137" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_vre_epoch_zero(io)-instance-method">
+      <div class="signature">
+        
+        def <strong>to_vre_epoch_zero</strong>(io)
+
+        <a class="method-permalink" href="#to_vre_epoch_zero(io)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Send the string represents the version, release and epoch where
+epoch is filled with 0, to given IO.</p>
+
+<p>This method makes a string comparable by single call of
+<code>rpmvercomp</code> function, but it seems to be used for comparing
+version and release separately, according to usage in RPM
+itself.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/version.cr#L172" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -715,10 +950,21 @@
         <a class="method-permalink" href="#to_vre_epoch_zero-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Returns the string represents the version, release and epoch
+where epoch is filled with 0.</p>
+
+<p>This method makes a string comparable by single call of
+<code>rpmvercomp</code> function, but it seems to be used for comparing
+version and release separately, according to usage in RPM
+itself.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/version.cr#L72" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/version.cr#L159" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -734,7 +980,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/version.cr#L29" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/version.cr#L29" target="_blank">View source</a>]
         
       </div>
     </div>

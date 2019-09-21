@@ -14,7 +14,7 @@
 </script>
 
   <meta id="repository-name" content="github.com/lugia-kun/crystal-rpm">
-  <title>RPM::Patch - github.com/lugia-kun/crystal-rpm</title>
+  <title>RPM::TagDataFormat - github.com/lugia-kun/crystal-rpm</title>
 </head>
 <body>
 
@@ -146,7 +146,7 @@
       
     </li>
   
-  <li class=" current" data-id="github.com/lugia-kun/crystal-rpm/RPM/Patch" data-name="rpm::patch">
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Patch" data-name="rpm::patch">
       <a href="../RPM/Patch.html">Patch</a>
       
     </li>
@@ -281,7 +281,7 @@
       
     </li>
   
-  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagDataFormat" data-name="rpm::tagdataformat">
+  <li class=" current" data-id="github.com/lugia-kun/crystal-rpm/RPM/TagDataFormat" data-name="rpm::tagdataformat">
       <a href="../RPM/TagDataFormat.html">TagDataFormat</a>
       
     </li>
@@ -365,17 +365,18 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">class</span> RPM::Patch
+  <span class="kind">alias</span> RPM::TagDataFormat
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../RPM/Patch.html">RPM::Patch</a></li><li class="superclass"><a href="../RPM/SourceBase.html">RPM::SourceBase</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
 
 
 
 
 
+  <h2>Alias Definition</h2>
+  <code>RPM::LibRPM::TagDataFormat</code>
 
 
 
@@ -391,14 +392,121 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/source.cr#L22" target="_blank">
-        rpm/source.cr
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/librpm.cr#L1181" target="_blank">
+        rpm/librpm.cr
       </a>
     
     <br/>
   
 
 
+
+  
+    <h2>Constant Summary</h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="ARMOR">
+        <strong>ARMOR</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="ARRAYSIZE">
+        <strong>ARRAYSIZE</strong> = <code><span class="n">14</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="BASE64">
+        <strong>BASE64</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="DATE">
+        <strong>DATE</strong> = <code><span class="n">11</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="DAY">
+        <strong>DAY</strong> = <code><span class="n">12</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="DEPFLAGS">
+        <strong>DEPFLAGS</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="DEPTYPE">
+        <strong>DEPTYPE</strong> = <code><span class="n">15</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="EXPAND">
+        <strong>EXPAND</strong> = <code><span class="n">18</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="FFLAGS">
+        <strong>FFLAGS</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="FSTATE">
+        <strong>FSTATE</strong> = <code><span class="n">16</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="FSTATUS">
+        <strong>FSTATUS</strong> = <code><span class="n">19</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="HEX">
+        <strong>HEX</strong> = <code><span class="n">10</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="OCTAL">
+        <strong>OCTAL</strong> = <code><span class="n">9</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="PERMS">
+        <strong>PERMS</strong> = <code><span class="n">6</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="PGPSIG">
+        <strong>PGPSIG</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SHESCAPE">
+        <strong>SHESCAPE</strong> = <code><span class="n">13</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="STRING">
+        <strong>STRING</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="TRIGGERTYPE">
+        <strong>TRIGGERTYPE</strong> = <code><span class="n">7</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VFLAGS">
+        <strong>VFLAGS</strong> = <code><span class="n">17</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="XML">
+        <strong>XML</strong> = <code><span class="n">8</span></code>
+      </dt>
+      
+    
+  </dl>
 
 
 
@@ -411,89 +519,6 @@
 
 
 <div class="methods-inherited">
-  
-    
-
-  <h3>Instance methods inherited from class <code><a href="../RPM/SourceBase.html">RPM::SourceBase</a></code></h3>
-  
-  
-    <a href="../RPM/SourceBase.html#filename-instance-method" class="tooltip">
-      <span>filename</span>
-    filename</a>, 
-    
-  
-    <a href="../RPM/SourceBase.html#fullname:String-instance-method" class="tooltip">
-      <span>fullname : String</span>
-    fullname</a>, 
-    
-  
-    <a href="../RPM/SourceBase.html#fullname=(fullname:String)-instance-method" class="tooltip">
-      <span>fullname=(fullname : String)</span>
-    fullname=</a>, 
-    
-  
-    <a href="../RPM/SourceBase.html#no=(no)-instance-method" class="tooltip">
-      <span>no=(no)</span>
-    no=</a>, 
-    
-  
-    <a href="../RPM/SourceBase.html#no?:Bool-instance-method" class="tooltip">
-      <span>no? : Bool</span>
-    no?</a>, 
-    
-  
-    <a href="../RPM/SourceBase.html#number:Int32-instance-method" class="tooltip">
-      <span>number : Int32</span>
-    number</a>, 
-    
-  
-    <a href="../RPM/SourceBase.html#number=(number:Int32)-instance-method" class="tooltip">
-      <span>number=(number : Int32)</span>
-    number=</a>, 
-    
-  
-    <a href="../RPM/SourceBase.html#to_s:String-instance-method" class="tooltip">
-      <span>to_s : String</span>
-    to_s</a>
-    
-  
-
-
-    
-
-  <h3>Constructor methods inherited from class <code><a href="../RPM/SourceBase.html">RPM::SourceBase</a></code></h3>
-  
-  
-    <a href="../RPM/SourceBase.html#new(fullname,number,no=false)-class-method" class="tooltip">
-      <span>new(fullname, number, no = <span class="n">false</span>)</span>
-    new</a>
-    
-  
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
   
 </div>
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.28.0">
+<meta name="generator" content="Crystal Docs 0.30.1">
 
 
 <link href="../css/style.css" rel="stylesheet" type="text/css">
@@ -40,6 +40,11 @@
       <a href="../RPM.html">RPM</a>
       
         <ul>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/AllocationError" data-name="rpm::allocationerror">
+      <a href="../RPM/AllocationError.html">AllocationError</a>
+      
+    </li>
   
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/BuildFlags" data-name="rpm::buildflags">
       <a href="../RPM/BuildFlags.html">BuildFlags</a>
@@ -136,6 +141,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/PackageError" data-name="rpm::packageerror">
+      <a href="../RPM/PackageError.html">PackageError</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Patch" data-name="rpm::patch">
       <a href="../RPM/Patch.html">Patch</a>
       
@@ -216,18 +226,63 @@
       
         <ul>
   
-  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ElementUnion" data-name="rpm::tagdata::elementunion">
-      <a href="../RPM/TagData/ElementUnion.html">ElementUnion</a>
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnType" data-name="rpm::tagdata::returntype(t)">
+      <a href="../RPM/TagData/ReturnType.html">ReturnType</a>
       
     </li>
   
-  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/Iterator" data-name="rpm::tagdata::iterator(t)">
-      <a href="../RPM/TagData/Iterator.html">Iterator</a>
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeBase" data-name="rpm::tagdata::returntypebase">
+      <a href="../RPM/TagData/ReturnTypeBase.html">ReturnTypeBase</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeBin" data-name="rpm::tagdata::returntypebin">
+      <a href="../RPM/TagData/ReturnTypeBin.html">ReturnTypeBin</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeChar" data-name="rpm::tagdata::returntypechar">
+      <a href="../RPM/TagData/ReturnTypeChar.html">ReturnTypeChar</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeInt16" data-name="rpm::tagdata::returntypeint16">
+      <a href="../RPM/TagData/ReturnTypeInt16.html">ReturnTypeInt16</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeInt32" data-name="rpm::tagdata::returntypeint32">
+      <a href="../RPM/TagData/ReturnTypeInt32.html">ReturnTypeInt32</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeInt64" data-name="rpm::tagdata::returntypeint64">
+      <a href="../RPM/TagData/ReturnTypeInt64.html">ReturnTypeInt64</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeInt8" data-name="rpm::tagdata::returntypeint8">
+      <a href="../RPM/TagData/ReturnTypeInt8.html">ReturnTypeInt8</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeModule" data-name="rpm::tagdata::returntypemodule">
+      <a href="../RPM/TagData/ReturnTypeModule.html">ReturnTypeModule</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeString" data-name="rpm::tagdata::returntypestring">
+      <a href="../RPM/TagData/ReturnTypeString.html">ReturnTypeString</a>
       
     </li>
   
 </ul>
 
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagDataFormat" data-name="rpm::tagdataformat">
+      <a href="../RPM/TagDataFormat.html">TagDataFormat</a>
       
     </li>
   
@@ -336,14 +391,14 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/dependency.cr#L2" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/dependency.cr#L2" target="_blank">
         rpm/dependency.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/package.cr#L13" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/package.cr#L16" target="_blank">
         rpm/package.cr
       </a>
     
@@ -361,6 +416,8 @@
     
       <li class="entry-summary">
         <a href="#create(name:String,version:Version)-class-method" class="signature"><strong>.create</strong>(name : String, version : Version)</a>
+        
+          <div class="summary"><p>Creates a new package header with given name and version</p></div>
         
       </li>
     
@@ -386,12 +443,16 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#[](tag:DbiTag)-instance-method" class="signature"><strong>#[]</strong>(tag : DbiTag)</a>
+        <a href="#[](tag)-instance-method" class="signature"><strong>#[]</strong>(tag)</a>
+        
+          <div class="summary"><p>Get the value of given <code><a href="../RPM/Tag.html">Tag</a></code> directly.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#[](tag:Tag%7CTagValue)-instance-method" class="signature"><strong>#[]</strong>(tag : Tag | TagValue)</a>
+        <a href="#[]?(tag)-instance-method" class="signature"><strong>#[]?</strong>(tag)</a>
+        
+          <div class="summary"><p>Get the value of given <code><a href="../RPM/Tag.html">Tag</a></code> directly.</p></div>
         
       </li>
     
@@ -401,12 +462,51 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#files-instance-method" class="signature"><strong>#files</strong></a>
+        <a href="#file_paths:Array(String)-instance-method" class="signature"><strong>#file_paths</strong> : Array(String)</a>
+        
+          <div class="summary"><p>Get the list of file paths.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#files:Array(RPM::File)-instance-method" class="signature"><strong>#files</strong> : Array(RPM::File)</a>
+        
+          <div class="summary"><p>Get the list of files with extra metadata.</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#finalize-instance-method" class="signature"><strong>#finalize</strong></a>
+        
+          <div class="summary"><p>Cleanup the handle to package header.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_tagdata(tag:Tag%7CTagValue,*,flag:LibRPM::HeaderGetFlags=LibRPM::HeaderGetFlags::MINMEM)-instance-method" class="signature"><strong>#get_tagdata</strong>(tag : Tag | TagValue, *, flag : LibRPM::HeaderGetFlags = <span class="t">LibRPM</span><span class="t">::</span><span class="t">HeaderGetFlags</span><span class="t">::</span><span class="t">MINMEM</span>)</a>
+        
+          <div class="summary"><p>Get <code><a href="../RPM/TagData.html">TagData</a></code> for given <code><a href="../RPM/Tag.html">Tag</a></code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_tagdata(tag:DbiTag,**opts)-instance-method" class="signature"><strong>#get_tagdata</strong>(tag : DbiTag, **opts)</a>
+        
+          <div class="summary"><p>Get <code><a href="../RPM/TagData.html">TagData</a></code> for given <code><a href="../RPM/Tag.html">Tag</a></code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_tagdata?(tag:Tag%7CTagValue,*,flag:LibRPM::HeaderGetFlags=LibRPM::HeaderGetFlags::MINMEM)-instance-method" class="signature"><strong>#get_tagdata?</strong>(tag : Tag | TagValue, *, flag : LibRPM::HeaderGetFlags = <span class="t">LibRPM</span><span class="t">::</span><span class="t">HeaderGetFlags</span><span class="t">::</span><span class="t">MINMEM</span>)</a>
+        
+          <div class="summary"><p>Get <code><a href="../RPM/TagData.html">TagData</a></code> for given <code><a href="../RPM/Tag.html">Tag</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_tagdata?(tag:DbiTag,**opts)-instance-method" class="signature"><strong>#get_tagdata?</strong>(tag : DbiTag, **opts)</a>
+        
+          <div class="summary"><p>Get <code><a href="../RPM/TagData.html">TagData</a></code> for given <code><a href="../RPM/Tag.html">Tag</a></code></p></div>
         
       </li>
     
@@ -417,6 +517,8 @@
     
       <li class="entry-summary">
         <a href="#name-instance-method" class="signature"><strong>#name</strong></a>
+        
+          <div class="summary"><p>Returns the name of package.</p></div>
         
       </li>
     
@@ -438,10 +540,28 @@
       <li class="entry-summary">
         <a href="#signature-instance-method" class="signature"><strong>#signature</strong></a>
         
+          <div class="summary"><p>Returns the signature string</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#sprintf(fmt)-instance-method" class="signature"><strong>#sprintf</strong>(fmt)</a>
+        
+          <div class="summary"><p>Format a string with package data</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#with_tagdata(*tags,&block)-instance-method" class="signature"><strong>#with_tagdata</strong>(*tags, &block)</a>
+        
+          <div class="summary"><p>Get <code><a href="../RPM/TagData.html">TagData</a></code>(s) for given <code><a href="../RPM/Tag.html">Tag</a></code>(s), yield them and then cleanup them.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#with_tagdata?(*tags,&block)-instance-method" class="signature"><strong>#with_tagdata?</strong>(*tags, &block)</a>
+        
+          <div class="summary"><p>Get <code><a href="../RPM/TagData.html">TagData</a></code>(s) for given <code><a href="../RPM/Tag.html">Tag</a></code>(s), yield them and then cleanup them.</p></div>
         
       </li>
     
@@ -488,10 +608,15 @@
         <a class="method-permalink" href="#create(name:String,version:Version)-class-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Creates a new package header with given name and version</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/package.cr#L16" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/package.cr#L20" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -504,12 +629,15 @@
         <a class="method-permalink" href="#open(filename)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Open existing RPM Package file</p></div>
+        <div class="doc">
+          
+          <p>Open existing RPM Package file</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/package.cr#L39" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/package.cr#L51" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -522,12 +650,15 @@
         <a class="method-permalink" href="#open(filename,*,transaction:Transaction)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Open existing RPM package file, using existing transaction</p></div>
+        <div class="doc">
+          
+          <p>Open existing RPM package file, using existing transaction</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/package.cr#L46" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/package.cr#L58" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -537,34 +668,48 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="[](tag:DbiTag)-instance-method">
+    <div class="entry-detail" id="[](tag)-instance-method">
       <div class="signature">
         
-        def <strong>[]</strong>(tag : <a href="../RPM/DbiTag.html">DbiTag</a>)
+        def <strong>[]</strong>(tag)
 
-        <a class="method-permalink" href="#[](tag:DbiTag)-instance-method">#</a>
+        <a class="method-permalink" href="#[](tag)-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+          <p>Get the value of given <code><a href="../RPM/Tag.html">Tag</a></code> directly.</p>
+
+<p>Raises <code>KeyError</code> if given <code><a href="../RPM/Tag.html">Tag</a></code> is not found.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/package.cr#L192" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/package.cr#L333" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="[](tag:Tag|TagValue)-instance-method">
+    <div class="entry-detail" id="[]?(tag)-instance-method">
       <div class="signature">
         
-        def <strong>[]</strong>(tag : <a href="../RPM/Tag.html">Tag</a> | <a href="../RPM/TagValue.html">TagValue</a>)
+        def <strong>[]?</strong>(tag)
 
-        <a class="method-permalink" href="#[](tag:Tag%7CTagValue)-instance-method">#</a>
+        <a class="method-permalink" href="#[]?(tag)-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+          <p>Get the value of given <code><a href="../RPM/Tag.html">Tag</a></code> directly.</p>
+
+<p>If given <code><a href="../RPM/Tag.html">Tag</a></code> is not found, returns <code>nil</code>.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/package.cr#L201" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/package.cr#L342" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -580,23 +725,53 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/package.cr#L175" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/package.cr#L231" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="files-instance-method">
+    <div class="entry-detail" id="file_paths:Array(String)-instance-method">
       <div class="signature">
         
-        def <strong>files</strong>
+        def <strong>file_paths</strong> : Array(String)
 
-        <a class="method-permalink" href="#files-instance-method">#</a>
+        <a class="method-permalink" href="#file_paths:Array(String)-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+          <p>Get the list of file paths.</p>
+
+<p>Handy function for getting file paths. Since RPM stores basename
+and dirname separately, this method concatenate them to represents
+list of fullpaths.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/package.cr#L81" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/package.cr#L123" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="files:Array(RPM::File)-instance-method">
+      <div class="signature">
+        
+        def <strong>files</strong> : Array(<a href="../RPM/File.html">RPM::File</a>)
+
+        <a class="method-permalink" href="#files:Array(RPM::File)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Get the list of files with extra metadata.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/package.cr#L141" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -609,10 +784,112 @@
         <a class="method-permalink" href="#finalize-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Cleanup the handle to package header.</p>
+
+<p>The package header does not seem to depend to the external
+resources (fd for the file or DB). So calling this method is not
+mandated.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/package.cr#L59" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/package.cr#L76" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_tagdata(tag:Tag|TagValue,*,flag:LibRPM::HeaderGetFlags=LibRPM::HeaderGetFlags::MINMEM)-instance-method">
+      <div class="signature">
+        
+        def <strong>get_tagdata</strong>(tag : <a href="../RPM/Tag.html">Tag</a> | <a href="../RPM/TagValue.html">TagValue</a>, *, flag : LibRPM::HeaderGetFlags = <span class="t">LibRPM</span><span class="t">::</span><span class="t">HeaderGetFlags</span><span class="t">::</span><span class="t">MINMEM</span>)
+
+        <a class="method-permalink" href="#get_tagdata(tag:Tag%7CTagValue,*,flag:LibRPM::HeaderGetFlags=LibRPM::HeaderGetFlags::MINMEM)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Get <code><a href="../RPM/TagData.html">TagData</a></code> for given <code><a href="../RPM/Tag.html">Tag</a></code>.</p>
+
+<p>Raises KeyError if the given tag is not found.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/package.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_tagdata(tag:DbiTag,**opts)-instance-method">
+      <div class="signature">
+        
+        def <strong>get_tagdata</strong>(tag : <a href="../RPM/DbiTag.html">DbiTag</a>, **opts)
+
+        <a class="method-permalink" href="#get_tagdata(tag:DbiTag,**opts)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Get <code><a href="../RPM/TagData.html">TagData</a></code> for given <code><a href="../RPM/Tag.html">Tag</a></code>.</p>
+
+<p>Raises <code>TypeCastError</code> if the given tag is not valid for <code><a href="../RPM/Tag.html">Tag</a></code>.
+Raises <code>KeyError</code> if the given tag is not found.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/package.cr#L260" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_tagdata?(tag:Tag|TagValue,*,flag:LibRPM::HeaderGetFlags=LibRPM::HeaderGetFlags::MINMEM)-instance-method">
+      <div class="signature">
+        
+        def <strong>get_tagdata?</strong>(tag : <a href="../RPM/Tag.html">Tag</a> | <a href="../RPM/TagValue.html">TagValue</a>, *, flag : LibRPM::HeaderGetFlags = <span class="t">LibRPM</span><span class="t">::</span><span class="t">HeaderGetFlags</span><span class="t">::</span><span class="t">MINMEM</span>)
+
+        <a class="method-permalink" href="#get_tagdata?(tag:Tag%7CTagValue,*,flag:LibRPM::HeaderGetFlags=LibRPM::HeaderGetFlags::MINMEM)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Get <code><a href="../RPM/TagData.html">TagData</a></code> for given <code><a href="../RPM/Tag.html">Tag</a></code></p>
+
+<p>Returns <code>nil</code> if the given tag is not found.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/package.cr#L250" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_tagdata?(tag:DbiTag,**opts)-instance-method">
+      <div class="signature">
+        
+        def <strong>get_tagdata?</strong>(tag : <a href="../RPM/DbiTag.html">DbiTag</a>, **opts)
+
+        <a class="method-permalink" href="#get_tagdata?(tag:DbiTag,**opts)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Get <code><a href="../RPM/TagData.html">TagData</a></code> for given <code><a href="../RPM/Tag.html">Tag</a></code></p>
+
+<p>Returns <code>nil</code> if the given tag is not found, or not valid tag.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/package.cr#L272" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -628,7 +905,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/package.cr#L16" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/package.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -641,10 +918,17 @@
         <a class="method-permalink" href="#name-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Returns the name of package.</p>
+
+<p>Shorthand for calling <code><a href="../RPM/Package.html#[](tag)-instance-method">#[]</a></code> with <code><a href="../RPM/LibRPM/Tag.html#Name">Tag::Name</a></code>.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/package.cr#L77" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/package.cr#L114" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -660,7 +944,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/package.cr#L171" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/package.cr#L227" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -676,7 +960,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/package.cr#L167" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/package.cr#L223" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -692,7 +976,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/package.cr#L163" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/package.cr#L219" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -705,10 +989,22 @@
         <a class="method-permalink" href="#signature-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Returns the signature string</p>
+
+<p>Returns the signature string with hexadecimal charactors.
+Returns the string <code>(none)</code> if not set.</p>
+
+<p>If you want a binary data, you may use
+<code><a href="../RPM/Package.html#with_tagdata(*tags,&block)-instance-method">#with_tagdata(Tag::SigMD5)</a></code> and <code><a href="../RPM/TagData.html#bytes-instance-method">TagData#bytes</a></code>. But it just
+converts back to binary from this hexadecimal character representation.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/package.cr#L73" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/package.cr#L101" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -721,10 +1017,71 @@
         <a class="method-permalink" href="#sprintf(fmt)-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Format a string with package data</p>
+
+<p>The format is same to the <code>--queryformat</code> argument in <code>rpm -q</code>:
+for example, <code>%{name}</code> will be replaced with the name of the
+package and <code>%{version}</code> will be replaced with the version of
+the package.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/90fb51f299244c308a7ec6732c76ab37fae9ef2f/src/rpm/package.cr#L66" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/package.cr#L86" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="with_tagdata(*tags,&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>with_tagdata</strong>(*tags, &block)
+
+        <a class="method-permalink" href="#with_tagdata(*tags,&block)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Get <code><a href="../RPM/TagData.html">TagData</a></code>(s) for given <code><a href="../RPM/Tag.html">Tag</a></code>(s), yield them and then cleanup them.</p>
+
+<p>Returns the result of given block.</p>
+
+<p>Raises <code>KeyError</code> if one of <code>tags</code> is not found. In this case,
+the block will not be yielded.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/package.cr#L287" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="with_tagdata?(*tags,&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>with_tagdata?</strong>(*tags, &block)
+
+        <a class="method-permalink" href="#with_tagdata?(*tags,&block)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Get <code><a href="../RPM/TagData.html">TagData</a></code>(s) for given <code><a href="../RPM/Tag.html">Tag</a></code>(s), yield them and then cleanup them.</p>
+
+<p>Returns the result of given block.</p>
+
+<p>If some of <code>tags</code> are not found, this method pass <code>nil</code> for them.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/package.cr#L317" target="_blank">View source</a>]
         
       </div>
     </div>
