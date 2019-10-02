@@ -116,6 +116,16 @@
       
     </li>
   
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/HeaderGetFlags" data-name="rpm::headergetflags">
+      <a href="../RPM/HeaderGetFlags.html">HeaderGetFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/HeaderPutFlags" data-name="rpm::headerputflags">
+      <a href="../RPM/HeaderPutFlags.html">HeaderPutFlags</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Icon" data-name="rpm::icon">
       <a href="../RPM/Icon.html">Icon</a>
       
@@ -151,8 +161,78 @@
       
     </li>
   
-  <li class=" current" data-id="github.com/lugia-kun/crystal-rpm/RPM/Problem" data-name="rpm::problem">
+  <li class="parent open current" data-id="github.com/lugia-kun/crystal-rpm/RPM/Problem" data-name="rpm::problem">
       <a href="../RPM/Problem.html">Problem</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Problem/BadArch" data-name="rpm::problem::badarch">
+      <a href="../RPM/Problem/BadArch.html">BadArch</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Problem/BadOS" data-name="rpm::problem::bados">
+      <a href="../RPM/Problem/BadOS.html">BadOS</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Problem/BadRelocate" data-name="rpm::problem::badrelocate">
+      <a href="../RPM/Problem/BadRelocate.html">BadRelocate</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Problem/Conflicts" data-name="rpm::problem::conflicts">
+      <a href="../RPM/Problem/Conflicts.html">Conflicts</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Problem/DiskNodes" data-name="rpm::problem::disknodes">
+      <a href="../RPM/Problem/DiskNodes.html">DiskNodes</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Problem/DiskSpace" data-name="rpm::problem::diskspace">
+      <a href="../RPM/Problem/DiskSpace.html">DiskSpace</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Problem/FileConflict" data-name="rpm::problem::fileconflict">
+      <a href="../RPM/Problem/FileConflict.html">FileConflict</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Problem/NewFileConflict" data-name="rpm::problem::newfileconflict">
+      <a href="../RPM/Problem/NewFileConflict.html">NewFileConflict</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Problem/Obsoletes" data-name="rpm::problem::obsoletes">
+      <a href="../RPM/Problem/Obsoletes.html">Obsoletes</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Problem/OldPackage" data-name="rpm::problem::oldpackage">
+      <a href="../RPM/Problem/OldPackage.html">OldPackage</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Problem/PackageInstalled" data-name="rpm::problem::packageinstalled">
+      <a href="../RPM/Problem/PackageInstalled.html">PackageInstalled</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Problem/Requires" data-name="rpm::problem::requires">
+      <a href="../RPM/Problem/Requires.html">Requires</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/Problem/Verify" data-name="rpm::problem::verify">
+      <a href="../RPM/Problem/Verify.html">Verify</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -379,56 +459,6 @@
 
   <p>Stores Problem.</p>
 
-<p>Content changed on RPM 4.9</p>
-
-<p>RPM 4.9~</p>
-
-<p>========================================================================
-type          pkg_nevr      alt_nevr        str            number</p>
-
-<hr/><p>BADARCH       target pkg    (unused)        arch name      (unused)
-BADOS         target pkg    (unused)        os name        (unused)
-PKG_INSTALLED target pkg    (unused)        (unused)       (unused)
-BADRELOCATE   target pkg    (unused)        relocated path (unused)
-NF_CONFLICT   target pkg    conflicting pkg file path      (unused)
-FILE_CONFLICT installed pkg conflicting pkg file path      (unused)
-OLD_PACKAGE   target pkg    installed pkg   (unused)       (unused)
-DISKSPACE     target pkg    (unused)        file system    number bytes
-DISKNODES     target pkg    (unused)        file system    number inodes
-REQUIRES      (unused)      required pkg    name requires  1 = installed
-CONFLICT      (unused)      conflict pkg    name conflicts 1 = installed
-OBSOLETES     (unused)      obsoletes pkg   name obsoleted 1 = installed
-VERIFY        target pkg    (unused)        content        (unused)
-========================================================================</p>
-
-<p>~RPM4.8</p>
-
-<p>(note: the function arguments requires dirname and filename
- separatedly, but the upstream implementation simply joins them,
- so set dirname to <code>nil</code> is suffice.)</p>
-
-<p>========================================================================
-type          pkg_nevr      alt_nevr        str            number</p>
-
-<hr/><p>BADARCH       target pkg    (unused)        arch name      (unused)
-BADOS         target pkg    (unused)        os name        (unused)
-PKG_INSTALLED target pkg    (unused)        (unused)       (unused)
-BADRELOCATE   target pkg    (unused)        relocated path (unused)
-NF_CONFLICT   target pkg    conflicting pkg file path      (unused)
-FILE_CONFLICT installed pkg conflicting pkg file path      (unused)
-OLD_PACKAGE   target pkg    installed pkg   (unused)       (unused)
-DISKSPACE     target pkg    (unused)        file system    number bytes
-DISKNODES     target pkg    (unused)        file system    number inodes
-REQUIRES      required pkg  pkg requires+2  (unused)       0 = installed
-CONFLICTS     conflict pkg  pkg conflicted+2 (unused)      0 = installed
-(OBSOLETES)   obsoletes pkg pkg obsoleted+2  (unused)      0 = installed
-(VERIFY)
-========================================================================</p>
-
-<p>OBSOLETES is not defined in RPM 4.8, but applies same translation to
-REQUIRES or CONFLICTS.</p>
-
-<p>No translation applies for VERIFY.</p>
 
 
 
@@ -437,6 +467,36 @@ REQUIRES or CONFLICTS.</p>
 
 
 
+  <h2>Direct Known Subclasses</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="../RPM/Problem/BadArch.html">RPM::Problem::BadArch</a></li>
+  
+    <li class="other-type"><a href="../RPM/Problem/BadOS.html">RPM::Problem::BadOS</a></li>
+  
+    <li class="other-type"><a href="../RPM/Problem/BadRelocate.html">RPM::Problem::BadRelocate</a></li>
+  
+    <li class="other-type"><a href="../RPM/Problem/Conflicts.html">RPM::Problem::Conflicts</a></li>
+  
+    <li class="other-type"><a href="../RPM/Problem/DiskNodes.html">RPM::Problem::DiskNodes</a></li>
+  
+    <li class="other-type"><a href="../RPM/Problem/DiskSpace.html">RPM::Problem::DiskSpace</a></li>
+  
+    <li class="other-type"><a href="../RPM/Problem/FileConflict.html">RPM::Problem::FileConflict</a></li>
+  
+    <li class="other-type"><a href="../RPM/Problem/NewFileConflict.html">RPM::Problem::NewFileConflict</a></li>
+  
+    <li class="other-type"><a href="../RPM/Problem/Obsoletes.html">RPM::Problem::Obsoletes</a></li>
+  
+    <li class="other-type"><a href="../RPM/Problem/OldPackage.html">RPM::Problem::OldPackage</a></li>
+  
+    <li class="other-type"><a href="../RPM/Problem/PackageInstalled.html">RPM::Problem::PackageInstalled</a></li>
+  
+    <li class="other-type"><a href="../RPM/Problem/Requires.html">RPM::Problem::Requires</a></li>
+  
+    <li class="other-type"><a href="../RPM/Problem/Verify.html">RPM::Problem::Verify</a></li>
+  
+  </ul>
 
 
 
@@ -446,7 +506,7 @@ REQUIRES or CONFLICTS.</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/problem.cr#L58" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/problem.cr#L6" target="_blank">
         rpm/problem.cr
       </a>
     
@@ -457,21 +517,33 @@ REQUIRES or CONFLICTS.</p>
 
 
 
-  <h2>Constructors</h2>
+
+
+  <h2>Class Method Summary</h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new(type,pkg_nevr,key,dir,file,alt_nevr,number)-class-method" class="signature"><strong>.new</strong>(type, pkg_nevr, key, dir, file, alt_nevr, number)</a>
+        <a href="#create(type,pkg_nevr,key,dir,file,alt_nevr,number)-class-method" class="signature"><strong>.create</strong>(type, pkg_nevr, key, dir, file, alt_nevr, number)</a>
+        
+          <div class="summary"><p>Create a problem with calling convention of <code>rpmProblemCreate</code> in RPM 4.8.x.</p>
+
+<p><span class="flag red">DEPRECATED</span>  Use <code><a href="../RPM/Problem.html#create(type,pkg_nevr,key,dir,file,alt_nevr,number)-class-method">.create</a></code> with RPM 4.9 convention</p>
+
+</div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new(type,pkg_nevr,key,alt_nevr,str,number)-class-method" class="signature"><strong>.new</strong>(type, pkg_nevr, key, alt_nevr, str, number)</a>
+        <a href="#create(type,pkg_nevr,key,alt_nevr,str,number)-class-method" class="signature"><strong>.create</strong>(type, pkg_nevr, key, alt_nevr, str, number)</a>
+        
+          <div class="summary"><p>Create a problem with calling convention of <code>rpmProblemCreate</code> in RPM 4.9 or later.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new(ptr,*,need_gc=false)-class-method" class="signature"><strong>.new</strong>(ptr, *, need_gc = <span class="n">false</span>)</a>
+        <a href="#for(ptr:LibRPM::Problem,**opts)-class-method" class="signature"><strong>.for</strong>(ptr : LibRPM::Problem, **opts)</a>
+        
+          <div class="summary"><p>Create a Problem instance with type indicated by given problem's type.</p></div>
         
       </li>
     
@@ -479,13 +551,23 @@ REQUIRES or CONFLICTS.</p>
 
 
 
-
-
   <h2>Instance Method Summary</h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#(other)-instance-method" class="signature"><strong>#<=></strong>(other)</a>
+        <a href="#==(other)-instance-method" class="signature"><strong>#==</strong>(other)</a>
+        
+          <div class="summary"><p>Compares two problems</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#alt_nevr-instance-method" class="signature"><strong>#alt_nevr</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#alt_nevr?-instance-method" class="signature"><strong>#alt_nevr?</strong></a>
         
       </li>
     
@@ -507,12 +589,17 @@ REQUIRES or CONFLICTS.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#ptr:LibRPM::Problem-instance-method" class="signature"><strong>#ptr</strong> : LibRPM::Problem</a>
+        <a href="#number-instance-method" class="signature"><strong>#number</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#ptr=(ptr:LibRPM::Problem)-instance-method" class="signature"><strong>#ptr=</strong>(ptr : LibRPM::Problem)</a>
+        <a href="#pkg_nevr-instance-method" class="signature"><strong>#pkg_nevr</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pkg_nevr?-instance-method" class="signature"><strong>#pkg_nevr?</strong></a>
         
       </li>
     
@@ -522,14 +609,19 @@ REQUIRES or CONFLICTS.</p>
       </li>
     
       <li class="entry-summary">
+        <a href="#str?-instance-method" class="signature"><strong>#str?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#to_s(io)-instance-method" class="signature"><strong>#to_s</strong>(io)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_s-instance-method" class="signature"><strong>#to_s</strong></a>
+        <a href="#to_unsafe:RPM::LibRPM::Problem-instance-method" class="signature"><strong>#to_unsafe</strong> : RPM::LibRPM::Problem</a>
         
-          <div class="summary"><p>Returns a string representation of this object.</p></div>
+          <div class="summary"><p>Returns pointer to <code>rpm<a href="../RPM/Problem.html">Problem</a></code> to deal with librpm C API directly</p></div>
         
       </li>
     
@@ -569,75 +661,142 @@ REQUIRES or CONFLICTS.</p>
 </div>
 
 
-  <h2>Constructor Detail</h2>
+
+
+  <h2>Class Method Detail</h2>
   
-    <div class="entry-detail" id="new(type,pkg_nevr,key,dir,file,alt_nevr,number)-class-method">
+    <div class="entry-detail" id="create(type,pkg_nevr,key,dir,file,alt_nevr,number)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(type, pkg_nevr, key, dir, file, alt_nevr, number)
+        def self.<strong>create</strong>(type, pkg_nevr, key, dir, file, alt_nevr, number)
 
-        <a class="method-permalink" href="#new(type,pkg_nevr,key,dir,file,alt_nevr,number)-class-method">#</a>
+        <a class="method-permalink" href="#create(type,pkg_nevr,key,dir,file,alt_nevr,number)-class-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+          <p>Create a problem with calling convention of <code>rpmProblemCreate</code>
+in RPM 4.8.x.</p>
+
+<p><code>dir</code> and <code>file</code> are simply concatenated (if both of them are
+not <code>nil</code>).</p>
+
+<p><span class="flag red">DEPRECATED</span>  Use <code><a href="../RPM/Problem.html#create(type,pkg_nevr,key,dir,file,alt_nevr,number)-class-method">.create</a></code> with RPM 4.9 convention</p>
+
+
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/problem.cr#L77" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/problem.cr#L31" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new(type,pkg_nevr,key,alt_nevr,str,number)-class-method">
+    <div class="entry-detail" id="create(type,pkg_nevr,key,alt_nevr,str,number)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(type, pkg_nevr, key, alt_nevr, str, number)
+        def self.<strong>create</strong>(type, pkg_nevr, key, alt_nevr, str, number)
 
-        <a class="method-permalink" href="#new(type,pkg_nevr,key,alt_nevr,str,number)-class-method">#</a>
+        <a class="method-permalink" href="#create(type,pkg_nevr,key,alt_nevr,str,number)-class-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+          <p>Create a problem with calling convention of <code>rpmProblemCreate</code>
+in RPM 4.9 or later.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/problem.cr#L71" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/problem.cr#L31" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new(ptr,*,need_gc=false)-class-method">
+    <div class="entry-detail" id="for(ptr:LibRPM::Problem,**opts)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(ptr, *, need_gc = <span class="n">false</span>)
+        def self.<strong>for</strong>(ptr : LibRPM::Problem, **opts)
 
-        <a class="method-permalink" href="#new(ptr,*,need_gc=false)-class-method">#</a>
+        <a class="method-permalink" href="#for(ptr:LibRPM::Problem,**opts)-class-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+          <p>Create a Problem instance with type indicated by given problem's
+type.</p>
+
+<p>If given <code>ptr</code> is NULL, or, unsupported type, this method
+returns an instance of <code><a href="../RPM/Problem.html">RPM::Problem</a></code>.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/problem.cr#L68" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/problem.cr#L569" target="_blank">View source</a>]
         
       </div>
     </div>
   
-
-
 
 
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="(other)-instance-method">
+    <div class="entry-detail" id="==(other)-instance-method">
       <div class="signature">
         
-        def <strong><=></strong>(other)
+        def <strong>==</strong>(other)
 
-        <a class="method-permalink" href="#(other)-instance-method">#</a>
+        <a class="method-permalink" href="#==(other)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Compares two problems</p>
+
+<p><span class="flag purple">NOTE</span>  RPM 4.8 does not support this method.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/problem.cr#L674" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="alt_nevr-instance-method">
+      <div class="signature">
+        
+        def <strong>alt_nevr</strong>
+
+        <a class="method-permalink" href="#alt_nevr-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/problem.cr#L125" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/problem.cr#L625" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="alt_nevr?-instance-method">
+      <div class="signature">
+        
+        def <strong>alt_nevr?</strong>
+
+        <a class="method-permalink" href="#alt_nevr?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/problem.cr#L616" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -665,7 +824,7 @@ REQUIRES or CONFLICTS.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/problem.cr#L83" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/problem.cr#L597" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -681,7 +840,7 @@ REQUIRES or CONFLICTS.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/problem.cr#L62" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/problem.cr#L10" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -697,39 +856,55 @@ REQUIRES or CONFLICTS.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/problem.cr#L93" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/problem.cr#L633" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="ptr:LibRPM::Problem-instance-method">
+    <div class="entry-detail" id="number-instance-method">
       <div class="signature">
         
-        def <strong>ptr</strong> : LibRPM::Problem
+        def <strong>number</strong>
 
-        <a class="method-permalink" href="#ptr:LibRPM::Problem-instance-method">#</a>
+        <a class="method-permalink" href="#number-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/problem.cr#L62" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/problem.cr#L650" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="ptr=(ptr:LibRPM::Problem)-instance-method">
+    <div class="entry-detail" id="pkg_nevr-instance-method">
       <div class="signature">
         
-        def <strong>ptr=</strong>(ptr : LibRPM::Problem)
+        def <strong>pkg_nevr</strong>
 
-        <a class="method-permalink" href="#ptr=(ptr:LibRPM::Problem)-instance-method">#</a>
+        <a class="method-permalink" href="#pkg_nevr-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/problem.cr#L66" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/problem.cr#L612" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pkg_nevr?-instance-method">
+      <div class="signature">
+        
+        def <strong>pkg_nevr?</strong>
+
+        <a class="method-permalink" href="#pkg_nevr?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/problem.cr#L603" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -745,7 +920,23 @@ REQUIRES or CONFLICTS.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/problem.cr#L97" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/problem.cr#L646" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="str?-instance-method">
+      <div class="signature">
+        
+        def <strong>str?</strong>
+
+        <a class="method-permalink" href="#str?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/problem.cr#L637" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -761,36 +952,28 @@ REQUIRES or CONFLICTS.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/problem.cr#L117" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/problem.cr#L654" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="to_s-instance-method">
+    <div class="entry-detail" id="to_unsafe:RPM::LibRPM::Problem-instance-method">
       <div class="signature">
         
-        def <strong>to_s</strong>
+        def <strong>to_unsafe</strong> : RPM::LibRPM::Problem
 
-        <a class="method-permalink" href="#to_s-instance-method">#</a>
+        <a class="method-permalink" href="#to_unsafe:RPM::LibRPM::Problem-instance-method">#</a>
       </div>
       
         <div class="doc">
           
-            <div class="doc-inherited">
-              Description copied from class Object
-            </div>
-          
-          <p>Returns a string representation of this object.</p>
-
-<p>Descendants must usually <strong>not</strong> override this method. Instead,
-they must override <code><a href="../RPM/Problem.html#to_s(io)-instance-method">#to_s(io)</a></code>, which must append to the given
-IO object.</p>
+          <p>Returns pointer to <code>rpm<a href="../RPM/Problem.html">Problem</a></code> to deal with librpm C API directly</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/problem.cr#L121" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/problem.cr#L679" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -806,7 +989,7 @@ IO object.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/63b3ad8dc1b70bf2c76b78c9f7d23d8bd1980815/src/rpm/problem.cr#L89" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/problem.cr#L629" target="_blank">View source</a>]
         
       </div>
     </div>
