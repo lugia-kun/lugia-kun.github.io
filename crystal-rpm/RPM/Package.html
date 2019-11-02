@@ -455,6 +455,10 @@
 
 
 
+  <h2>Overview</h2>
+
+  <p>RPM Package Header data container</p>
+
 
 
 
@@ -471,14 +475,14 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/dependency.cr#L2" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/dependency.cr#L2" target="_blank">
         rpm/dependency.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/package.cr#L16" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L18" target="_blank">
         rpm/package.cr
       </a>
     
@@ -537,7 +541,16 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#changelogs-instance-method" class="signature"><strong>#changelogs</strong></a>
+        
+          <div class="summary"><p>Get the list of Changelogs.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#conflicts-instance-method" class="signature"><strong>#conflicts</strong></a>
+        
+          <div class="summary"><p>Get the list of "Conflict" dependencies.</p></div>
         
       </li>
     
@@ -600,15 +613,21 @@
       <li class="entry-summary">
         <a href="#obsoletes-instance-method" class="signature"><strong>#obsoletes</strong></a>
         
+          <div class="summary"><p>Get the list of "Obsolete" dependencies.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#provides-instance-method" class="signature"><strong>#provides</strong></a>
         
+          <div class="summary"><p>Get the list of "Provide" dependencies.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#requires-instance-method" class="signature"><strong>#requires</strong></a>
+        
+          <div class="summary"><p>Get the list of "Require" dependencies.</p></div>
         
       </li>
     
@@ -698,7 +717,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/package.cr#L20" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L22" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -719,7 +738,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/package.cr#L51" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L53" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -740,7 +759,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/package.cr#L58" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L60" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -768,7 +787,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/package.cr#L333" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L355" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -791,7 +810,28 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/package.cr#L342" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L364" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="changelogs-instance-method">
+      <div class="signature">
+        
+        def <strong>changelogs</strong>
+
+        <a class="method-permalink" href="#changelogs-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Get the list of Changelogs.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L242" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -804,10 +844,15 @@
         <a class="method-permalink" href="#conflicts-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Get the list of "Conflict" dependencies.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/package.cr#L231" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L237" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -832,7 +877,7 @@ list of fullpaths.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/package.cr#L123" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L125" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -853,7 +898,7 @@ list of fullpaths.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/package.cr#L141" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L143" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -878,7 +923,7 @@ mandated.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/package.cr#L76" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L78" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -902,7 +947,7 @@ Raises <code>KeyError</code> if the given tag is not found.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/package.cr#L260" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L282" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -925,7 +970,7 @@ Raises <code>KeyError</code> if the given tag is not found.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/package.cr#L238" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L260" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -948,7 +993,7 @@ Raises <code>KeyError</code> if the given tag is not found.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/package.cr#L272" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L294" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -971,7 +1016,7 @@ Raises <code>KeyError</code> if the given tag is not found.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/package.cr#L250" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L272" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -994,7 +1039,7 @@ Raises <code>KeyError</code> if the given tag is not found.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/package.cr#L114" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L116" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1007,10 +1052,15 @@ Raises <code>KeyError</code> if the given tag is not found.</p>
         <a class="method-permalink" href="#obsoletes-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Get the list of "Obsolete" dependencies.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/package.cr#L227" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L232" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1023,10 +1073,15 @@ Raises <code>KeyError</code> if the given tag is not found.</p>
         <a class="method-permalink" href="#provides-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Get the list of "Provide" dependencies.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/package.cr#L223" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L227" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1039,10 +1094,15 @@ Raises <code>KeyError</code> if the given tag is not found.</p>
         <a class="method-permalink" href="#requires-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Get the list of "Require" dependencies.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/package.cr#L219" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L222" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1070,7 +1130,7 @@ converts back to binary from this hexadecimal character representation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/package.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L103" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1096,7 +1156,7 @@ the package.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/package.cr#L86" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L88" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1117,7 +1177,7 @@ the package.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/package.cr#L353" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L375" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1143,7 +1203,7 @@ the block will not be yielded.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/package.cr#L287" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L309" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1168,7 +1228,7 @@ the block will not be yielded.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/b18effd6b70f91254aa599f63e9c9c10c9e36a6f/src/rpm/package.cr#L317" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L339" target="_blank">View source</a>]
         
       </div>
     </div>
