@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.30.1">
+<meta name="generator" content="Crystal Docs 0.32.1">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/lugia-kun/crystal-rpm">
   <title>RPM::Package - github.com/lugia-kun/crystal-rpm</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
@@ -455,7 +459,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>RPM Package Header data container</p>
 
@@ -472,17 +483,24 @@
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/dependency.cr#L2" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/dependency.cr#L2" target="_blank">
         rpm/dependency.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L18" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/package.cr#L18" target="_blank">
         rpm/package.cr
       </a>
     
@@ -495,7 +513,14 @@
 
 
 
-  <h2>Class Method Summary</h2>
+  <h2>
+    <a id="class-method-summary" class="anchor" href="#class-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
@@ -523,7 +548,14 @@
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
@@ -653,14 +685,14 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#with_tagdata(*tags,**opts,&block)-instance-method" class="signature"><strong>#with_tagdata</strong>(*tags, **opts, &block)</a>
+        <a href="#with_tagdata(*tags,**opts,&)-instance-method" class="signature"><strong>#with_tagdata</strong>(*tags, **opts, &)</a>
         
           <div class="summary"><p>Get <code><a href="../RPM/TagData.html">TagData</a></code>(s) for given <code><a href="../RPM/Tag.html">Tag</a></code>(s), yield them and then cleanup them.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#with_tagdata?(*tags,**opts,&block)-instance-method" class="signature"><strong>#with_tagdata?</strong>(*tags, **opts, &block)</a>
+        <a href="#with_tagdata?(*tags,**opts,&)-instance-method" class="signature"><strong>#with_tagdata?</strong>(*tags, **opts, &)</a>
         
           <div class="summary"><p>Get <code><a href="../RPM/TagData.html">TagData</a></code>(s) for given <code><a href="../RPM/Tag.html">Tag</a></code>(s), yield them and then cleanup them.</p></div>
         
@@ -699,7 +731,14 @@
 
 
 
-  <h2>Class Method Detail</h2>
+  <h2>
+    <a id="class-method-detail" class="anchor" href="#class-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Detail
+  </h2>
   
     <div class="entry-detail" id="create(name:String,version:Version)-class-method">
       <div class="signature">
@@ -717,7 +756,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L22" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/package.cr#L22" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -738,7 +777,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L53" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/package.cr#L53" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -759,7 +798,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L60" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/package.cr#L60" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -767,7 +806,14 @@
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="[](tag)-instance-method">
       <div class="signature">
@@ -787,7 +833,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L355" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/package.cr#L355" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -810,7 +856,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L364" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/package.cr#L364" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -831,7 +877,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L242" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/package.cr#L242" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -852,7 +898,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L237" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/package.cr#L237" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -877,7 +923,7 @@ list of fullpaths.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L125" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/package.cr#L125" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -898,7 +944,7 @@ list of fullpaths.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L143" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/package.cr#L143" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -923,7 +969,7 @@ mandated.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L78" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/package.cr#L78" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -947,7 +993,7 @@ Raises <code>KeyError</code> if the given tag is not found.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L282" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/package.cr#L282" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -970,7 +1016,7 @@ Raises <code>KeyError</code> if the given tag is not found.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L260" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/package.cr#L260" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -993,7 +1039,7 @@ Raises <code>KeyError</code> if the given tag is not found.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L294" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/package.cr#L294" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1016,7 +1062,7 @@ Raises <code>KeyError</code> if the given tag is not found.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L272" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/package.cr#L272" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1039,7 +1085,7 @@ Raises <code>KeyError</code> if the given tag is not found.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L116" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/package.cr#L116" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1060,7 +1106,7 @@ Raises <code>KeyError</code> if the given tag is not found.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L232" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/package.cr#L232" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1081,7 +1127,7 @@ Raises <code>KeyError</code> if the given tag is not found.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L227" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/package.cr#L227" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1102,7 +1148,7 @@ Raises <code>KeyError</code> if the given tag is not found.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L222" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/package.cr#L222" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1123,14 +1169,14 @@ Raises <code>KeyError</code> if the given tag is not found.</p>
 Returns the string <code>(none)</code> if not set.</p>
 
 <p>If you want a binary data, you may use
-<code><a href="../RPM/Package.html#with_tagdata(*tags,**opts,&block)-instance-method">#with_tagdata(Tag::SigMD5)</a></code> and <code><a href="../RPM/TagData.html#bytes-instance-method">TagData#bytes</a></code>. But it just
+<code><a href="../RPM/Package.html#with_tagdata(*tags,**opts,&)-instance-method">#with_tagdata(Tag::SigMD5)</a></code> and <code><a href="../RPM/TagData.html#bytes-instance-method">TagData#bytes</a></code>. But it just
 converts back to binary from this hexadecimal character representation.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L103" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/package.cr#L103" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1156,7 +1202,7 @@ the package.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L88" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/package.cr#L88" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1177,17 +1223,17 @@ the package.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L375" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/package.cr#L375" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="with_tagdata(*tags,**opts,&amp;block)-instance-method">
+    <div class="entry-detail" id="with_tagdata(*tags,**opts,&amp;)-instance-method">
       <div class="signature">
         
-        def <strong>with_tagdata</strong>(*tags, **opts, &block)
+        def <strong>with_tagdata</strong>(*tags, **opts, &)
 
-        <a class="method-permalink" href="#with_tagdata(*tags,**opts,&block)-instance-method">#</a>
+        <a class="method-permalink" href="#with_tagdata(*tags,**opts,&)-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -1203,17 +1249,17 @@ the block will not be yielded.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L309" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/package.cr#L309" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="with_tagdata?(*tags,**opts,&amp;block)-instance-method">
+    <div class="entry-detail" id="with_tagdata?(*tags,**opts,&amp;)-instance-method">
       <div class="signature">
         
-        def <strong>with_tagdata?</strong>(*tags, **opts, &block)
+        def <strong>with_tagdata?</strong>(*tags, **opts, &)
 
-        <a class="method-permalink" href="#with_tagdata?(*tags,**opts,&block)-instance-method">#</a>
+        <a class="method-permalink" href="#with_tagdata?(*tags,**opts,&)-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -1228,7 +1274,7 @@ the block will not be yielded.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/package.cr#L339" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/package.cr#L339" target="_blank">View source</a>]
         
       </div>
     </div>

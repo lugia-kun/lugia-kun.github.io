@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.30.1">
+<meta name="generator" content="Crystal Docs 0.32.1">
 
-
-<link href="css/style.css" rel="stylesheet" type="text/css">
-
+<link href="css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/lugia-kun/crystal-rpm">
   <title>README - github.com/lugia-kun/crystal-rpm</title>
+  <script type="text/javascript">
+  CrystalDoc.base_path = "";
+  </script>
 </head>
 <body>
 
@@ -443,7 +447,11 @@
 
 
 <div class="main-content">
-<h1>crystal-rpm <a href="https://travis-ci.com/lugia-kun/crystal-rpm" target="_blank"><img src="https://travis-ci.com/lugia-kun/crystal-rpm.svg?branch=master" alt="Build Status"/></a></h1>
+<h1><a id="crystal-rpm-build-statushttpstravis-ci.comlugia-kuncrystal-rpm.svgbranchmasterhttpstravis-ci.comlugia-kuncrystal-rpm" class="anchor" href="#crystal-rpm-build-statushttpstravis-ci.comlugia-kuncrystal-rpm.svgbranchmasterhttpstravis-ci.comlugia-kuncrystal-rpm">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>crystal-rpm <a href="https://travis-ci.com/lugia-kun/crystal-rpm" target="_blank"><img src="https://travis-ci.com/lugia-kun/crystal-rpm.svg?branch=master" alt="Build Status"/></a></h1>
 
 <p>The <a href="http://rpm.org/" target="_blank">RPM</a> bindings for
 <a href="https://crystal-lang.org/" target="_blank">Crystal</a> language based on
@@ -452,7 +460,11 @@
 
 <p>It supports RPM 4.8.0 or later.</p>
 
-<h2>Before use</h2>
+<h2><a id="before-use" class="anchor" href="#before-use">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Before use</h2>
 
 <p>RPM is licensed under <a href="https://rpm.org/about.html" target="_blank">GNU GPL</a>. This
 means all libraries and applications which link to RPM must be
@@ -469,7 +481,11 @@ with LGPL 2.0 and Apache-2.0). We are thinking you do not have a
 chance to use this library under the conditions of GPLv2, but left to
 let us to keep in mind.</p>
 
-<h2>Installation</h2>
+<h2><a id="installation" class="anchor" href="#installation">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Installation</h2>
 
 <ol><li>Add the dependency to your <code>shard.yml</code>:</li></ol>
 
@@ -479,7 +495,11 @@ let us to keep in mind.</p>
 
 <ol><li>Run <code>shards install</code></li></ol>
 
-<h2>Usage</h2>
+<h2><a id="usage" class="anchor" href="#usage">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Usage</h2>
 
 <pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;rpm&quot;</span></code></pre>
 
@@ -488,7 +508,11 @@ required. Typically, it can be installed by <code>yum install rpm-devel</code> o
 CentOS or Red Hat, <code>dnf install rpm-devel</code> on Fedora, and <code>zypper in
 rpm-devel</code> on openSUSE or SLES.</p>
 
-<h3>Inspect package</h3>
+<h3><a id="inspect-package" class="anchor" href="#inspect-package">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Inspect package</h3>
 
 <pre><code class="language-crystal">pkg <span class="o">=</span> <span class="t">RPM</span><span class="t">::</span><span class="t">Package</span>.open(<span class="s">&quot;foobar-1.0-0.x86_64.rpm&quot;</span>)
 puts pkg[<span class="t">RPM</span><span class="t">::</span><span class="t">Tag</span><span class="t">::</span><span class="t">Name</span>] <span class="c"># =&gt; &quot;foobar&quot;</span>
@@ -501,7 +525,11 @@ pkg.provides <span class="c"># =&gt; Array of Provides.</span>
 pkg.conflicts <span class="c"># =&gt; Array of Conflicts.</span>
 pkg.obsoletes <span class="c"># =&gt; Array of Obsolstes.</span></code></pre>
 
-<h3>Install package</h3>
+<h3><a id="install-package" class="anchor" href="#install-package">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Install package</h3>
 
 <pre><code class="language-crystal"><span class="t">RPM</span>.transaction <span class="k">do</span> <span class="o">|</span>ts<span class="o">|</span>
   path <span class="o">=</span> <span class="s">&quot;pkg_to_install-1.0-0.x86_64.rpm&quot;</span>
@@ -515,7 +543,11 @@ pkg.obsoletes <span class="c"># =&gt; Array of Obsolstes.</span></code></pre>
 have an instance of <code>Transaction</code> already,
 <code>Transaction#read_package_file</code> reduces allocations.</p>
 
-<h3>Search installed packages</h3>
+<h3><a id="search-installed-packages" class="anchor" href="#search-installed-packages">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Search installed packages</h3>
 
 <pre><code class="language-crystal"><span class="c"># with given name</span>
 <span class="t">RPM</span>.transaction <span class="k">do</span> <span class="o">|</span>ts<span class="o">|</span>
@@ -570,7 +602,11 @@ have an instance of <code>Transaction</code> already,
   <span class="k">end</span>
 <span class="k">end</span></code></pre>
 
-<h3>Remove package</h3>
+<h3><a id="remove-package" class="anchor" href="#remove-package">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Remove package</h3>
 
 <pre><code class="language-crystal"><span class="t">RPM</span>.transaction <span class="k">do</span> <span class="o">|</span>ts<span class="o">|</span>
   ts.delete(pkg) <span class="c"># Add to removal package</span>
@@ -579,7 +615,11 @@ have an instance of <code>Transaction</code> already,
   ts.commit   <span class="c"># Run Transaction</span>
 <span class="k">end</span></code></pre>
 
-<h3>Using Transaction without block</h3>
+<h3><a id="using-transaction-without-block" class="anchor" href="#using-transaction-without-block">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Using Transaction without block</h3>
 
 <p>For installing and/or removing packages, the DB handle is bound to the
 transaction. So, DB must be closed via transaction.</p>
@@ -596,7 +636,11 @@ transaction. So, DB must be closed via transaction.</p>
 <span class="k">end</span>
 ts.finalize <span class="c"># Not nesseary, but recommended.</span></code></pre>
 
-<h3>Using DB iterator without block</h3>
+<h3><a id="using-db-iterator-without-block" class="anchor" href="#using-db-iterator-without-block">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Using DB iterator without block</h3>
 
 <p>For searching packages in DB, the DB handle is bound to the
 iterator. So, DB must be closed via finalizing the iterator.</p>
@@ -614,7 +658,11 @@ iterator. So, DB must be closed via finalizing the iterator.</p>
 <span class="k">end</span>
 ts.finalize</code></pre>
 
-<h3>Install/Remove Problems</h3>
+<h3><a id="installremove-problems" class="anchor" href="#installremove-problems">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Install/Remove Problems</h3>
 
 <pre><code class="language-crystal"><span class="t">RPM</span>.transation <span class="k">do</span> <span class="o">|</span>ts<span class="o">|</span>
   ts.install(...)
@@ -628,7 +676,11 @@ ts.finalize</code></pre>
   <span class="k">end</span>
 <span class="k">end</span></code></pre>
 
-<h3>Inspect Specfile</h3>
+<h3><a id="inspect-specfile" class="anchor" href="#inspect-specfile">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Inspect Specfile</h3>
 
 <pre><code class="language-crystal">spec <span class="o">=</span> <span class="t">RPM</span><span class="t">::</span><span class="t">Spec</span>.open(<span class="s">&quot;foo.spec&quot;</span>)
 packages <span class="o">=</span> spec.packages
@@ -638,7 +690,11 @@ packages[<span class="n">1</span>][<span class="t">RPM</span><span class="t">::<
 
 spec.buildrequires <span class="c"># =&gt; Array of BuildRequires.</span></code></pre>
 
-<h3>Build RPM</h3>
+<h3><a id="build-rpm" class="anchor" href="#build-rpm">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Build RPM</h3>
 
 <pre><code class="language-crystal"><span class="c"># Steps to be run.</span>
 <span class="c">#</span>
@@ -652,7 +708,11 @@ amount <span class="o">=</span> <span class="t">RPM</span><span class="t">::</sp
 spec <span class="o">=</span> <span class="t">RPM</span><span class="t">::</span><span class="t">Spec</span>.open(<span class="s">&quot;foo.spec&quot;</span>)
 spec.build(build_amount: amount)</code></pre>
 
-<h2>Development</h2>
+<h2><a id="development" class="anchor" href="#development">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Development</h2>
 
 <p>The definitions of structs are written by hand. Tests can check their
 size and member offsets if you have a C compiler (optional).</p>
@@ -684,11 +744,19 @@ container# exit</code></pre>
   that the spec files must be owned by a valid user, when building
   RPMs.</li></ul>
 
-<h2>Contributing</h2>
+<h2><a id="contributing" class="anchor" href="#contributing">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Contributing</h2>
 
 <ol><li>Fork it (&lt;https://github.com/lugia-kun/crystal-rpm/fork>)</li><li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li><li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li><li>Push to the branch (<code>git push origin my-new-feature</code>)</li><li>Create a new Pull Request</li></ol>
 
-<h2>Contributors</h2>
+<h2><a id="contributors" class="anchor" href="#contributors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Contributors</h2>
 
 <ul><li><a href="https://github.com/lugia-kun" target="_blank">Hajime Yoshimori</a> - creator and maintainer</li></ul>
 </div>

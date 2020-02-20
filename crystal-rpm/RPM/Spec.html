@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.30.1">
+<meta name="generator" content="Crystal Docs 0.32.1">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/lugia-kun/crystal-rpm">
   <title>RPM::Spec - github.com/lugia-kun/crystal-rpm</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
@@ -468,10 +472,17 @@
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/spec.cr#L2" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/spec.cr#L2" target="_blank">
         rpm/spec.cr
       </a>
     
@@ -482,7 +493,14 @@
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
@@ -494,7 +512,14 @@
 
 
 
-  <h2>Class Method Summary</h2>
+  <h2>
+    <a id="class-method-summary" class="anchor" href="#class-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
@@ -508,11 +533,20 @@
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#build(*,build_amount:BuildFlags,pkg_flags:BuildPkgFlags=BuildPkgFlags::NONE)-instance-method" class="signature"><strong>#build</strong>(*, build_amount : BuildFlags, pkg_flags : BuildPkgFlags = <span class="t">BuildPkgFlags</span><span class="t">::</span><span class="t">NONE</span>)</a>
+        <a href="#build(*,build_amount:BuildFlags,pkg_flags:BuildPkgFlags=BuildPkgFlags::NONE,transaction:Transaction?=nil)-instance-method" class="signature"><strong>#build</strong>(*, build_amount : BuildFlags, pkg_flags : BuildPkgFlags = <span class="t">BuildPkgFlags</span><span class="t">::</span><span class="t">NONE</span>, transaction : Transaction? = <span class="n">nil</span>)</a>
+        
+          <div class="summary"><p>Build the package</p></div>
         
       </li>
     
@@ -601,7 +635,14 @@
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new(specfile:String,flags:LibRPM::SpecFlags,buildroot:String?,rootdir:String?=&amp;quot;/&amp;quot;)-class-method">
       <div class="signature">
@@ -614,7 +655,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/spec.cr#L143" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/spec.cr#L145" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -622,7 +663,14 @@
 
 
 
-  <h2>Class Method Detail</h2>
+  <h2>
+    <a id="class-method-detail" class="anchor" href="#class-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Detail
+  </h2>
   
     <div class="entry-detail" id="open(specfile:String,flags:LibRPM::SpecFlags=LibRPM::SpecFlags::FORCE|LibRPM::SpecFlags::ANYARCH,buildroot:String?=nil,rootdir:String?=&amp;quot;/&amp;quot;)-class-method">
       <div class="signature">
@@ -642,7 +690,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/spec.cr#L271" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/spec.cr#L300" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -650,20 +698,42 @@
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
-    <div class="entry-detail" id="build(*,build_amount:BuildFlags,pkg_flags:BuildPkgFlags=BuildPkgFlags::NONE)-instance-method">
+    <div class="entry-detail" id="build(*,build_amount:BuildFlags,pkg_flags:BuildPkgFlags=BuildPkgFlags::NONE,transaction:Transaction?=nil)-instance-method">
       <div class="signature">
         
-        def <strong>build</strong>(*, build_amount : <a href="../RPM/BuildFlags.html">BuildFlags</a>, pkg_flags : <a href="../RPM/BuildPkgFlags.html">BuildPkgFlags</a> = <span class="t">BuildPkgFlags</span><span class="t">::</span><span class="t">NONE</span>)
+        def <strong>build</strong>(*, build_amount : <a href="../RPM/BuildFlags.html">BuildFlags</a>, pkg_flags : <a href="../RPM/BuildPkgFlags.html">BuildPkgFlags</a> = <span class="t">BuildPkgFlags</span><span class="t">::</span><span class="t">NONE</span>, transaction : <a href="../RPM/Transaction.html">Transaction</a>? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#build(*,build_amount:BuildFlags,pkg_flags:BuildPkgFlags=BuildPkgFlags::NONE)-instance-method">#</a>
+        <a class="method-permalink" href="#build(*,build_amount:BuildFlags,pkg_flags:BuildPkgFlags=BuildPkgFlags::NONE,transaction:Transaction?=nil)-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+          <p>Build the package</p>
+
+<p>Build the package with specified steps in <code>build_amount</code>.
+Pre-build check and other conditions may be set via <code>pkg_flags</code>.
+If a <code>transaction</code> is given, use it as a transaction while
+building the package. <code>transaction</code> parameter only affects on
+rpm >= 4.15.0. Otherwise it will be ignored. If <code>transaction</code> is
+not given for rpm >= 4.15.0, this method creates new one.</p>
+
+<p>If the package built seccessfully, returns true. Otherwise
+returns false.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/spec.cr#L226" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/spec.cr#L239" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -684,7 +754,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/spec.cr#L222" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/spec.cr#L224" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -705,7 +775,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/spec.cr#L217" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/spec.cr#L219" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -730,7 +800,7 @@ simultaneously, you may get incorrect result.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/spec.cr#L175" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/spec.cr#L177" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -751,7 +821,7 @@ simultaneously, you may get incorrect result.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/spec.cr#L260" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/spec.cr#L289" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -775,7 +845,7 @@ simultaneously, you may get incorrect result.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/spec.cr#L187" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/spec.cr#L189" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -796,7 +866,7 @@ simultaneously, you may get incorrect result.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/spec.cr#L199" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/spec.cr#L201" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -812,7 +882,7 @@ simultaneously, you may get incorrect result.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/spec.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/spec.cr#L3" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -833,7 +903,7 @@ simultaneously, you may get incorrect result.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/ae28ccc67717640626bf6415105b5e80a8a49346/src/rpm/spec.cr#L208" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/spec.cr#L210" target="_blank">View source</a>]
         
       </div>
     </div>
