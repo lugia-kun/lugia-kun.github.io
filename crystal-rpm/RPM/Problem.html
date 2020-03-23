@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.32.1">
+<meta name="generator" content="Crystal Docs 0.33.0">
 
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
@@ -360,8 +360,18 @@
       
     </li>
   
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeUnion" data-name="rpm::tagdata::returntypeunion">
+      <a href="../RPM/TagData/ReturnTypeUnion.html">ReturnTypeUnion</a>
+      
+    </li>
+  
 </ul>
 
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagDataFlags" data-name="rpm::tagdataflags">
+      <a href="../RPM/TagDataFlags.html">TagDataFlags</a>
       
     </li>
   
@@ -531,7 +541,7 @@
   </h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/problem.cr#L6" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/problem.cr#L6" target="_blank">
         rpm/problem.cr
       </a>
     
@@ -724,8 +734,9 @@
           <p>Create a problem with calling convention of <code>rpmProblemCreate</code>
 in RPM 4.8.x.</p>
 
-<p><code>dir</code> and <code>file</code> are simply concatenated (if both of them are
-not <code>nil</code>).</p>
+<p>The function arguments requires dirname and filename separately,
+but the upstream implementation simply joins them, so set
+dirname to <code>nil</code> is suffice.</p>
 
 <p><span class="flag red">DEPRECATED</span>  Use <code><a href="../RPM/Problem.html#create(type,pkg_nevr,key,dir,file,alt_nevr,number)-class-method">.create</a></code> with RPM 4.9 convention</p>
 
@@ -735,7 +746,7 @@ not <code>nil</code>).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/problem.cr#L31" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/problem.cr#L31" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -757,7 +768,7 @@ in RPM 4.9 or later.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/problem.cr#L31" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/problem.cr#L31" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -782,7 +793,7 @@ returns an instance of <code><a href="../RPM/Problem.html">RPM::Problem</a></cod
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/problem.cr#L569" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/problem.cr#L569" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -817,7 +828,7 @@ returns an instance of <code><a href="../RPM/Problem.html">RPM::Problem</a></cod
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/problem.cr#L674" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/problem.cr#L674" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -833,7 +844,7 @@ returns an instance of <code><a href="../RPM/Problem.html">RPM::Problem</a></cod
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/problem.cr#L625" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/problem.cr#L625" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -849,7 +860,7 @@ returns an instance of <code><a href="../RPM/Problem.html">RPM::Problem</a></cod
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/problem.cr#L616" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/problem.cr#L616" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -877,7 +888,7 @@ returns an instance of <code><a href="../RPM/Problem.html">RPM::Problem</a></cod
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/problem.cr#L597" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/problem.cr#L597" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -893,7 +904,7 @@ returns an instance of <code><a href="../RPM/Problem.html">RPM::Problem</a></cod
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/problem.cr#L10" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/problem.cr#L10" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -909,7 +920,7 @@ returns an instance of <code><a href="../RPM/Problem.html">RPM::Problem</a></cod
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/problem.cr#L633" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/problem.cr#L633" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -925,7 +936,7 @@ returns an instance of <code><a href="../RPM/Problem.html">RPM::Problem</a></cod
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/problem.cr#L650" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/problem.cr#L650" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -941,7 +952,7 @@ returns an instance of <code><a href="../RPM/Problem.html">RPM::Problem</a></cod
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/problem.cr#L612" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/problem.cr#L612" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -957,7 +968,7 @@ returns an instance of <code><a href="../RPM/Problem.html">RPM::Problem</a></cod
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/problem.cr#L603" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/problem.cr#L603" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -973,7 +984,7 @@ returns an instance of <code><a href="../RPM/Problem.html">RPM::Problem</a></cod
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/problem.cr#L646" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/problem.cr#L646" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -989,7 +1000,7 @@ returns an instance of <code><a href="../RPM/Problem.html">RPM::Problem</a></cod
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/problem.cr#L637" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/problem.cr#L637" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1005,7 +1016,7 @@ returns an instance of <code><a href="../RPM/Problem.html">RPM::Problem</a></cod
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/problem.cr#L654" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/problem.cr#L654" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1026,7 +1037,7 @@ returns an instance of <code><a href="../RPM/Problem.html">RPM::Problem</a></cod
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/problem.cr#L679" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/problem.cr#L679" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1042,7 +1053,7 @@ returns an instance of <code><a href="../RPM/Problem.html">RPM::Problem</a></cod
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/problem.cr#L629" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/problem.cr#L629" target="_blank">View source</a>]
         
       </div>
     </div>

@@ -15,7 +15,7 @@
 </svg>
 
   <meta id="repository-name" content="github.com/lugia-kun/crystal-rpm">
-  <title>RPM::BuildFlags - github.com/lugia-kun/crystal-rpm</title>
+  <title>RPM::TagDataFlags - github.com/lugia-kun/crystal-rpm</title>
   <script type="text/javascript">
     CrystalDoc.base_path = "../";
   </script>
@@ -50,7 +50,7 @@
       
     </li>
   
-  <li class=" current" data-id="github.com/lugia-kun/crystal-rpm/RPM/BuildFlags" data-name="rpm::buildflags">
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/BuildFlags" data-name="rpm::buildflags">
       <a href="../RPM/BuildFlags.html">BuildFlags</a>
       
     </li>
@@ -370,7 +370,7 @@
       
     </li>
   
-  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagDataFlags" data-name="rpm::tagdataflags">
+  <li class=" current" data-id="github.com/lugia-kun/crystal-rpm/RPM/TagDataFlags" data-name="rpm::tagdataflags">
       <a href="../RPM/TagDataFlags.html">TagDataFlags</a>
       
     </li>
@@ -459,7 +459,7 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">alias</span> RPM::BuildFlags
+  <span class="kind">alias</span> RPM::TagDataFlags
 
 </h1>
 
@@ -477,7 +477,7 @@
 </a>
     Alias Definition
   </h2>
-  <code>RPM::LibRPM::BuildFlags</code>
+  <code>RPM::LibRPM::TagDataFlags</code>
 
 
 
@@ -500,7 +500,7 @@
   </h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/librpm.cr#L1224" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/librpm.cr#L1212" target="_blank">
         rpm/librpm.cr
       </a>
     
@@ -521,58 +521,23 @@
   
   <dl>
     
-      <dt class="entry-const" id="BUILD">
-        <strong>BUILD</strong> = <code><span class="n">2_u32</span></code>
+      <dt class="entry-const" id="ALLOCED">
+        <strong>ALLOCED</strong> = <code><span class="n">1_u32</span></code>
       </dt>
       
     
-      <dt class="entry-const" id="BUILDREQUIRES">
-        <strong>BUILDREQUIRES</strong> = <code><span class="n">1048576_u32</span></code>
+      <dt class="entry-const" id="ARGV">
+        <strong>ARGV</strong> = <code><span class="n">8_u32</span></code>
       </dt>
       
     
-      <dt class="entry-const" id="CHECK">
-        <strong>CHECK</strong> = <code><span class="n">8_u32</span></code>
+      <dt class="entry-const" id="IMMUTABLE">
+        <strong>IMMUTABLE</strong> = <code><span class="n">4_u32</span></code>
       </dt>
       
     
-      <dt class="entry-const" id="CHECKBUILDREQUIRES">
-        <strong>CHECKBUILDREQUIRES</strong> = <code><span class="n">524288_u32</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const" id="CLEAN">
-        <strong>CLEAN</strong> = <code><span class="n">16_u32</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const" id="DUMPBUILDREQUIRES">
-        <strong>DUMPBUILDREQUIRES</strong> = <code><span class="n">2097152_u32</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const" id="FILE_FILE">
-        <strong>FILE_FILE</strong> = <code><span class="n">65536_u32</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const" id="FILE_LIST">
-        <strong>FILE_LIST</strong> = <code><span class="n">131072_u32</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const" id="FILECHECK">
-        <strong>FILECHECK</strong> = <code><span class="n">32_u32</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const" id="INSTALL">
-        <strong>INSTALL</strong> = <code><span class="n">4_u32</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const" id="NOBUILD">
-        <strong>NOBUILD</strong> = <code><span class="n">2147483648_u32</span></code>
+      <dt class="entry-const" id="INVALID">
+        <strong>INVALID</strong> = <code><span class="n">16_u32</span></code>
       </dt>
       
     
@@ -581,43 +546,8 @@
       </dt>
       
     
-      <dt class="entry-const" id="PACKAGEBINARY">
-        <strong>PACKAGEBINARY</strong> = <code><span class="n">128_u32</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const" id="PACKAGESOURCE">
-        <strong>PACKAGESOURCE</strong> = <code><span class="n">64_u32</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const" id="POLICY">
-        <strong>POLICY</strong> = <code><span class="n">262144_u32</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const" id="PREP">
-        <strong>PREP</strong> = <code><span class="n">1_u32</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const" id="RMBUILD">
-        <strong>RMBUILD</strong> = <code><span class="n">512_u32</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const" id="RMSOURCE">
-        <strong>RMSOURCE</strong> = <code><span class="n">256_u32</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const" id="RMSPEC">
-        <strong>RMSPEC</strong> = <code><span class="n">2048_u32</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const" id="STRINGBUF">
-        <strong>STRINGBUF</strong> = <code><span class="n">1024_u32</span></code>
+      <dt class="entry-const" id="PTRALLOCED">
+        <strong>PTRALLOCED</strong> = <code><span class="n">2_u32</span></code>
       </dt>
       
     

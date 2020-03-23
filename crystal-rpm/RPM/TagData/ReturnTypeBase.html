@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.32.1">
+<meta name="generator" content="Crystal Docs 0.33.0">
 
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../../js/doc.js"></script>
@@ -360,8 +360,18 @@
       
     </li>
   
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeUnion" data-name="rpm::tagdata::returntypeunion">
+      <a href="../../RPM/TagData/ReturnTypeUnion.html">ReturnTypeUnion</a>
+      
+    </li>
+  
 </ul>
 
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagDataFlags" data-name="rpm::tagdataflags">
+      <a href="../../RPM/TagDataFlags.html">TagDataFlags</a>
       
     </li>
   
@@ -515,7 +525,7 @@
   </h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/tagdata.cr#L32" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L38" target="_blank">
         rpm/tagdata.cr
       </a>
     
@@ -579,6 +589,20 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#return_type-instance-method" class="signature"><strong>#return_type</strong></a>
+        
+          <div class="summary"><p>Returns the return type pf TagData</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#size-instance-method" class="signature"><strong>#size</strong></a>
+        
+          <div class="summary"><p>Returns the number of elements in the tagdata.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#tag-instance-method" class="signature"><strong>#tag</strong></a>
         
           <div class="summary"><p>Returns the tag value.</p></div>
@@ -593,9 +617,28 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#to_a-instance-method" class="signature"><strong>#to_a</strong></a>
+        
+          <div class="summary"><p>Respond to <code>Indexable#to_a</code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_unsafe:RPM::LibRPM::TagData-instance-method" class="signature"><strong>#to_unsafe</strong> : RPM::LibRPM::TagData</a>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#type-instance-method" class="signature"><strong>#type</strong></a>
         
           <div class="summary"><p>Returns the type of TagData</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#unsafe_fetch(index:Int)-instance-method" class="signature"><strong>#unsafe_fetch</strong>(index : Int)</a>
+        
+          <div class="summary"><p>Respond to <code>Indexable#unsafe_fetch</code></p></div>
         
       </li>
     
@@ -660,7 +703,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/tagdata.cr#L32" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L38" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -697,7 +740,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/tagdata.cr#L48" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L69" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -719,7 +762,7 @@ TagData, and send to given IO.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/tagdata.cr#L85" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L116" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -740,7 +783,49 @@ TagData, and send to given IO.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/tagdata.cr#L71" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L102" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="return_type-instance-method">
+      <div class="signature">
+        
+        def <strong>return_type</strong>
+
+        <a class="method-permalink" href="#return_type-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns the return type pf TagData</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L62" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="size-instance-method">
+      <div class="signature">
+        
+        def <strong>size</strong>
+
+        <a class="method-permalink" href="#size-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns the number of elements in the tagdata.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L144" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -761,7 +846,7 @@ TagData, and send to given IO.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/tagdata.cr#L36" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L52" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -785,7 +870,44 @@ not, this method raises <code>TypeCastError</code>.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/tagdata.cr#L56" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L87" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_a-instance-method">
+      <div class="signature">
+        abstract 
+        def <strong>to_a</strong>
+
+        <a class="method-permalink" href="#to_a-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Respond to <code>Indexable#to_a</code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L49" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_unsafe:RPM::LibRPM::TagData-instance-method">
+      <div class="signature">
+        
+        def <strong>to_unsafe</strong> : RPM::LibRPM::TagData
+
+        <a class="method-permalink" href="#to_unsafe:RPM::LibRPM::TagData-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L139" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -806,7 +928,28 @@ not, this method raises <code>TypeCastError</code>.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/tagdata.cr#L41" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L57" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="unsafe_fetch(index:Int)-instance-method">
+      <div class="signature">
+        abstract 
+        def <strong>unsafe_fetch</strong>(index : Int)
+
+        <a class="method-permalink" href="#unsafe_fetch(index:Int)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Respond to <code>Indexable#unsafe_fetch</code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L43" target="_blank">View source</a>]
         
       </div>
     </div>

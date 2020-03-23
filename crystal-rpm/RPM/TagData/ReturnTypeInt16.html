@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.32.1">
+<meta name="generator" content="Crystal Docs 0.33.0">
 
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../../js/doc.js"></script>
@@ -360,8 +360,18 @@
       
     </li>
   
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeUnion" data-name="rpm::tagdata::returntypeunion">
+      <a href="../../RPM/TagData/ReturnTypeUnion.html">ReturnTypeUnion</a>
+      
+    </li>
+  
 </ul>
 
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagDataFlags" data-name="rpm::tagdataflags">
+      <a href="../../RPM/TagDataFlags.html">TagDataFlags</a>
       
     </li>
   
@@ -484,8 +494,6 @@
   </h2>
   <ul class="other-types-list">
     
-      <li class="other-type">Indexable(UInt16)</li>
-    
       <li class="other-type"><a href="../../RPM/TagData/ReturnTypeModule.html">RPM::TagData::ReturnTypeModule</a></li>
     
   </ul>
@@ -509,7 +517,7 @@
   </h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/tagdata.cr#L180" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L221" target="_blank">
         rpm/tagdata.cr
       </a>
     
@@ -524,50 +532,51 @@
 
 
 
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#bytes-instance-method" class="signature"><strong>#bytes</strong></a>
+        
+          <div class="summary"><p>Returns binary raw array of expecting type.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#bytes?-instance-method" class="signature"><strong>#bytes?</strong></a>
+        
+          <div class="summary"><p>Returns binary raw array of expecting type.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_a-instance-method" class="signature"><strong>#to_a</strong></a>
+        
+          <div class="summary"><p>Returns the array of values using <code><a href="../../RPM/TagData/ReturnTypeInt16.html#bytes-instance-method">#bytes</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#unsafe_fetch(index:Int)-instance-method" class="signature"><strong>#unsafe_fetch</strong>(index : Int)</a>
+        
+          <div class="summary"><p>:nodoc:</p></div>
+        
+      </li>
+    
+  </ul>
+
 
 
 
 
 <div class="methods-inherited">
-  
-    
-
-  <h3>Instance methods inherited from module <code><a href="../../RPM/TagData/ReturnTypeModule.html">RPM::TagData::ReturnTypeModule</a></code></h3>
-  
-  
-    <a href="../../RPM/TagData/ReturnTypeModule.html#size-instance-method" class="tooltip">
-      <span>size</span>
-    size</a>
-    
-  
-
-
-    
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
   
     
 
@@ -599,9 +608,9 @@
     fetch_ptr</a>, 
     
   
-    <a href="../../RPM/TagData/ReturnType.html#to_a_from_bytes:Array(T)-instance-method" class="tooltip">
-      <span>to_a_from_bytes : Array(T)</span>
-    to_a_from_bytes</a>
+    <a href="../../RPM/TagData/ReturnType.html#to_a:Array(T)-instance-method" class="tooltip">
+      <span>to_a : Array(T)</span>
+    to_a</a>
     
   
 
@@ -633,6 +642,16 @@
     format1</a>, 
     
   
+    <a href="../../RPM/TagData/ReturnTypeBase.html#return_type-instance-method" class="tooltip">
+      <span>return_type</span>
+    return_type</a>, 
+    
+  
+    <a href="../../RPM/TagData/ReturnTypeBase.html#size-instance-method" class="tooltip">
+      <span>size</span>
+    size</a>, 
+    
+  
     <a href="../../RPM/TagData/ReturnTypeBase.html#tag-instance-method" class="tooltip">
       <span>tag</span>
     tag</a>, 
@@ -643,9 +662,24 @@
     tag=</a>, 
     
   
+    <a href="../../RPM/TagData/ReturnTypeBase.html#to_a-instance-method" class="tooltip">
+      <span>to_a</span>
+    to_a</a>, 
+    
+  
+    <a href="../../RPM/TagData/ReturnTypeBase.html#to_unsafe:RPM::LibRPM::TagData-instance-method" class="tooltip">
+      <span>to_unsafe : RPM::LibRPM::TagData</span>
+    to_unsafe</a>, 
+    
+  
     <a href="../../RPM/TagData/ReturnTypeBase.html#type-instance-method" class="tooltip">
       <span>type</span>
-    type</a>
+    type</a>, 
+    
+  
+    <a href="../../RPM/TagData/ReturnTypeBase.html#unsafe_fetch(index:Int)-instance-method" class="tooltip">
+      <span>unsafe_fetch(index : Int)</span>
+    unsafe_fetch</a>
     
   
 
@@ -702,6 +736,122 @@
 
 
 
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="bytes-instance-method">
+      <div class="signature">
+        
+        def <strong>bytes</strong>
+
+        <a class="method-permalink" href="#bytes-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from struct <a href="../../RPM/TagData/ReturnType.html">RPM::TagData::ReturnType(UInt16)</a>
+            </div>
+          
+          <p>Returns binary raw array of expecting type.</p>
+
+<p>Raises <code>NilAssertionError</code> if <code>#fetch_ptr</code> returns <code>NULL</code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L241" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="bytes?-instance-method">
+      <div class="signature">
+        
+        def <strong>bytes?</strong>
+
+        <a class="method-permalink" href="#bytes?-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from struct <a href="../../RPM/TagData/ReturnType.html">RPM::TagData::ReturnType(UInt16)</a>
+            </div>
+          
+          <p>Returns binary raw array of expecting type.</p>
+
+<p>Returns <code>nil</code> if <code>#fetch_ptr</code> returns <code>NULL</code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L237" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_a-instance-method">
+      <div class="signature">
+        
+        def <strong>to_a</strong>
+
+        <a class="method-permalink" href="#to_a-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from struct <a href="../../RPM/TagData/ReturnType.html">RPM::TagData::ReturnType(UInt16)</a>
+            </div>
+          
+          <p>Returns the array of values using <code><a href="../../RPM/TagData/ReturnTypeInt16.html#bytes-instance-method">#bytes</a></code></p>
+
+<p>This may be faster than <code>Indexable#to_a</code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L233" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="unsafe_fetch(index:Int)-instance-method">
+      <div class="signature">
+        
+        def <strong>unsafe_fetch</strong>(index : Int)
+
+        <a class="method-permalink" href="#unsafe_fetch(index:Int)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from struct <a href="../../RPM/TagData/ReturnType.html">RPM::TagData::ReturnType(UInt16)</a>
+            </div>
+          
+          <p>:nodoc:</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L229" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
 
 
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.32.1">
+<meta name="generator" content="Crystal Docs 0.33.0">
 
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../../js/doc.js"></script>
@@ -360,8 +360,18 @@
       
     </li>
   
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagData/ReturnTypeUnion" data-name="rpm::tagdata::returntypeunion">
+      <a href="../../RPM/TagData/ReturnTypeUnion.html">ReturnTypeUnion</a>
+      
+    </li>
+  
 </ul>
 
+      
+    </li>
+  
+  <li class=" " data-id="github.com/lugia-kun/crystal-rpm/RPM/TagDataFlags" data-name="rpm::tagdataflags">
+      <a href="../../RPM/TagDataFlags.html">TagDataFlags</a>
       
     </li>
   
@@ -470,8 +480,9 @@
 
   <p>Binary type for TagData</p>
 
-<p><span class="flag purple">NOTE</span>  The raw representation of binary data a same to array of
-UInt8, but same reason to UInt8, we cannot obtain it directly.</p>
+<p><span class="flag purple">NOTE</span>  The raw representation of binary data is same to array of
+UInt8. RPM does not provide a way to obtain the pointer directly,
+and we need to convert back from string representation.</p>
 
 
 
@@ -486,8 +497,6 @@ UInt8, but same reason to UInt8, we cannot obtain it directly.</p>
     Included Modules
   </h2>
   <ul class="other-types-list">
-    
-      <li class="other-type">Indexable(Slice(UInt8))</li>
     
       <li class="other-type"><a href="../../RPM/TagData/ReturnTypeModule.html">RPM::TagData::ReturnTypeModule</a></li>
     
@@ -512,7 +521,7 @@ UInt8, but same reason to UInt8, we cannot obtain it directly.</p>
   </h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/tagdata.cr#L301" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L367" target="_blank">
         rpm/tagdata.cr
       </a>
     
@@ -538,9 +547,37 @@ UInt8, but same reason to UInt8, we cannot obtain it directly.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
+        <a href="#bytes(&block:String,Char?,Char?-%3E_)-instance-method" class="signature"><strong>#bytes</strong>(&block : String, Char?, Char? -> _)</a>
+        
+          <div class="summary"><p>Generates binary data from hexadecimal string representation.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#bytes-instance-method" class="signature"><strong>#bytes</strong></a>
         
           <div class="summary"><p>Generates binary data from hexadecimal string representation.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#bytes?:Bytes?-instance-method" class="signature"><strong>#bytes?</strong> : Bytes?</a>
+        
+          <div class="summary"><p>Generates binary data from hexadecimal string representation.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#size-instance-method" class="signature"><strong>#size</strong></a>
+        
+          <div class="summary"><p><code>rpmtdCount</code> should always returns 1 too.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_a:Array(Bytes)-instance-method" class="signature"><strong>#to_a</strong> : Array(Bytes)</a>
+        
+          <div class="summary"><p>Respond to <code>Indexable#to_a</code></p></div>
         
       </li>
     
@@ -551,45 +588,6 @@ UInt8, but same reason to UInt8, we cannot obtain it directly.</p>
 
 
 <div class="methods-inherited">
-  
-    
-
-  <h3>Instance methods inherited from module <code><a href="../../RPM/TagData/ReturnTypeModule.html">RPM::TagData::ReturnTypeModule</a></code></h3>
-  
-  
-    <a href="../../RPM/TagData/ReturnTypeModule.html#size-instance-method" class="tooltip">
-      <span>size</span>
-    size</a>
-    
-  
-
-
-    
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
   
     
 
@@ -621,6 +619,16 @@ UInt8, but same reason to UInt8, we cannot obtain it directly.</p>
     format1</a>, 
     
   
+    <a href="../../RPM/TagData/ReturnTypeBase.html#return_type-instance-method" class="tooltip">
+      <span>return_type</span>
+    return_type</a>, 
+    
+  
+    <a href="../../RPM/TagData/ReturnTypeBase.html#size-instance-method" class="tooltip">
+      <span>size</span>
+    size</a>, 
+    
+  
     <a href="../../RPM/TagData/ReturnTypeBase.html#tag-instance-method" class="tooltip">
       <span>tag</span>
     tag</a>, 
@@ -631,9 +639,24 @@ UInt8, but same reason to UInt8, we cannot obtain it directly.</p>
     tag=</a>, 
     
   
+    <a href="../../RPM/TagData/ReturnTypeBase.html#to_a-instance-method" class="tooltip">
+      <span>to_a</span>
+    to_a</a>, 
+    
+  
+    <a href="../../RPM/TagData/ReturnTypeBase.html#to_unsafe:RPM::LibRPM::TagData-instance-method" class="tooltip">
+      <span>to_unsafe : RPM::LibRPM::TagData</span>
+    to_unsafe</a>, 
+    
+  
     <a href="../../RPM/TagData/ReturnTypeBase.html#type-instance-method" class="tooltip">
       <span>type</span>
-    type</a>
+    type</a>, 
+    
+  
+    <a href="../../RPM/TagData/ReturnTypeBase.html#unsafe_fetch(index:Int)-instance-method" class="tooltip">
+      <span>unsafe_fetch(index : Int)</span>
+    unsafe_fetch</a>
     
   
 
@@ -700,6 +723,45 @@ UInt8, but same reason to UInt8, we cannot obtain it directly.</p>
     Instance Method Detail
   </h2>
   
+    <div class="entry-detail" id="bytes(&amp;block:String,Char?,Char?-&gt;_)-instance-method">
+      <div class="signature">
+        
+        def <strong>bytes</strong>(&block : String, Char?, Char? -> _)
+
+        <a class="method-permalink" href="#bytes(&block:String,Char?,Char?-%3E_)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Generates binary data from hexadecimal string representation.</p>
+
+<p>Yield block if the string representations contains error.</p>
+
+<ul><li>First block argument is always converted string.</li><li>If the string length reported by upstream API is odd,
+  both Char arguments are nil.</li><li>Otherwise two <code>Char</code>s will be each slice of the string,
+  but second Char can be nil if it is '\0'.</li></ul>
+
+<p>Returns the result of block if error.</p>
+
+<p><span class="flag purple">NOTE</span>  The type will be ignored. So if a string data consists</p>
+
+<pre><code>  <span class="k">of</span> hexadecimal characters (ex: <span class="s">`aa`</span>), it will convert to
+  binary (here <span class="s">`Bytes[0xaa]`</span> will be returned).</code></pre>
+
+<p><span class="flag purple">NOTE</span>  This method is intended to use for <code><a href="../../RPM/LibRPM/TagType.html#BIN">TagType::BIN</a></code> data.</p>
+
+<pre><code>  <span class="t">So</span> <span class="s">`0x`</span> or <span class="s">`0X`</span> prefix is prohibited, which never be
+  appeared <span class="k">for</span> <span class="s">`TagType::BIN`</span> data.</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L457" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
     <div class="entry-detail" id="bytes-instance-method">
       <div class="signature">
         
@@ -711,12 +773,107 @@ UInt8, but same reason to UInt8, we cannot obtain it directly.</p>
         <div class="doc">
           
           <p>Generates binary data from hexadecimal string representation.</p>
+
+<p>Raises <code>IndexError</code> if the length of the string is an odd
+number.</p>
+
+<p>Raises <code>TypeCastError</code> if the string contains non-hexadecimal
+character</p>
+
+<p><span class="flag purple">NOTE</span>  The type will be ignored. So if a string data consists</p>
+
+<pre><code>  <span class="k">of</span> hexadecimal characters (ex: <span class="s">`aa`</span>), it will convert to
+  binary (here <span class="s">`Bytes[0xaa]`</span> will be returned).</code></pre>
+
+<p><span class="flag purple">NOTE</span>  This method is intended to use for <code><a href="../../RPM/LibRPM/TagType.html#BIN">TagType::BIN</a></code> data.</p>
+
+<pre><code>  <span class="t">So</span> <span class="s">`0x`</span> or <span class="s">`0X`</span> prefix is prohibited, which never be
+  appeared <span class="k">for</span> <span class="s">`TagType::BIN`</span> data.</code></pre>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/bdc36d4e1a595f4bceb89dc3f9848f4f4a11c166/src/rpm/tagdata.cr#L329" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L503" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="bytes?:Bytes?-instance-method">
+      <div class="signature">
+        
+        def <strong>bytes?</strong> : Bytes?
+
+        <a class="method-permalink" href="#bytes?:Bytes?-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Generates binary data from hexadecimal string representation.</p>
+
+<p>Returns <code>nil</code> if the string representation is not valid.</p>
+
+<p><span class="flag purple">NOTE</span>  The type will be ignored. So if a string data consists</p>
+
+<pre><code>  <span class="k">of</span> hexadecimal characters (ex: <span class="s">`aa`</span>), it will convert to
+  binary (here <span class="s">`Bytes[0xaa]`</span> will be returned).</code></pre>
+
+<p><span class="flag purple">NOTE</span>  This method is intended to use for <code><a href="../../RPM/LibRPM/TagType.html#BIN">TagType::BIN</a></code> data.</p>
+
+<pre><code>  <span class="t">So</span> <span class="s">`0x`</span> or <span class="s">`0X`</span> prefix is prohibited, which never be
+  appeared <span class="k">for</span> <span class="s">`TagType::BIN`</span> data.</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L434" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="size-instance-method">
+      <div class="signature">
+        
+        def <strong>size</strong>
+
+        <a class="method-permalink" href="#size-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code>rpmtdCount</code> should always returns 1 too.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L380" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_a:Array(Bytes)-instance-method">
+      <div class="signature">
+        
+        def <strong>to_a</strong> : Array(Bytes)
+
+        <a class="method-permalink" href="#to_a:Array(Bytes)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from struct <a href="../../RPM/TagData/ReturnTypeBase.html">RPM::TagData::ReturnTypeBase</a>
+            </div>
+          
+          <p>Respond to <code>Indexable#to_a</code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L513" target="_blank">View source</a>]
         
       </div>
     </div>
