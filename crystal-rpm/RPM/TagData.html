@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.33.0">
+<meta name="generator" content="Crystal Docs 0.34.0">
 
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
@@ -527,7 +527,7 @@
   </h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L18" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L18" target="_blank">
         rpm/tagdata.cr
       </a>
     
@@ -689,9 +689,16 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#format1(fmt:TagDataFormat)-instance-method" class="signature"><strong>#format1</strong>(fmt : TagDataFormat)</a>
+        <a href="#format(index:Int,fmt:TagDataFormat):String-instance-method" class="signature"><strong>#format</strong>(index : Int, fmt : TagDataFormat) : String</a>
         
-          <div class="summary"><p>Format a single value of tag data in given tag data format, and return it.</p></div>
+          <div class="summary"><p>Format a single value at specified index of tag data in given tag data format, and return it.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#format(io:IO,index:Int,fmt:TagDataFormat):Void-instance-method" class="signature"><strong>#format</strong>(io : IO, index : Int, fmt : TagDataFormat) : Void</a>
+        
+          <div class="summary"><p>Format a single value at specified index of tag data in given tag data format, and return it.</p></div>
         
       </li>
     
@@ -734,13 +741,6 @@
         <a href="#to_a-instance-method" class="signature"><strong>#to_a</strong></a>
         
           <div class="summary"><p>Returns an <code>Array</code> with all the elements in the collection.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#to_s-instance-method" class="signature"><strong>#to_s</strong></a>
-        
-          <div class="summary"><p>Returns a string representation of this object.</p></div>
         
       </li>
     
@@ -907,7 +907,7 @@ of <code>Exception</code> in the block if you want to do so.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L578" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L592" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -928,7 +928,7 @@ of <code>Exception</code> in the block if you want to do so.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L610" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L624" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -949,7 +949,7 @@ of <code>Exception</code> in the block if you want to do so.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L628" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L642" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -970,7 +970,7 @@ of <code>Exception</code> in the block if you want to do so.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L659" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L673" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -991,7 +991,7 @@ of <code>Exception</code> in the block if you want to do so.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L668" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L682" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1012,7 +1012,7 @@ of <code>Exception</code> in the block if you want to do so.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L677" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L691" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1033,7 +1033,7 @@ of <code>Exception</code> in the block if you want to do so.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L686" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L700" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1059,7 +1059,7 @@ of <code><a href="../RPM/TagData.html">TagData</a></code>.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L700" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L714" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1085,7 +1085,7 @@ of <code><a href="../RPM/TagData.html">TagData</a></code>.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L726" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L740" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1111,7 +1111,7 @@ of <code><a href="../RPM/TagData.html">TagData</a></code>.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L752" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L766" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1137,7 +1137,7 @@ of <code><a href="../RPM/TagData.html">TagData</a></code>.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L778" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L792" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1165,7 +1165,7 @@ the block, or make sure to rescue them.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L599" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L613" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1200,7 +1200,7 @@ the block, or make sure to rescue them.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L952" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L966" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1224,7 +1224,7 @@ method raises <code>TypeCastError</code>.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L960" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L974" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1240,7 +1240,7 @@ method raises <code>TypeCastError</code>.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L945" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L959" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1267,7 +1267,7 @@ unexpected behavior.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L997" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L1013" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1288,7 +1288,7 @@ unexpected behavior.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L984" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L1000" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1309,29 +1309,51 @@ unexpected behavior.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L979" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L995" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="format1(fmt:TagDataFormat)-instance-method">
+    <div class="entry-detail" id="format(index:Int,fmt:TagDataFormat):String-instance-method">
       <div class="signature">
         
-        def <strong>format1</strong>(fmt : <a href="../RPM/TagDataFormat.html">TagDataFormat</a>)
+        def <strong>format</strong>(index : Int, fmt : <a href="../RPM/TagDataFormat.html">TagDataFormat</a>) : String
 
-        <a class="method-permalink" href="#format1(fmt:TagDataFormat)-instance-method">#</a>
+        <a class="method-permalink" href="#format(index:Int,fmt:TagDataFormat):String-instance-method">#</a>
       </div>
       
         <div class="doc">
           
-          <p>Format a single value of tag data in given tag data format, and
-return it.</p>
+          <p>Format a single value at specified index of tag data in given
+tag data format, and return it.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L974" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L990" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="format(io:IO,index:Int,fmt:TagDataFormat):Void-instance-method">
+      <div class="signature">
+        
+        def <strong>format</strong>(io : IO, index : Int, fmt : <a href="../RPM/TagDataFormat.html">TagDataFormat</a>) : Void
+
+        <a class="method-permalink" href="#format(io:IO,index:Int,fmt:TagDataFormat):Void-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Format a single value at specified index of tag data in given
+tag data format, and return it.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L984" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1356,7 +1378,7 @@ type is <code><a href="../RPM/LibRPM/TagReturnType.html#ARRAY">TagReturnType::AR
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L841" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L855" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1377,7 +1399,7 @@ type is <code><a href="../RPM/LibRPM/TagReturnType.html#ARRAY">TagReturnType::AR
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L817" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L831" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1398,7 +1420,7 @@ type is <code><a href="../RPM/LibRPM/TagReturnType.html#ARRAY">TagReturnType::AR
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L826" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L840" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1419,7 +1441,7 @@ type is <code><a href="../RPM/LibRPM/TagReturnType.html#ARRAY">TagReturnType::AR
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L799" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L813" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1443,7 +1465,7 @@ this method raises <code>TypeCastError</code>.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L807" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L821" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1470,36 +1492,7 @@ this method raises <code>TypeCastError</code>.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L941" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="to_s-instance-method">
-      <div class="signature">
-        
-        def <strong>to_s</strong>
-
-        <a class="method-permalink" href="#to_s-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-            <div class="doc-inherited">
-              Description copied from class Object
-            </div>
-          
-          <p>Returns a string representation of this object.</p>
-
-<p>Descendants must usually <strong>not</strong> override this method. Instead,
-they must override <code><a href="../RPM/TagData.html#to_s(io)-instance-method">#to_s(io)</a></code>, which must append to the given
-IO object.</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L968" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L955" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1515,7 +1508,7 @@ IO object.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L964" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L978" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1536,7 +1529,7 @@ IO object.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L1004" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L1020" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1557,7 +1550,7 @@ IO object.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L812" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L826" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1592,7 +1585,7 @@ of performance.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L821" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L835" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1613,7 +1606,7 @@ of performance.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L916" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L930" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1634,7 +1627,7 @@ of performance.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L929" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L943" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1658,7 +1651,7 @@ only.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L887" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L901" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1681,7 +1674,7 @@ only.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L903" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L917" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1706,7 +1699,7 @@ methods just get the value at index 0).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L854" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L868" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1729,7 +1722,7 @@ methods just get the value at index 0).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L870" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L884" target="_blank">View source</a>]
         
       </div>
     </div>

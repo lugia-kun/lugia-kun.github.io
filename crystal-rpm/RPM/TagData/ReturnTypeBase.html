@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.33.0">
+<meta name="generator" content="Crystal Docs 0.34.0">
 
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../../js/doc.js"></script>
@@ -525,7 +525,7 @@
   </h2>
   
     
-      <a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L38" target="_blank">
+      <a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L38" target="_blank">
         rpm/tagdata.cr
       </a>
     
@@ -575,16 +575,23 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#format(io:IO,fmt:TagDataFormat)-instance-method" class="signature"><strong>#format</strong>(io : IO, fmt : TagDataFormat)</a>
+        <a href="#format(io:IO,index:Int,fmt:TagDataFormat)-instance-method" class="signature"><strong>#format</strong>(io : IO, index : Int, fmt : TagDataFormat)</a>
         
-          <div class="summary"><p>Format the TagData to a string also represents array and empty TagData, and send to given IO.</p></div>
+          <div class="summary"><p><code><a href="../../RPM/TagData/ReturnTypeBase.html#format(io:IO,index:Int,fmt:TagDataFormat)-instance-method">#format</a></code> and write to IO</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#format1(fmt:TagDataFormat)-instance-method" class="signature"><strong>#format1</strong>(fmt : TagDataFormat)</a>
+        <a href="#format(index:Int,fmt:TagDataFormat)-instance-method" class="signature"><strong>#format</strong>(index : Int, fmt : TagDataFormat)</a>
         
           <div class="summary"><p>Format the TagData at current index in given format.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#format(io:IO,fmt:TagDataFormat)-instance-method" class="signature"><strong>#format</strong>(io : IO, fmt : TagDataFormat)</a>
+        
+          <div class="summary"><p>Format the TagData to a string also represents array and empty TagData, and send to given IO.</p></div>
         
       </li>
     
@@ -703,7 +710,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L38" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L38" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -740,7 +747,49 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L69" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L69" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="format(io:IO,index:Int,fmt:TagDataFormat)-instance-method">
+      <div class="signature">
+        
+        def <strong>format</strong>(io : IO, index : Int, fmt : <a href="../../RPM/TagDataFormat.html">TagDataFormat</a>)
+
+        <a class="method-permalink" href="#format(io:IO,index:Int,fmt:TagDataFormat)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="../../RPM/TagData/ReturnTypeBase.html#format(io:IO,index:Int,fmt:TagDataFormat)-instance-method">#format</a></code> and write to IO</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L122" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="format(index:Int,fmt:TagDataFormat)-instance-method">
+      <div class="signature">
+        
+        def <strong>format</strong>(index : Int, fmt : <a href="../../RPM/TagDataFormat.html">TagDataFormat</a>)
+
+        <a class="method-permalink" href="#format(index:Int,fmt:TagDataFormat)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Format the TagData at current index in given format.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L108" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -762,28 +811,7 @@ TagData, and send to given IO.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L116" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="format1(fmt:TagDataFormat)-instance-method">
-      <div class="signature">
-        
-        def <strong>format1</strong>(fmt : <a href="../../RPM/TagDataFormat.html">TagDataFormat</a>)
-
-        <a class="method-permalink" href="#format1(fmt:TagDataFormat)-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Format the TagData at current index in given format.</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L102" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L128" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -804,7 +832,7 @@ TagData, and send to given IO.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L62" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L62" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -825,7 +853,7 @@ TagData, and send to given IO.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L144" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L154" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -846,7 +874,7 @@ TagData, and send to given IO.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L52" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L52" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -870,7 +898,7 @@ not, this method raises <code>TypeCastError</code>.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L87" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L87" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -891,7 +919,7 @@ not, this method raises <code>TypeCastError</code>.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L49" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L49" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -907,7 +935,7 @@ not, this method raises <code>TypeCastError</code>.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L139" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L149" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -928,7 +956,7 @@ not, this method raises <code>TypeCastError</code>.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L57" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L57" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -949,7 +977,7 @@ not, this method raises <code>TypeCastError</code>.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/cc3c7d2761666a995281602a23323ea1809bbaa5/src/rpm/tagdata.cr#L43" target="_blank">View source</a>]
+          [<a href="https://github.com/lugia-kun/crystal-rpm/blob/088eeb7ecdebe17845d33d39a8e335da9808d2e2/src/rpm/tagdata.cr#L43" target="_blank">View source</a>]
         
       </div>
     </div>
