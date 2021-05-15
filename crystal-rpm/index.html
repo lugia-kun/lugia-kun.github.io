@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.35.1">
+<meta name="generator" content="Crystal Docs 0.36.1">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="rpm">
 
@@ -742,28 +742,6 @@ size and member offsets if you have a C compiler (optional).</p>
 <a href="https://proot-me.github.io/">proot</a> (untested), or root permission
 (i.e., <code>sudo</code>) is required to run <code>crystal spec</code>, since this spec uses
 <code>chroot()</code>.</p>
-
-<p>Alternatively, using Docker is another method to test:</p>
-
-<pre><code class="language-bash">     host$ shards install
-     host$ docker build -t [version] -f .travis/Dockerfile.rpm-[version] .
-     host$ docker run -it -v $(pwd):/work -w /work [version] ./.travis.sh</code></pre>
-
-<p>Or, manually,</p>
-
-<pre><code class="language-bash">     host$ shards install
-     host$ docker build -t [version] -f .travis/Dockerfile.rpm-[version] .
-     host$ docker run -it -v $(pwd):/work -w /work [version]
-container# useradd -u $(stat -c %u spec/data/simple.spec) crystal || :
-container# crystal spec [arguments]
-container# exit</code></pre>
-
-<p>Notes:</p>
-
-<ul><li>Git in CentOS 6 is too old and does not work with shards, so shards
-  should be install on the local.</li><li>In Fedora and CentOS, rpmbuild or rpmrc or rpmmacro files requires
-  that the spec files must be owned by a valid user, when building
-  RPMs.</li></ul>
 
 <h2><a id="contributing" class="anchor" href="#contributing">
   <svg class="octicon-link" aria-hidden="true">
